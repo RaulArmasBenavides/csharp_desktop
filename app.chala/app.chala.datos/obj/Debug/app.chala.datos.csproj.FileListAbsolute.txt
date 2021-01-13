@@ -1,0 +1,9 @@
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.cochachi.datos\bin\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.cochachi.datos\bin\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.cochachi.datos\obj\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.cochachi.datos\obj\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.chala.datos\bin\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.chala.datos\bin\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.chala.datos\obj\Debug\app.chala.datos.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.chala.datos\obj\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\TEST\app.chala\app.chala.datos\obj\Debug\app.cochachi.datos.pdb

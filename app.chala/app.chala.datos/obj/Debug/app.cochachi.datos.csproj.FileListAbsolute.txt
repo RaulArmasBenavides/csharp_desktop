@@ -1,0 +1,8 @@
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi.datos\bin\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi.datos\bin\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi.datos\obj\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi.datos\obj\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.datos\bin\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.datos\bin\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.datos\obj\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.datos\obj\Debug\app.cochachi.datos.pdb

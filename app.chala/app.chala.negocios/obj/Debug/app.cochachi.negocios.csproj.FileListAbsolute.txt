@@ -1,0 +1,7 @@
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\bin\Debug\app.cochachi.negocios.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\bin\Debug\app.cochachi.negocios.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\bin\Debug\app.cochachi.datos.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\bin\Debug\app.cochachi.datos.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\obj\Debug\app.cochachi.negocios.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\obj\Debug\app.cochachi.negocios.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\app.cochachi.negocios\obj\Debug\app.cochachi.negocios.pdb

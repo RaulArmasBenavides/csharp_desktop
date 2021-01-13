@@ -1,0 +1,9 @@
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\bin\Debug\app.cochachiUI.exe.config
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\bin\Debug\app.cochachiUI.exe
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\bin\Debug\app.cochachiUI.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachi.Form1.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachiUI.Properties.Resources.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachi.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachiUI.exe
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachiUI.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\app.cochachi\obj\Debug\app.cochachi.csprojResolveAssemblyReference.cache
