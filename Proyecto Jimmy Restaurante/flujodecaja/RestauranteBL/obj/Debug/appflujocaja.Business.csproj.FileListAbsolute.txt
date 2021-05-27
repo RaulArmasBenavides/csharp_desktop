@@ -1,0 +1,14 @@
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\obj\Debug\appflujocaja.Business.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\obj\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteBL\obj\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\obj\Debug\appflujocaja.Business.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\obj\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\obj\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\RestauranteBL\bin\Debug\RestauranteDL.pdb

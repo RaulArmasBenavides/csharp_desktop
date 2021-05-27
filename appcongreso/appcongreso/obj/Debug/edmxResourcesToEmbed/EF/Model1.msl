@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CongresoModelStoreContainer" CdmEntityContainer="CongresoEntities">
+    <EntitySetMapping Name="actividades">
+      <EntityTypeMapping TypeName="CongresoModel.actividades">
+        <MappingFragment StoreEntitySet="actividades">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="asistencias">
+      <EntityTypeMapping TypeName="CongresoModel.asistencias">
+        <MappingFragment StoreEntitySet="asistencias">
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="participantes">
+      <EntityTypeMapping TypeName="CongresoModel.participantes">
+        <MappingFragment StoreEntitySet="participantes">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_actividades_listar_all" FunctionName="CongresoModel.Store.usp_actividades_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CongresoModel.usp_actividades_listar_all_Result">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_actualiza_participante" FunctionName="CongresoModel.Store.usp_actualiza_participante" />
+    <FunctionImportMapping FunctionImportName="usp_eliminar_participante" FunctionName="CongresoModel.Store.usp_eliminar_participante" />
+    <FunctionImportMapping FunctionImportName="usp_participantes_listar_all" FunctionName="CongresoModel.Store.usp_participantes_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CongresoModel.usp_participantes_listar_all_Result">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_registrar_participante" FunctionName="CongresoModel.Store.usp_registrar_participante" />
+    <FunctionImportMapping FunctionImportName="usp_actualizar_actividad" FunctionName="CongresoModel.Store.usp_actualizar_actividad" />
+    <FunctionImportMapping FunctionImportName="usp_eliminar_actividad" FunctionName="CongresoModel.Store.usp_eliminar_actividad" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_actividad" FunctionName="CongresoModel.Store.usp_registrar_actividad" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,4 @@
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.pdb

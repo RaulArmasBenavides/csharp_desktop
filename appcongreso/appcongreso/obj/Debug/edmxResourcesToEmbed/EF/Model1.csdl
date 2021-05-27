@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CongresoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="actividades">
+    <Key>
+      <PropertyRef Name="idactividad" />
+    </Key>
+    <Property Name="idactividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="asistencias" Relationship="Self.FK__asistenci__idact__60A75C0F" FromRole="actividades" ToRole="asistencias" />
+  </EntityType>
+  <EntityType Name="asistencias">
+    <Key>
+      <PropertyRef Name="idasistencias" />
+    </Key>
+    <Property Name="idasistencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idparticipante" Type="Int32" />
+    <Property Name="idactividad" Type="Int32" />
+    <NavigationProperty Name="actividades" Relationship="Self.FK__asistenci__idact__60A75C0F" FromRole="asistencias" ToRole="actividades" />
+    <NavigationProperty Name="participantes" Relationship="Self.FK__asistenci__idpar__5FB337D6" FromRole="asistencias" ToRole="participantes" />
+  </EntityType>
+  <EntityType Name="participantes">
+    <Key>
+      <PropertyRef Name="idparticipante" />
+    </Key>
+    <Property Name="idparticipante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="carrera" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="tipo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="asistencias" Relationship="Self.FK__asistenci__idpar__5FB337D6" FromRole="participantes" ToRole="asistencias" />
+  </EntityType>
+  <Association Name="FK__asistenci__idact__60A75C0F">
+    <End Role="actividades" Type="Self.actividades" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="actividades">
+        <PropertyRef Name="idactividad" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idactividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__asistenci__idpar__5FB337D6">
+    <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="participantes">
+        <PropertyRef Name="idparticipante" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idparticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CongresoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="actividades" EntityType="Self.actividades" />
+    <EntitySet Name="asistencias" EntityType="Self.asistencias" />
+    <EntitySet Name="participantes" EntityType="Self.participantes" />
+    <AssociationSet Name="FK__asistenci__idact__60A75C0F" Association="Self.FK__asistenci__idact__60A75C0F">
+      <End Role="actividades" EntitySet="actividades" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__asistenci__idpar__5FB337D6" Association="Self.FK__asistenci__idpar__5FB337D6">
+      <End Role="participantes" EntitySet="participantes" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+    <FunctionImport Name="usp_actividades_listar_all" ReturnType="Collection(CongresoModel.usp_actividades_listar_all_Result)" />
+    <FunctionImport Name="usp_actualiza_participante">
+      <Parameter Name="ap_paterno" Mode="In" Type="String" />
+      <Parameter Name="ap_materno" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="dirrecion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_eliminar_participante">
+      <Parameter Name="DNI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_participantes_listar_all" ReturnType="Collection(CongresoModel.usp_participantes_listar_all_Result)" />
+    <FunctionImport Name="usp_registrar_participante">
+      <Parameter Name="ap_paterno" Mode="In" Type="String" />
+      <Parameter Name="ap_materno" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="carrera" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actualizar_actividad">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_eliminar_actividad">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_actividad">
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="usp_actividades_listar_all_Result">
+    <Property Type="Int32" Name="idactividad" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="80" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_participantes_listar_all_Result">
+    <Property Type="Int32" Name="idparticipante" Nullable="false" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="tipo" Nullable="false" MaxLength="10" />
+  </ComplexType>
+</Schema>

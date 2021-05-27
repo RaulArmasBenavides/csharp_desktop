@@ -1,0 +1,14 @@
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\Alumnos.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\Alumnos.Properties.Resources.resources
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\AppDemo11.View.ProductoView.resources
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\Alumnos.csproj.GenerateResource.Cache
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\bin\Debug\Alumnos.exe
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\bin\Debug\Alumnos.pdb
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\Alumnos.exe
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\proyectoparaponce\Alumnos\obj\x86\Debug\Alumnos.pdb
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.exe
+C:\Users\RAUL\Documents\Cursos\UNMSM\CICLO 4\Base de datos y Programación Visual\Semestre 2017-I\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb
+C:\Users\Raúl\Desktop\SCRIPTS\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.exe
+C:\Users\Raúl\Desktop\SCRIPTS\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb
+C:\Users\Raúl\Desktop\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.exe
+C:\Users\Raúl\Desktop\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb

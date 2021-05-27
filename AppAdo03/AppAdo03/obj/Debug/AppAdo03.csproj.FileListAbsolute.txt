@@ -1,0 +1,37 @@
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csprojResolveAssemblyReference.cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.Properties.Resources.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.MDImenu.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.ProductoView.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csproj.GenerateResource.Cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.LoginView.resources
+L:\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+L:\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+L:\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\bin\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.Properties.Resources.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.LoginView.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.MDImenu.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.ProductoView.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csproj.GenerateResource.Cache
+C:\Users\RAUL\Desktop\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\RAUL\Desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\RAUL\Desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\MARCELO\Desktop\SistemasUNIProgramación\Base de datos y Programación Visual\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\MARCELO\Desktop\SistemasUNIProgramación\Base de datos y Programación Visual\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\MARCELO\Desktop\SistemasUNIProgramación\Base de datos y Programación Visual\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\Raúl\Downloads\ADO.NET\Base de datos y Programación Visual\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\Raúl\Downloads\ADO.NET\Base de datos y Programación Visual\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\Raúl\Downloads\ADO.NET\Base de datos y Programación Visual\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb

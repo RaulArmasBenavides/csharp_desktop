@@ -1,0 +1,5 @@
+c:\users\marcelo\documents\visual studio 2015\Projects\proyectoCLEIN\proyectoCLEIN\bin\Debug\proyectoCLEIN.exe.config
+c:\users\marcelo\documents\visual studio 2015\Projects\proyectoCLEIN\proyectoCLEIN\obj\Debug\proyectoCLEIN.Properties.Resources.resources
+c:\users\marcelo\documents\visual studio 2015\Projects\proyectoCLEIN\proyectoCLEIN\obj\Debug\proyectoCLEIN.VerCandidatos.resources
+c:\users\marcelo\documents\visual studio 2015\Projects\proyectoCLEIN\proyectoCLEIN\obj\Debug\Casting.VerPerfiles.resources
+c:\users\marcelo\documents\visual studio 2015\Projects\proyectoCLEIN\proyectoCLEIN\obj\Debug\proyectoCLEIN.csproj.GenerateResource.Cache

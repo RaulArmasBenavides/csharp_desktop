@@ -1,0 +1,17 @@
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\appflujocajaUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MovimientoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\appflujocajaUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb

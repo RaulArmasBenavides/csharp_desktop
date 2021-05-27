@@ -1,0 +1,2 @@
+c:\users\marcelo\documents\visual studio 2015\Projects\erp_universidad\erp_universidad\bin\Debug\erp_universidad.exe.config
+C:\Users\RAUL\Documents\rmab\C#\DESA\erp_universidad\erp_universidad\bin\Debug\erp_universidad.exe.config

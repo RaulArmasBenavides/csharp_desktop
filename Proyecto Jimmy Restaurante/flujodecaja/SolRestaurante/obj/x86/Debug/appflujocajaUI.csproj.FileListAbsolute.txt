@@ -1,0 +1,47 @@
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\appflujocajaUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MovimientoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\appflujocajaUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\appflujocajaUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.MovimientoUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.ReporteUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\appflujocajaUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\obj\x86\Debug\SolRestaurante.exe.licenses
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.PdfViewer.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.UI.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Documents.Core.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Documents.Fixed.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\TelerikCommon.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Zip.dll
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.xml
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.PdfViewer.xml
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Documents.Core.xml
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Documents.Fixed.xml
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\DESA\Proyecto Jimmy Restaurante\flujodecaja\SolRestaurante\bin\Debug\Telerik.Windows.Zip.xml

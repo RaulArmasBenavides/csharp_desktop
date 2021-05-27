@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CongresoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="actividades">
+    <Key>
+      <PropertyRef Name="idactividad" />
+    </Key>
+    <Property Name="idactividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="80" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="asistencias">
+    <Key>
+      <PropertyRef Name="idasistencias" />
+    </Key>
+    <Property Name="idasistencias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idparticipante" Type="int" />
+    <Property Name="idactividad" Type="int" />
+  </EntityType>
+  <EntityType Name="participantes">
+    <Key>
+      <PropertyRef Name="idparticipante" />
+    </Key>
+    <Property Name="idparticipante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ap_paterno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ap_materno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="telefono" Type="nchar" MaxLength="20" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="DNI" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="carrera" Type="nvarchar" MaxLength="80" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="80" />
+    <Property Name="tipo" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__asistenci__idact__60A75C0F">
+    <End Role="actividades" Type="Self.actividades" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="actividades">
+        <PropertyRef Name="idactividad" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idactividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__asistenci__idpar__5FB337D6">
+    <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="participantes">
+        <PropertyRef Name="idparticipante" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idparticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_actividades_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_actualiza_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
+    <Parameter Name="ap_materno" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="telefono" Type="nchar" Mode="In" />
+    <Parameter Name="sexo" Type="nchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nchar" Mode="In" />
+    <Parameter Name="dirrecion" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipo" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_actualizar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DNI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_participantes_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_registrar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_registrar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
+    <Parameter Name="ap_materno" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="telefono" Type="nchar" Mode="In" />
+    <Parameter Name="sexo" Type="nchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nchar" Mode="In" />
+    <Parameter Name="carrera" Type="nvarchar" Mode="In" />
+    <Parameter Name="direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipo" Type="nchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="CongresoModelStoreContainer">
+    <EntitySet Name="actividades" EntityType="Self.actividades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="asistencias" EntityType="Self.asistencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="participantes" EntityType="Self.participantes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__asistenci__idact__60A75C0F" Association="Self.FK__asistenci__idact__60A75C0F">
+      <End Role="actividades" EntitySet="actividades" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__asistenci__idpar__5FB337D6" Association="Self.FK__asistenci__idpar__5FB337D6">
+      <End Role="participantes" EntitySet="participantes" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

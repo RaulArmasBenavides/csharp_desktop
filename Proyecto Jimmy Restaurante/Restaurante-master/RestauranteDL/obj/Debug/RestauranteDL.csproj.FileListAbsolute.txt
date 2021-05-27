@@ -1,0 +1,24 @@
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\RestauranteDL\bin\Debug\RestauranteDL.dll
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\RestauranteDL\bin\Debug\RestauranteDL.pdb
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\RestauranteDL\obj\Debug\ResolveAssemblyReference.cache
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\RestauranteDL\obj\Debug\RestauranteDL.dll
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\RestauranteDL\obj\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Desktop\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Desktop\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Desktop\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\RestauranteDL\obj\Debug\RestauranteDL.pdb

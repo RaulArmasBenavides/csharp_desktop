@@ -1,0 +1,89 @@
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.Form1.resources
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\SolRestaurante.exe
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\SolRestaurante.pdb
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\RestauranteBL.dll
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\RestauranteDL.dll
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\RestauranteBL.pdb
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\bin\Debug\RestauranteDL.pdb
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+c:\users\lennin\documents\visual studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\LENNIN\Documents\Visual Studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\LENNIN\Documents\Visual Studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.MenuUI.resources
+C:\Users\LENNIN\Documents\Visual Studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\LENNIN\Documents\Visual Studio 2010\Projects\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+D:\important\microsoft ultimo\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+D:\important\microsoft ultimo\SolRestaurante\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Form1.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MenuUI.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Desktop\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Form1.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MenuUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MenuUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Documents\rmab\C#\Proyectos FII - ENTREGA\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\SolRestaurante.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.dll
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteBL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\bin\Debug\RestauranteDL.pdb
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csprojResolveAssemblyReference.cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ClienteUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.EmpleadoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MDImenu.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.MovimientoUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.Properties.Resources.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.ReservacionUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.SucursalUI.resources
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\RestauranteUI.csproj.GenerateResource.Cache
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
