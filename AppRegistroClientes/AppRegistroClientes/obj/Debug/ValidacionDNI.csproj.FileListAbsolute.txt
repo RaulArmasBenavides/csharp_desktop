@@ -1,0 +1,11 @@
+C:\Users\DYAB\Desktop\ejercicicios C# UPN\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.exe.config
+C:\Users\DYAB\Desktop\ejercicicios C# UPN\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.exe
+C:\Users\DYAB\Desktop\ejercicicios C# UPN\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.pdb
+C:\Users\DYAB\Desktop\ejercicicios C# UPN\ValidacionDNI\ValidacionDNI\obj\Debug\ValidacionDNI.exe
+C:\Users\DYAB\Desktop\ejercicicios C# UPN\ValidacionDNI\ValidacionDNI\obj\Debug\ValidacionDNI.pdb
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.exe.config
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.exe
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\ValidacionDNI.pdb
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\obj\Debug\ValidacionDNI.exe
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\obj\Debug\ValidacionDNI.pdb
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\AppRegistroClientes.exe.config

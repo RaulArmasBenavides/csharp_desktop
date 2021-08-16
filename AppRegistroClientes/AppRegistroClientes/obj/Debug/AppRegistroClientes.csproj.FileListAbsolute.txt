@@ -1,0 +1,8 @@
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\AppRegistroClientes.exe.config
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\AppRegistroClientes.exe
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\bin\Debug\AppRegistroClientes.pdb
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\obj\Debug\AppRegistroClientes.exe
+C:\Users\RAUL\Desktop\ValidacionDNI\ValidacionDNI\obj\Debug\AppRegistroClientes.pdb
+C:\Users\RAUL\Desktop\AppRegistroClientes\AppRegistroClientes\bin\Debug\AppRegistroClientes.exe.config
+C:\Users\RAUL\Desktop\AppRegistroClientes\AppRegistroClientes\obj\Debug\AppRegistroClientes.exe
+C:\Users\RAUL\Desktop\AppRegistroClientes\AppRegistroClientes\obj\Debug\AppRegistroClientes.pdb
