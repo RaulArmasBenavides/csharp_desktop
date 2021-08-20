@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NeptunoModelStoreContainer" CdmEntityContainer="NeptunoEntities">
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="NeptunoModel.Producto">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="CantidadPorUnidad" ColumnName="CantidadPorUnidad" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+          <ScalarProperty Name="Suspendido" ColumnName="Suspendido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_Categoria_Listar" FunctionName="NeptunoModel.Store.usp_Categoria_Listar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Categoria_Listar_Result">
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="NombreCategoría" ColumnName="NombreCategoría" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Producto_Actualizar" FunctionName="NeptunoModel.Store.usp_Producto_Actualizar" />
+    <FunctionImportMapping FunctionImportName="usp_Producto_Adicionar" FunctionName="NeptunoModel.Store.usp_Producto_Adicionar" />
+    <FunctionImportMapping FunctionImportName="usp_Producto_Datos" FunctionName="NeptunoModel.Store.usp_Producto_Datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Producto_Datos_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Producto_Eliminar" FunctionName="NeptunoModel.Store.usp_Producto_Eliminar" />
+    <FunctionImportMapping FunctionImportName="usp_Productos_Datos" FunctionName="NeptunoModel.Store.usp_Productos_Datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Productos_Datos_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Productos_Listar" FunctionName="NeptunoModel.Store.usp_Productos_Listar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Productos_Listar_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_Proveedor_Listar" FunctionName="NeptunoModel.Store.usp_Proveedor_Listar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Proveedor_Listar_Result">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="NombreCompañía" ColumnName="NombreCompañía" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -35,3 +35,6 @@ C:\Users\Raúl\Downloads\ADO.NET\Base de datos y Programación Visual\AppAdo03\A
 C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
 C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
 C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb

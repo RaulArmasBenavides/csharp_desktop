@@ -5,3 +5,4 @@ c:\users\marcelo\documents\visual studio 2015\Projects\appcongreso\appcongreso\o
 c:\users\marcelo\documents\visual studio 2015\Projects\appcongreso\appcongreso\obj\Debug\appcongreso.View.MDICongreso.resources
 c:\users\marcelo\documents\visual studio 2015\Projects\appcongreso\appcongreso\obj\Debug\appcongreso.View.ParticipanteView.resources
 c:\users\marcelo\documents\visual studio 2015\Projects\appcongreso\appcongreso\obj\Debug\appcongreso.csproj.GenerateResource.Cache
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\appcongreso\appcongreso\bin\Debug\appcongreso.exe.config

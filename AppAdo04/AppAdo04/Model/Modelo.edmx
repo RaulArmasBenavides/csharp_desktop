@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NeptunoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categorías">
+          <Key>
+            <PropertyRef Name="IdCategoría" />
+          </Key>
+          <Property Name="IdCategoría" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCategoría" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Descripción" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreProducto" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="IdProveedor" Type="int" />
+          <Property Name="IdCategoría" Type="int" />
+          <Property Name="CantidadPorUnidad" Type="nvarchar" MaxLength="20" />
+          <Property Name="PrecioUnidad" Type="money" />
+          <Property Name="UnidadesEnExistencia" Type="smallint" />
+          <Property Name="Suspendido" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Proveedores">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCompañía" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Dirección" Type="nvarchar" MaxLength="60" />
+          <Property Name="Ciudad" Type="nvarchar" MaxLength="15" />
+          <Property Name="País" Type="nvarchar" MaxLength="15" />
+          <Property Name="Teléfono" Type="nvarchar" MaxLength="24" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="24" />
+        </EntityType>
+        <Association Name="FK_Productos_Categorías">
+          <End Role="Categorías" Type="Self.Categorías" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorías">
+              <PropertyRef Name="IdCategoría" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoría" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Productos_Proveedores">
+          <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IdProveedor" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="usp_Productos_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="NeptunoModelStoreContainer">
+          <EntitySet Name="Categorías" EntityType="Self.Categorías" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Productos_Categorías" Association="Self.FK_Productos_Categorías">
+            <End Role="Categorías" EntitySet="Categorías" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Productos_Proveedores" Association="Self.FK_Productos_Proveedores">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NeptunoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categorías">
+          <Key>
+            <PropertyRef Name="IdCategoría" />
+          </Key>
+          <Property Name="IdCategoría" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCategoría" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Categorías" FromRole="Categorías" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreProducto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdProveedor" Type="Int32" />
+          <Property Name="IdCategoría" Type="Int32" />
+          <Property Name="CantidadPorUnidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PrecioUnidad" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UnidadesEnExistencia" Type="Int16" />
+          <Property Name="Suspendido" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Categorías" Relationship="Self.FK_Productos_Categorías" FromRole="Productos" ToRole="Categorías" />
+          <NavigationProperty Name="Proveedore" Relationship="Self.FK_Productos_Proveedores" FromRole="Productos" ToRole="Proveedores" />
+        </EntityType>
+        <EntityType Name="Proveedore">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCompañía" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dirección" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Ciudad" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="País" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Teléfono" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Proveedores" FromRole="Proveedores" ToRole="Productos" />
+        </EntityType>
+        <Association Name="FK_Productos_Categorías">
+          <End Role="Categorías" Type="Self.Categorías" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorías">
+              <PropertyRef Name="IdCategoría" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdCategoría" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Productos_Proveedores">
+          <End Role="Proveedores" Type="Self.Proveedore" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Proveedores">
+              <PropertyRef Name="IdProveedor" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NeptunoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categorías" EntityType="Self.Categorías" />
+          <EntitySet Name="Productos" EntityType="Self.Producto" />
+          <EntitySet Name="Proveedores" EntityType="Self.Proveedore" />
+          <AssociationSet Name="FK_Productos_Categorías" Association="Self.FK_Productos_Categorías">
+            <End Role="Categorías" EntitySet="Categorías" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Productos_Proveedores" Association="Self.FK_Productos_Proveedores">
+            <End Role="Proveedores" EntitySet="Proveedores" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <FunctionImport Name="usp_Productos_Listar" ReturnType="Collection(NeptunoModel.usp_Productos_Listar_Result)" />
+        </EntityContainer>
+        <ComplexType Name="usp_Productos_Listar_Result">
+          <Property Type="Int32" Name="IdProducto" Nullable="false" />
+          <Property Type="String" Name="NombreProducto" Nullable="false" MaxLength="40" />
+          <Property Type="Int32" Name="IdProveedor" Nullable="true" />
+          <Property Type="Int32" Name="IdCategoría" Nullable="true" />
+          <Property Type="Decimal" Name="PrecioUnidad" Nullable="true" Precision="19" />
+          <Property Type="Int16" Name="UnidadesEnExistencia" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NeptunoModelStoreContainer" CdmEntityContainer="NeptunoEntities">
+          <EntitySetMapping Name="Categorías">
+            <EntityTypeMapping TypeName="NeptunoModel.Categorías">
+              <MappingFragment StoreEntitySet="Categorías">
+                <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+                <ScalarProperty Name="NombreCategoría" ColumnName="NombreCategoría" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="NeptunoModel.Producto">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+                <ScalarProperty Name="CantidadPorUnidad" ColumnName="CantidadPorUnidad" />
+                <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+                <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+                <ScalarProperty Name="Suspendido" ColumnName="Suspendido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proveedores">
+            <EntityTypeMapping TypeName="NeptunoModel.Proveedore">
+              <MappingFragment StoreEntitySet="Proveedores">
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="NombreCompañía" ColumnName="NombreCompañía" />
+                <ScalarProperty Name="Dirección" ColumnName="Dirección" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="País" ColumnName="País" />
+                <ScalarProperty Name="Teléfono" ColumnName="Teléfono" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_Productos_Listar" FunctionName="NeptunoModel.Store.usp_Productos_Listar">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NeptunoModel.usp_Productos_Listar_Result">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+                <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+                <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NeptunoModelStoreContainer" CdmEntityContainer="NeptunoEntities">
+    <EntitySetMapping Name="Categorías">
+      <EntityTypeMapping TypeName="NeptunoModel.Categorías">
+        <MappingFragment StoreEntitySet="Categorías">
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="NombreCategoría" ColumnName="NombreCategoría" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="NeptunoModel.Producto">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="CantidadPorUnidad" ColumnName="CantidadPorUnidad" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+          <ScalarProperty Name="Suspendido" ColumnName="Suspendido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedores">
+      <EntityTypeMapping TypeName="NeptunoModel.Proveedore">
+        <MappingFragment StoreEntitySet="Proveedores">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="NombreCompañía" ColumnName="NombreCompañía" />
+          <ScalarProperty Name="Dirección" ColumnName="Dirección" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="País" ColumnName="País" />
+          <ScalarProperty Name="Teléfono" ColumnName="Teléfono" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_Productos_Listar" FunctionName="NeptunoModel.Store.usp_Productos_Listar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NeptunoModel.usp_Productos_Listar_Result">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdCategoría" ColumnName="IdCategoría" />
+          <ScalarProperty Name="PrecioUnidad" ColumnName="PrecioUnidad" />
+          <ScalarProperty Name="UnidadesEnExistencia" ColumnName="UnidadesEnExistencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

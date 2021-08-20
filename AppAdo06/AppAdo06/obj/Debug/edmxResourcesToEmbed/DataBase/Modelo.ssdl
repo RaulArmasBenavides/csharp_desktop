@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NeptunoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreProducto" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdProveedor" Type="int" />
+    <Property Name="IdCategoría" Type="int" />
+    <Property Name="CantidadPorUnidad" Type="nvarchar" MaxLength="20" />
+    <Property Name="PrecioUnidad" Type="money" />
+    <Property Name="UnidadesEnExistencia" Type="smallint" />
+    <Property Name="Suspendido" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="usp_Categoria_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_Producto_Actualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdProveedor" Type="int" Mode="In" />
+    <Parameter Name="IdCategoria" Type="int" Mode="In" />
+    <Parameter Name="Precio" Type="money" Mode="In" />
+    <Parameter Name="Stock" Type="smallint" Mode="In" />
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Producto_Adicionar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdProveedor" Type="int" Mode="In" />
+    <Parameter Name="IdCategoria" Type="int" Mode="In" />
+    <Parameter Name="Precio" Type="money" Mode="In" />
+    <Parameter Name="Stock" Type="smallint" Mode="In" />
+    <Parameter Name="IdProducto" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="usp_Producto_Datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Producto_Eliminar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Productos_Datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_Productos_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_Proveedor_Listar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="NeptunoModelStoreContainer">
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

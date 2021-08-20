@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NeptunoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categorías">
+    <Key>
+      <PropertyRef Name="IdCategoría" />
+    </Key>
+    <Property Name="IdCategoría" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCategoría" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Descripción" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreProducto" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="IdProveedor" Type="int" />
+    <Property Name="IdCategoría" Type="int" />
+    <Property Name="CantidadPorUnidad" Type="nvarchar" MaxLength="20" />
+    <Property Name="PrecioUnidad" Type="money" />
+    <Property Name="UnidadesEnExistencia" Type="smallint" />
+    <Property Name="Suspendido" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedores">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCompañía" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Dirección" Type="nvarchar" MaxLength="60" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="15" />
+    <Property Name="País" Type="nvarchar" MaxLength="15" />
+    <Property Name="Teléfono" Type="nvarchar" MaxLength="24" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="24" />
+  </EntityType>
+  <Association Name="FK_Productos_Categorías">
+    <End Role="Categorías" Type="Self.Categorías" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorías">
+        <PropertyRef Name="IdCategoría" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdCategoría" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Productos_Proveedores">
+    <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="0..1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedores">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NeptunoModelStoreContainer">
+    <EntitySet Name="Categorías" EntityType="Self.Categorías" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Proveedores" EntityType="Self.Proveedores" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Productos_Categorías" Association="Self.FK_Productos_Categorías">
+      <End Role="Categorías" EntitySet="Categorías" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Productos_Proveedores" Association="Self.FK_Productos_Proveedores">
+      <End Role="Proveedores" EntitySet="Proveedores" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

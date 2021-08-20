@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NeptunoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreProducto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdProveedor" Type="Int32" />
+    <Property Name="IdCategoría" Type="Int32" />
+    <Property Name="CantidadPorUnidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PrecioUnidad" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnidadesEnExistencia" Type="Int16" />
+    <Property Name="Suspendido" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="NeptunoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Productos" EntityType="Self.Producto" />
+    <FunctionImport Name="usp_Categoria_Listar" ReturnType="Collection(NeptunoModel.usp_Categoria_Listar_Result)" />
+    <FunctionImport Name="usp_Producto_Actualizar">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IdProveedor" Mode="In" Type="Int32" />
+      <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+      <Parameter Name="Stock" Mode="In" Type="Int16" />
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Producto_Adicionar">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="IdProveedor" Mode="In" Type="Int32" />
+      <Parameter Name="IdCategoria" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+      <Parameter Name="Stock" Mode="In" Type="Int16" />
+      <Parameter Name="IdProducto" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Producto_Datos" ReturnType="Collection(NeptunoModel.usp_Producto_Datos_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Producto_Eliminar">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Productos_Datos" ReturnType="Collection(NeptunoModel.usp_Productos_Datos_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Productos_Listar" ReturnType="Collection(NeptunoModel.usp_Productos_Listar_Result)" />
+    <FunctionImport Name="usp_Proveedor_Listar" ReturnType="Collection(NeptunoModel.usp_Proveedor_Listar_Result)" />
+  </EntityContainer>
+  <ComplexType Name="usp_Categoria_Listar_Result">
+    <Property Type="Int32" Name="IdCategoría" Nullable="false" />
+    <Property Type="String" Name="NombreCategoría" Nullable="false" MaxLength="15" />
+  </ComplexType>
+  <ComplexType Name="usp_Producto_Datos_Result">
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="NombreProducto" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="IdProveedor" Nullable="true" />
+    <Property Type="Int32" Name="IdCategoría" Nullable="true" />
+    <Property Type="Decimal" Name="PrecioUnidad" Nullable="true" Precision="19" />
+    <Property Type="Int16" Name="UnidadesEnExistencia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_Productos_Datos_Result">
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="NombreProducto" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="IdProveedor" Nullable="true" />
+    <Property Type="Int32" Name="IdCategoría" Nullable="true" />
+    <Property Type="Decimal" Name="PrecioUnidad" Nullable="true" Precision="19" />
+    <Property Type="Int16" Name="UnidadesEnExistencia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_Productos_Listar_Result">
+    <Property Type="Int32" Name="IdProducto" Nullable="false" />
+    <Property Type="String" Name="NombreProducto" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="IdProveedor" Nullable="true" />
+    <Property Type="Int32" Name="IdCategoría" Nullable="true" />
+    <Property Type="Decimal" Name="PrecioUnidad" Nullable="true" Precision="19" />
+    <Property Type="Int16" Name="UnidadesEnExistencia" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_Proveedor_Listar_Result">
+    <Property Type="Int32" Name="IdProveedor" Nullable="false" />
+    <Property Type="String" Name="NombreCompañía" Nullable="false" MaxLength="40" />
+  </ComplexType>
+</Schema>

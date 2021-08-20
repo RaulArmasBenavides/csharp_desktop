@@ -1,0 +1,35 @@
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.csprojResolveAssemblyReference.cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.Properties.Resources.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.View.frmRegistraVentas.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.View.LoginView.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.csproj.GenerateResource.Cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+E:\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+E:\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+E:\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+G:\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+G:\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+G:\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+C:\Users\RAUL\Documents\usb_pendiente\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+C:\Users\RAUL\Documents\usb_pendiente\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+C:\Users\RAUL\Documents\usb_pendiente\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+C:\Users\Raúl\Downloads\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+C:\Users\Raúl\Downloads\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+C:\Users\Raúl\Downloads\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\bin\Debug\AppAdo07.pdb
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.Properties.Resources.resources
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.View.frmRegistraVentas.resources
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.View.LoginView.resources
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo07\AppAdo07\obj\Debug\AppAdo07.csproj.GenerateResource.Cache
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo07\AppAdo07\bin\Debug\AppAdo07.exe.config
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo07\AppAdo07\obj\Debug\AppAdo07.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo07\AppAdo07\obj\Debug\AppAdo07.pdb

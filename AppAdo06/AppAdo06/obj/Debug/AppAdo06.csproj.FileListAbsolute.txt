@@ -1,0 +1,16 @@
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\AppAdo06.exe.config
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\AppAdo06.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\AppAdo06.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\EntityFramework.dll
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\EntityFramework.SqlServer.dll
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\EntityFramework.xml
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\EntityFramework.SqlServer.xml
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.csprojResolveAssemblyReference.cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.Properties.Resources.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.View.ProductoView.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.csproj.GenerateResource.Cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\AppAdo06.exe.config
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.pdb

@@ -1,0 +1,27 @@
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe.config
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.csprojResolveAssemblyReference.cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.Properties.Resources.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.MDImenu.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.csproj.GenerateResource.Cache
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.exe
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.pdb
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosTodo.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosxCategoria.resources
+E:\Program Files\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosxNombre.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe.config
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.pdb
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.Properties.Resources.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosTodo.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosxCategoria.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.frmProductosxNombre.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.View.MDImenu.resources
+C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.csproj.GenerateResource.Cache
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe.config
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.exe
+C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.pdb
