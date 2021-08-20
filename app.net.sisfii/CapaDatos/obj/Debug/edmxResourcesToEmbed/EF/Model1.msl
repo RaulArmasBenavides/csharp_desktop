@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdstModelStoreContainer" CdmEntityContainer="bdstEntities">
+    <EntitySetMapping Name="actividades">
+      <EntityTypeMapping TypeName="bdstModel.actividades">
+        <MappingFragment StoreEntitySet="actividades">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="asistencias">
+      <EntityTypeMapping TypeName="bdstModel.asistencias">
+        <MappingFragment StoreEntitySet="asistencias">
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipo">
+      <EntityTypeMapping TypeName="bdstModel.Equipo">
+        <MappingFragment StoreEntitySet="Equipo">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="listaequipos">
+      <EntityTypeMapping TypeName="bdstModel.listaequipos">
+        <MappingFragment StoreEntitySet="listaequipos">
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="material">
+      <EntityTypeMapping TypeName="bdstModel.material">
+        <MappingFragment StoreEntitySet="material">
+          <ScalarProperty Name="idmaterial" ColumnName="idmaterial" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="folio_art" ColumnName="folio_art" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="empresa" ColumnName="empresa" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="matriculas">
+      <EntityTypeMapping TypeName="bdstModel.matriculas">
+        <MappingFragment StoreEntitySet="matriculas">
+          <ScalarProperty Name="idmatricula" ColumnName="idmatricula" />
+          <ScalarProperty Name="matrichar" ColumnName="matrichar" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="descripcionl" ColumnName="descripcionl" />
+          <ScalarProperty Name="unidad" ColumnName="unidad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="participantes">
+      <EntityTypeMapping TypeName="bdstModel.participantes">
+        <MappingFragment StoreEntitySet="participantes">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sala">
+      <EntityTypeMapping TypeName="bdstModel.sala">
+        <MappingFragment StoreEntitySet="sala">
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="bdstModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="bdstModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="bdstModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="bdstModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="bdstModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="bdstModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="bdstModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bdstModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bdstModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="usp_actividades_listar_all" FunctionName="bdstModel.Store.usp_actividades_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_actividades_listar_all_Result">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_actualiza_participante" FunctionName="bdstModel.Store.usp_actualiza_participante" />
+    <FunctionImportMapping FunctionImportName="usp_actualizar_actividad" FunctionName="bdstModel.Store.usp_actualizar_actividad" />
+    <FunctionImportMapping FunctionImportName="usp_actualizar_usuario" FunctionName="bdstModel.Store.usp_actualizar_usuario" />
+    <FunctionImportMapping FunctionImportName="usp_BusquedaActividadforDescripcion" FunctionName="bdstModel.Store.usp_BusquedaActividadforDescripcion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_BusquedaActividadforDescripcion_Result">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_BusquedaActividadforFecha" FunctionName="bdstModel.Store.usp_BusquedaActividadforFecha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_BusquedaActividadforFecha_Result">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_eliminar_actividad" FunctionName="bdstModel.Store.usp_eliminar_actividad" />
+    <FunctionImportMapping FunctionImportName="usp_eliminar_participante" FunctionName="bdstModel.Store.usp_eliminar_participante" />
+    <FunctionImportMapping FunctionImportName="usp_eliminar_usuario" FunctionName="bdstModel.Store.usp_eliminar_usuario" />
+    <FunctionImportMapping FunctionImportName="usp_participantes_listar_all" FunctionName="bdstModel.Store.usp_participantes_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_participantes_listar_all_Result">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_participantes_listar_estudiantes" FunctionName="bdstModel.Store.usp_participantes_listar_estudiantes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_participantes_listar_estudiantes_Result">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_participantes_listar_ponentes" FunctionName="bdstModel.Store.usp_participantes_listar_ponentes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_participantes_listar_ponentes_Result">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_participantes_listar_profesionales" FunctionName="bdstModel.Store.usp_participantes_listar_profesionales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_participantes_listar_profesionales_Result">
+          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="carrera" ColumnName="carrera" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_registrar_actividad" FunctionName="bdstModel.Store.usp_registrar_actividad" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_Equipo" FunctionName="bdstModel.Store.usp_registrar_Equipo" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_participante" FunctionName="bdstModel.Store.usp_registrar_participante" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_usuario" FunctionName="bdstModel.Store.usp_registrar_usuario" />
+    <FunctionImportMapping FunctionImportName="usp_usuarios_listar_all" FunctionName="bdstModel.Store.usp_usuarios_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_usuarios_listar_all_Result">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ValidaUsuario" FunctionName="bdstModel.Store.usp_ValidaUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdstModel.usp_ValidaUsuario_Result">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

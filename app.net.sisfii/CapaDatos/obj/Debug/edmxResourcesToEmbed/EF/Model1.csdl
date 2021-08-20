@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdstModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="actividades">
+    <Key>
+      <PropertyRef Name="idactividad" />
+    </Key>
+    <Property Name="idactividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
+    <Property Name="rol_creacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="idlistaeq" Type="Int32" />
+    <Property Name="idasistencias" Type="Int32" />
+    <Property Name="idsala" Type="Int32" />
+    <NavigationProperty Name="asistencias" Relationship="Self.FK__actividad__idasi__54CB950F" FromRole="actividades" ToRole="asistencias" />
+    <NavigationProperty Name="listaequipos" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="actividades" ToRole="listaequipos" />
+    <NavigationProperty Name="sala" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="actividades" ToRole="sala" />
+  </EntityType>
+  <EntityType Name="asistencias">
+    <Key>
+      <PropertyRef Name="idasistencias" />
+    </Key>
+    <Property Name="idasistencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idparticipante" Type="Int32" />
+    <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idasi__54CB950F" FromRole="asistencias" ToRole="actividades" />
+    <NavigationProperty Name="participantes" Relationship="Self.FK__asistenci__idpar__40C49C62" FromRole="asistencias" ToRole="participantes" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="idEquipo" />
+    </Key>
+    <Property Name="idEquipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="SO" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Procesador" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="RAM" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TarjetaMadre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="listaequipos" Relationship="Self.FK__listaequi__idEqu__4F12BBB9" FromRole="Equipo" ToRole="listaequipos" />
+  </EntityType>
+  <EntityType Name="listaequipos">
+    <Key>
+      <PropertyRef Name="idlistaeq" />
+    </Key>
+    <Property Name="idlistaeq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="idEquipo" Type="Int32" />
+    <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="listaequipos" ToRole="actividades" />
+    <NavigationProperty Name="Equipo" Relationship="Self.FK__listaequi__idEqu__4F12BBB9" FromRole="listaequipos" ToRole="Equipo" />
+  </EntityType>
+  <EntityType Name="material">
+    <Key>
+      <PropertyRef Name="idmaterial" />
+    </Key>
+    <Property Name="idmaterial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="grupo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="folio_art" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="empresa" Type="Int32" Nullable="false" />
+    <Property Name="estado" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="matriculas">
+    <Key>
+      <PropertyRef Name="idmatricula" />
+    </Key>
+    <Property Name="idmatricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matrichar" Type="String" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="descripcionl" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="unidad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="participantes">
+    <Key>
+      <PropertyRef Name="idparticipante" />
+    </Key>
+    <Property Name="idparticipante" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ap_paterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ap_materno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="carrera" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="tipo_participante" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="asistencias" Relationship="Self.FK__asistenci__idpar__40C49C62" FromRole="participantes" ToRole="asistencias" />
+  </EntityType>
+  <EntityType Name="sala">
+    <Key>
+      <PropertyRef Name="idsala" />
+    </Key>
+    <Property Name="idsala" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="capacidad" Type="Int32" />
+    <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="rol_creacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="sala" ToRole="actividades" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="clave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__actividad__idasi__54CB950F">
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asistencias">
+        <PropertyRef Name="idasistencias" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idasistencias" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__actividad__idlis__53D770D6">
+    <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="listaequipos">
+        <PropertyRef Name="idlistaeq" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idlistaeq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__actividad__idsal__55BFB948">
+    <End Role="sala" Type="Self.sala" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sala">
+        <PropertyRef Name="idsala" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idsala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__asistenci__idpar__40C49C62">
+    <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="participantes">
+        <PropertyRef Name="idparticipante" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idparticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__listaequi__idEqu__4F12BBB9">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="idEquipo" />
+      </Principal>
+      <Dependent Role="listaequipos">
+        <PropertyRef Name="idEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdstEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="actividades" EntityType="Self.actividades" />
+    <EntitySet Name="asistencias" EntityType="Self.asistencias" />
+    <EntitySet Name="Equipo" EntityType="Self.Equipo" />
+    <EntitySet Name="listaequipos" EntityType="Self.listaequipos" />
+    <EntitySet Name="material" EntityType="Self.material" />
+    <EntitySet Name="matriculas" EntityType="Self.matriculas" />
+    <EntitySet Name="participantes" EntityType="Self.participantes" />
+    <EntitySet Name="sala" EntityType="Self.sala" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <AssociationSet Name="FK__actividad__idasi__54CB950F" Association="Self.FK__actividad__idasi__54CB950F">
+      <End Role="asistencias" EntitySet="asistencias" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__actividad__idlis__53D770D6" Association="Self.FK__actividad__idlis__53D770D6">
+      <End Role="listaequipos" EntitySet="listaequipos" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__actividad__idsal__55BFB948" Association="Self.FK__actividad__idsal__55BFB948">
+      <End Role="sala" EntitySet="sala" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__asistenci__idpar__40C49C62" Association="Self.FK__asistenci__idpar__40C49C62">
+      <End Role="participantes" EntitySet="participantes" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__listaequi__idEqu__4F12BBB9" Association="Self.FK__listaequi__idEqu__4F12BBB9">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="listaequipos" EntitySet="listaequipos" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(bdstModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(bdstModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="usp_actividades_listar_all" ReturnType="Collection(bdstModel.usp_actividades_listar_all_Result)" />
+    <FunctionImport Name="usp_actualiza_participante">
+      <Parameter Name="ap_paterno" Mode="In" Type="String" />
+      <Parameter Name="ap_materno" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="dirrecion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actualizar_actividad">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actualizar_usuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_BusquedaActividadforDescripcion" ReturnType="Collection(bdstModel.usp_BusquedaActividadforDescripcion_Result)">
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_BusquedaActividadforFecha" ReturnType="Collection(bdstModel.usp_BusquedaActividadforFecha_Result)">
+      <Parameter Name="fec1" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_eliminar_actividad">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_eliminar_participante">
+      <Parameter Name="DNI" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_eliminar_usuario">
+      <Parameter Name="idusuario" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_participantes_listar_all" ReturnType="Collection(bdstModel.usp_participantes_listar_all_Result)" />
+    <FunctionImport Name="usp_participantes_listar_estudiantes" ReturnType="Collection(bdstModel.usp_participantes_listar_estudiantes_Result)" />
+    <FunctionImport Name="usp_participantes_listar_ponentes" ReturnType="Collection(bdstModel.usp_participantes_listar_ponentes_Result)" />
+    <FunctionImport Name="usp_participantes_listar_profesionales" ReturnType="Collection(bdstModel.usp_participantes_listar_profesionales_Result)" />
+    <FunctionImport Name="usp_registrar_actividad">
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_Equipo">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="SO" Mode="In" Type="String" />
+      <Parameter Name="Procesador" Mode="In" Type="String" />
+      <Parameter Name="RAM" Mode="In" Type="String" />
+      <Parameter Name="TMADRE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_participante">
+      <Parameter Name="ap_paterno" Mode="In" Type="String" />
+      <Parameter Name="ap_materno" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="carrera" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_usuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_usuarios_listar_all" ReturnType="Collection(bdstModel.usp_usuarios_listar_all_Result)" />
+    <FunctionImport Name="usp_ValidaUsuario" ReturnType="Collection(bdstModel.usp_ValidaUsuario_Result)">
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Clave" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_actividades_listar_all_Result">
+    <Property Type="Int32" Name="idactividad" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="idlistaeq" Nullable="true" />
+    <Property Type="Int32" Name="idasistencias" Nullable="true" />
+    <Property Type="Int32" Name="idsala" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_BusquedaActividadforDescripcion_Result">
+    <Property Type="Int32" Name="idactividad" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="idlistaeq" Nullable="true" />
+    <Property Type="Int32" Name="idasistencias" Nullable="true" />
+    <Property Type="Int32" Name="idsala" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_BusquedaActividadforFecha_Result">
+    <Property Type="Int32" Name="idactividad" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="idlistaeq" Nullable="true" />
+    <Property Type="Int32" Name="idasistencias" Nullable="true" />
+    <Property Type="Int32" Name="idsala" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="usp_participantes_listar_all_Result">
+    <Property Type="Int32" Name="idparticipante" Nullable="false" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_participantes_listar_estudiantes_Result">
+    <Property Type="Int32" Name="idparticipante" Nullable="false" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_participantes_listar_ponentes_Result">
+    <Property Type="Int32" Name="idparticipante" Nullable="false" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_participantes_listar_profesionales_Result">
+    <Property Type="Int32" Name="idparticipante" Nullable="false" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_usuarios_listar_all_Result">
+    <Property Type="Int32" Name="idusuario" Nullable="false" />
+    <Property Type="String" Name="usuario" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="clave" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="usp_ValidaUsuario_Result">
+    <Property Type="Int32" Name="idusuario" Nullable="false" />
+    <Property Type="String" Name="usuario" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="clave" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+  </ComplexType>
+</Schema>

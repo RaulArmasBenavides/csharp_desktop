@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdcongresoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="actividades">
+    <Key>
+      <PropertyRef Name="idactividad" />
+    </Key>
+    <Property Name="idactividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="fecha_creacion" Type="date" />
+    <Property Name="rol_creacion" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="idlistaeq" Type="int" />
+    <Property Name="idasistencias" Type="int" />
+    <Property Name="idsala" Type="int" />
+  </EntityType>
+  <EntityType Name="asistencias">
+    <Key>
+      <PropertyRef Name="idasistencias" />
+    </Key>
+    <Property Name="idasistencias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idparticipante" Type="int" />
+  </EntityType>
+  <EntityType Name="Equipo">
+    <Key>
+      <PropertyRef Name="idEquipo" />
+    </Key>
+    <Property Name="idEquipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" MaxLength="20" />
+    <Property Name="SO" Type="nchar" MaxLength="10" />
+    <Property Name="Procesador" Type="nchar" MaxLength="30" />
+    <Property Name="RAM" Type="nchar" MaxLength="10" />
+    <Property Name="TarjetaMadre" Type="nchar" MaxLength="10" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="listaequipos">
+    <Key>
+      <PropertyRef Name="idlistaeq" />
+    </Key>
+    <Property Name="idlistaeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="idEquipo" Type="int" />
+  </EntityType>
+  <EntityType Name="participantes">
+    <Key>
+      <PropertyRef Name="idparticipante" />
+    </Key>
+    <Property Name="idparticipante" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ap_paterno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ap_materno" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="telefono" Type="nchar" MaxLength="20" />
+    <Property Name="sexo" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="correo" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="DNI" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="carrera" Type="nvarchar" MaxLength="80" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="80" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="tipo_participante" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sala">
+    <Key>
+      <PropertyRef Name="idsala" />
+    </Key>
+    <Property Name="idsala" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="ubicacion" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="capacidad" Type="int" />
+    <Property Name="fecha_creacion" Type="date" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="rol_creacion" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="nchar" MaxLength="10" />
+    <Property Name="clave" Type="nchar" MaxLength="10" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <Association Name="FK__actividad__idasi__54CB950F">
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asistencias">
+        <PropertyRef Name="idasistencias" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idasistencias" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__actividad__idlis__53D770D6">
+    <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="listaequipos">
+        <PropertyRef Name="idlistaeq" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idlistaeq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__actividad__idsal__55BFB948">
+    <End Role="sala" Type="Self.sala" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sala">
+        <PropertyRef Name="idsala" />
+      </Principal>
+      <Dependent Role="actividades">
+        <PropertyRef Name="idsala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__asistenci__idpar__40C49C62">
+    <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="participantes">
+        <PropertyRef Name="idparticipante" />
+      </Principal>
+      <Dependent Role="asistencias">
+        <PropertyRef Name="idparticipante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__listaequi__idEqu__4F12BBB9">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="idEquipo" />
+      </Principal>
+      <Dependent Role="listaequipos">
+        <PropertyRef Name="idEquipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_actividades_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_actualiza_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
+    <Parameter Name="ap_materno" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="telefono" Type="nchar" Mode="In" />
+    <Parameter Name="sexo" Type="nchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nchar" Mode="In" />
+    <Parameter Name="dirrecion" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipo" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_actualizar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="nchar" Mode="In" />
+    <Parameter Name="clave" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_BusquedaActividadforDescripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_BusquedaActividadforFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fec1" Type="date" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DNI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idusuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_participantes_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_participantes_listar_estudiantes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_participantes_listar_ponentes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_participantes_listar_profesionales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_registrar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="rol_creacion" Type="nchar" Mode="In" />
+    <Parameter Name="idasistencias" Type="int" Mode="In" />
+    <Parameter Name="idlistaeq" Type="int" Mode="In" />
+    <Parameter Name="idsala" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_registrar_Equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="SO" Type="nvarchar" Mode="In" />
+    <Parameter Name="Procesador" Type="nvarchar" Mode="In" />
+    <Parameter Name="RAM" Type="nvarchar" Mode="In" />
+    <Parameter Name="TMADRE" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="usp_registrar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
+    <Parameter Name="ap_materno" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="telefono" Type="nchar" Mode="In" />
+    <Parameter Name="sexo" Type="nchar" Mode="In" />
+    <Parameter Name="correo" Type="nvarchar" Mode="In" />
+    <Parameter Name="DNI" Type="nchar" Mode="In" />
+    <Parameter Name="carrera" Type="nvarchar" Mode="In" />
+    <Parameter Name="direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipo" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_registrar_sala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="ubicacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacidad" Type="int" Mode="In" />
+    <Parameter Name="rol_creacion" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_registrar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usuario" Type="nchar" Mode="In" />
+    <Parameter Name="clave" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_salas_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_usuarios_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_ValidaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="Clave" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="bdcongresoModelStoreContainer">
+    <EntitySet Name="actividades" EntityType="Self.actividades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="asistencias" EntityType="Self.asistencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipo" EntityType="Self.Equipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="listaequipos" EntityType="Self.listaequipos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="participantes" EntityType="Self.participantes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sala" EntityType="Self.sala" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__actividad__idasi__54CB950F" Association="Self.FK__actividad__idasi__54CB950F">
+      <End Role="asistencias" EntitySet="asistencias" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__actividad__idlis__53D770D6" Association="Self.FK__actividad__idlis__53D770D6">
+      <End Role="listaequipos" EntitySet="listaequipos" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__actividad__idsal__55BFB948" Association="Self.FK__actividad__idsal__55BFB948">
+      <End Role="sala" EntitySet="sala" />
+      <End Role="actividades" EntitySet="actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK__asistenci__idpar__40C49C62" Association="Self.FK__asistenci__idpar__40C49C62">
+      <End Role="participantes" EntitySet="participantes" />
+      <End Role="asistencias" EntitySet="asistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK__listaequi__idEqu__4F12BBB9" Association="Self.FK__listaequi__idEqu__4F12BBB9">
+      <End Role="Equipo" EntitySet="Equipo" />
+      <End Role="listaequipos" EntitySet="listaequipos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
