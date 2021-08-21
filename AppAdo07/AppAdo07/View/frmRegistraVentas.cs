@@ -103,10 +103,10 @@ namespace AppAdo07.View
             {
                 ve.IdCliente = cboCliente.SelectedValue.ToString();
                 ve.IdEmpleado = (int)cboEmpleado.SelectedValue;
-                ve.Fecha = DateTime.Parse(txtFecha.Text);
+               
                 ve.Monto = decimal.Parse(txtTotal.Text);
                 ve.Item = lista;
-                txtNro.Text = VentaBll.RegistarVenta(ve).ToString();
+                txtNro.Text = VentaBll.RegistrarVenta(ve).ToString();
                 nFactura = int.Parse(txtNro.Text);
                 MessageBox.Show("Venta registrada correctamente", "Registrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

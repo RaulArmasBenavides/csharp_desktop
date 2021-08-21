@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace AppAdo07.Entity
 {
-    public class Venta
+    public class Venta 
     {
         // propiedades
         public int IdVenta { get; set; }
         public string IdCliente { get; set; }
         public int IdEmpleado { get; set; }
-        public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
         public List<Detalle> Item { get; set; }
     }

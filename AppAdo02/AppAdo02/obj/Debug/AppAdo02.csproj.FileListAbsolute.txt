@@ -25,3 +25,6 @@ C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo02\AppA
 C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe.config
 C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.exe
 C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo02\AppAdo02\obj\Debug\AppAdo02.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo02\AppAdo02\bin\Debug\AppAdo02.exe.config
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo02\AppAdo02\obj\Debug\AppAdo02.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo02\AppAdo02\obj\Debug\AppAdo02.pdb

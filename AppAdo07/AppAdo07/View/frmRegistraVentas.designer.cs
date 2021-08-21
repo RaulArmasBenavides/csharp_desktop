@@ -94,6 +94,7 @@
             this.dgdDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgdDetalle.Size = new System.Drawing.Size(473, 176);
             this.dgdDetalle.TabIndex = 40;
+          
             // 
             // Column1
             // 
@@ -168,6 +169,7 @@
             this.txtTotal.Size = new System.Drawing.Size(96, 20);
             this.txtTotal.TabIndex = 38;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        
             // 
             // Label10
             // 
@@ -176,6 +178,7 @@
             this.Label10.Size = new System.Drawing.Size(63, 18);
             this.Label10.TabIndex = 37;
             this.Label10.Text = "Total Venta";
+          
             // 
             // btnCerrar
             // 
@@ -235,6 +238,7 @@
             this.GroupBox2.TabIndex = 32;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Datos del Detalle";
+            
             // 
             // txtSubTotal
             // 
@@ -353,7 +357,8 @@
             this.GroupBox1.Size = new System.Drawing.Size(577, 80);
             this.GroupBox1.TabIndex = 31;
             this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Datos del Venta";
+            this.GroupBox1.Text = "Datos de la Venta";
+          
             // 
             // cboCliente
             // 
@@ -370,6 +375,7 @@
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(160, 21);
             this.cboEmpleado.TabIndex = 2;
+          
             // 
             // txtNro
             // 

@@ -29,13 +29,11 @@ namespace AppAdo07.Model
                     //crear objetos parametros para pasar al sp
                     SqlParameter idcli = new SqlParameter("@IdCliente", t.IdCliente);
                     SqlParameter idemp = new SqlParameter("@IdEmpleado", t.IdEmpleado);
-                    SqlParameter fech = new SqlParameter("@Fecha", t.Fecha);
-                    SqlParameter monto = new SqlParameter("@Monto", t.Monto);
+   
                     //agregar los objetos parametros a la coleccion list
                     lista.Add(idcli);
                     lista.Add(idemp);
-                    lista.Add(fech);
-                    lista.Add(monto);
+           
                     //ejecutar el sp
                     int result = oCon.runTransaccionStore("usp_registra_venta", lista);
                     nroventa = NumeroVenta(); //metodo genera idventa

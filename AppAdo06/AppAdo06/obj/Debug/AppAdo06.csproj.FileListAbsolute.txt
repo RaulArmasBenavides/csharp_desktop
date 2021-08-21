@@ -14,3 +14,6 @@ E:\Program Files\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.pdb
 C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\bin\Debug\AppAdo06.exe.config
 C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.exe
 C:\Users\RAUL\Documents\SistemasUNIProgramación\AdoNet_2017\Demos\AppAdo06\AppAdo06\obj\Debug\AppAdo06.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo06\AppAdo06\bin\Debug\AppAdo06.exe.config
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo06\AppAdo06\obj\Debug\AppAdo06.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo06\AppAdo06\obj\Debug\AppAdo06.pdb

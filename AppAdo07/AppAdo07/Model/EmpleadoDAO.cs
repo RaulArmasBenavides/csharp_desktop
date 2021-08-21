@@ -1,5 +1,4 @@
 ﻿using AppAdo07.Database;
-
 using AppAdo07.Entity;
 using AppAdo07.Service;
 using System;
@@ -17,7 +16,7 @@ namespace AppAdo07.Model
 
         //variables
         Conexion oCon = new Conexion();
-        bool ok;
+    
 
         public bool create(EmpleadoTO t)
         {

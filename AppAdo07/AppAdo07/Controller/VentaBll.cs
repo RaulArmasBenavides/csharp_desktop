@@ -29,7 +29,7 @@ namespace AppAdo07.Controller
             return new VentaDao().ProductoListar();
         }
 
-        public static int RegistarVenta(Venta o)
+        public static int RegistrarVenta(Venta o)
         {
             return new VentaDao().Registrar(o);
         }
