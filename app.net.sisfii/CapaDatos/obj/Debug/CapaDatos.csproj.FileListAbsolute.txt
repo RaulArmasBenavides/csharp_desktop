@@ -53,6 +53,8 @@ C:\Users\RAUL\Documents\rmab\C#\TEST\.NET\appcongreso\app.net.sisfii\CapaDatos\o
 C:\Users\RAUL\Documents\rmab\C#\TEST\.NET\appcongreso\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.Cache
 C:\Users\RAUL\Documents\rmab\C#\TEST\.NET\appcongreso\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.exe
 C:\Users\RAUL\Documents\rmab\C#\TEST\.NET\appcongreso\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.Properties.Resources.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.Cache
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\appcongreso.exe.config
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\appcongreso.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\appcongreso.pdb
@@ -76,7 +78,5 @@ C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\stdole.dll
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.xml
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.Properties.Resources.resources
-C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.Cache
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.pdb

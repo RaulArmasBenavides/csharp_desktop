@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.npdCapacidad = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtubi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboTipoSala = new System.Windows.Forms.ComboBox();
@@ -39,30 +41,29 @@
             this.txtdescrip = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtidentificador = new System.Windows.Forms.TextBox();
+            this.LblBuscar = new System.Windows.Forms.PictureBox();
+            this.txtfiltro = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dgvPonencias = new System.Windows.Forms.DataGridView();
+            this.dgvSalas = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.npdCapacidad = new System.Windows.Forms.NumericUpDown();
+            this.txtidsala = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPonencias)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.txtidentificador);
+            this.groupBox1.Controls.Add(this.LblBuscar);
+            this.groupBox1.Controls.Add(this.txtfiltro);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(45, 26);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -93,6 +94,23 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
+            // 
+            // npdCapacidad
+            // 
+            this.npdCapacidad.Location = new System.Drawing.Point(161, 144);
+            this.npdCapacidad.Name = "npdCapacidad";
+            this.npdCapacidad.Size = new System.Drawing.Size(200, 22);
+            this.npdCapacidad.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 144);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Capacidad";
             // 
             // txtubi
             // 
@@ -178,24 +196,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripción";
             // 
-            // pictureBox1
+            // LblBuscar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(332, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.LblBuscar.Image = ((System.Drawing.Image)(resources.GetObject("LblBuscar.Image")));
+            this.LblBuscar.Location = new System.Drawing.Point(332, 43);
+            this.LblBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.LblBuscar.Name = "LblBuscar";
+            this.LblBuscar.Size = new System.Drawing.Size(24, 24);
+            this.LblBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LblBuscar.TabIndex = 2;
+            this.LblBuscar.TabStop = false;
+            this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click);
             // 
-            // txtidentificador
+            // txtfiltro
             // 
-            this.txtidentificador.Location = new System.Drawing.Point(133, 44);
-            this.txtidentificador.Margin = new System.Windows.Forms.Padding(4);
-            this.txtidentificador.Name = "txtidentificador";
-            this.txtidentificador.Size = new System.Drawing.Size(189, 22);
-            this.txtidentificador.TabIndex = 1;
+            this.txtfiltro.Location = new System.Drawing.Point(133, 44);
+            this.txtfiltro.Margin = new System.Windows.Forms.Padding(4);
+            this.txtfiltro.Name = "txtfiltro";
+            this.txtfiltro.Size = new System.Drawing.Size(189, 22);
+            this.txtfiltro.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -209,15 +228,16 @@
             this.comboBox1.Size = new System.Drawing.Size(95, 24);
             this.comboBox1.TabIndex = 0;
             // 
-            // dgvPonencias
+            // dgvSalas
             // 
-            this.dgvPonencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPonencias.Location = new System.Drawing.Point(532, 13);
-            this.dgvPonencias.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvPonencias.Name = "dgvPonencias";
-            this.dgvPonencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPonencias.Size = new System.Drawing.Size(659, 362);
-            this.dgvPonencias.TabIndex = 3;
+            this.dgvSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSalas.Location = new System.Drawing.Point(532, 13);
+            this.dgvSalas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSalas.Name = "dgvSalas";
+            this.dgvSalas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSalas.Size = new System.Drawing.Size(659, 362);
+            this.dgvSalas.TabIndex = 3;
+            this.dgvSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalas_CellContentClick);
             // 
             // groupBox2
             // 
@@ -284,6 +304,7 @@
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnAgregar
             // 
@@ -301,30 +322,21 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label5
+            // txtidsala
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 144);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Capacidad";
-            // 
-            // npdCapacidad
-            // 
-            this.npdCapacidad.Location = new System.Drawing.Point(161, 144);
-            this.npdCapacidad.Name = "npdCapacidad";
-            this.npdCapacidad.Size = new System.Drawing.Size(200, 22);
-            this.npdCapacidad.TabIndex = 11;
+            this.txtidsala.Location = new System.Drawing.Point(88, 409);
+            this.txtidsala.Name = "txtidsala";
+            this.txtidsala.Size = new System.Drawing.Size(100, 22);
+            this.txtidsala.TabIndex = 5;
             // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1225, 549);
+            this.Controls.Add(this.txtidsala);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.dgvPonencias);
+            this.Controls.Add(this.dgvSalas);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSala";
@@ -333,10 +345,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPonencias)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSalas)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,10 +362,10 @@
         private System.Windows.Forms.TextBox txtdescrip;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtidentificador;
+        private System.Windows.Forms.PictureBox LblBuscar;
+        private System.Windows.Forms.TextBox txtfiltro;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dgvPonencias;
+        private System.Windows.Forms.DataGridView dgvSalas;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnActualizar;
@@ -365,5 +377,6 @@
         private System.Windows.Forms.TextBox txtubi;
         private System.Windows.Forms.NumericUpDown npdCapacidad;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtidsala;
     }
 }

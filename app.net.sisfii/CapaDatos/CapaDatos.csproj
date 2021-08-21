@@ -121,6 +121,9 @@
     <Compile Include="EF\usp_BusquedaActividadforFecha_Result.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\usp_participantes_datos_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\usp_participantes_listar_all_Result.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -134,6 +137,9 @@
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\usp_salas_listar_all_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\usp_sala_datos_Result.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\usp_sala_listar_all_Result.cs">

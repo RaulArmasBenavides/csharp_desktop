@@ -226,6 +226,9 @@
   <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idusuario" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="usp_participantes_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DNI" Type="nchar" Mode="In" />
+  </Function>
   <Function Name="usp_participantes_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_participantes_listar_estudiantes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_participantes_listar_ponentes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -261,10 +264,14 @@
     <Parameter Name="ubicacion" Type="nvarchar" Mode="In" />
     <Parameter Name="capacidad" Type="int" Mode="In" />
     <Parameter Name="rol_creacion" Type="nchar" Mode="In" />
+    <Parameter Name="tipo_Sala" Type="char" Mode="In" />
   </Function>
   <Function Name="usp_registrar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="usuario" Type="nchar" Mode="In" />
     <Parameter Name="clave" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_sala_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="usp_sala_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_usuarios_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />

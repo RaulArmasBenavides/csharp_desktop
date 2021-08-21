@@ -405,7 +405,7 @@ namespace appcongreso.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ValidaUsuario_Result>("usp_ValidaUsuario", usuarioParameter, claveParameter);
         }
     
-        public virtual int usp_registrar_sala(string nombre, string ubicacion, Nullable<int> capacidad, string rol_creacion)
+        public virtual int usp_registrar_sala(string nombre, string ubicacion, Nullable<int> capacidad, string rol_creacion, string tipo_Sala)
         {
             var nombreParameter = nombre != null ?
                 new ObjectParameter("nombre", nombre) :
@@ -423,7 +423,11 @@ namespace appcongreso.EF
                 new ObjectParameter("rol_creacion", rol_creacion) :
                 new ObjectParameter("rol_creacion", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_sala", nombreParameter, ubicacionParameter, capacidadParameter, rol_creacionParameter);
+            var tipo_SalaParameter = tipo_Sala != null ?
+                new ObjectParameter("tipo_Sala", tipo_Sala) :
+                new ObjectParameter("tipo_Sala", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_sala", nombreParameter, ubicacionParameter, capacidadParameter, rol_creacionParameter, tipo_SalaParameter);
         }
     
         public virtual ObjectResult<usp_salas_listar_all_Result> usp_salas_listar_all()
@@ -468,6 +472,24 @@ namespace appcongreso.EF
                 new ObjectParameter("idsala", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_sala", idsalaParameter);
+        }
+    
+        public virtual ObjectResult<usp_sala_datos_Result> usp_sala_datos(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_sala_datos_Result>("usp_sala_datos", nombreParameter);
+        }
+    
+        public virtual ObjectResult<usp_participantes_datos_Result> usp_participantes_datos(string dNI)
+        {
+            var dNIParameter = dNI != null ?
+                new ObjectParameter("DNI", dNI) :
+                new ObjectParameter("DNI", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_participantes_datos_Result>("usp_participantes_datos", dNIParameter);
         }
     }
 }

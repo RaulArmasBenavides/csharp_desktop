@@ -33,7 +33,7 @@ namespace CapaDatos.View
             else
             {
                 procesar(1);
-                //listaParticipantes();
+                listaSalas();
             }
         }
 
@@ -65,15 +65,15 @@ namespace CapaDatos.View
                         msg = "Sala registrado con éxito";
                         break;
                     case 2:
-                     //   obj.SalaActualizar(leerSala());
+                        obj.SalaActualizar(leerSala());
                         msg = "Sala actualizado con éxito";
                         break;
                     case 3:
-                        //obj.SalaEliminar(leerSala2());
+                        obj.SalaEliminar(leerSala());
                         msg = "Sala eliminado con éxito";
                         break;
                     case 4:
-                        //consultarProducto();
+                        consultarSala();
                         return;
                 }
                 MessageBox.Show(msg, "exito");
@@ -89,8 +89,12 @@ namespace CapaDatos.View
         private usp_sala_listar_all_Result leerSala()
         {
             var pro = new usp_sala_listar_all_Result();
+            if(!txtidsala.Text.Equals(""))
+            pro.idsala = Convert.ToInt32(txtidsala.Text.ToString());
             pro.nombre = txtdescrip.Text;
-             
+            pro.tipo_sala = cboTipoSala.Text;
+            pro.capacidad = (int)npdCapacidad.Value;
+            //pro.IdCategoría = (int)cboCategoria.SelectedValue;
             pro.rol_creacion = "SGIT";
             //pro.ap_paterno = txtappat.Text;
             //pro.ap_materno = txtapmat.Text;
@@ -118,6 +122,65 @@ namespace CapaDatos.View
                 procesar(3);
                
             }
+        }
+
+ 
+
+        private void listaSalas()
+        {
+            dgvSalas.DataSource = obj.SalaListar();
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro que quiere actualizar esta sala?", "",
+    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                procesar(2);
+                listaSalas();
+            }
+        }
+
+        private void dgvSalas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LblBuscar_Click(object sender, EventArgs e)
+        {
+            procesar(4);
+        }
+
+
+        private void consultarSala()
+        {
+            var pro = obj.SalaBuscar(leerNombreSalaBuscar());
+            if (pro != null)
+            {
+                txtdescrip.Text = pro.nombre;
+                //txtPrecio.Text = pro.PrecioUnidad.ToString();
+                //cboProveedor.SelectedValue = pro.IdProveedor;
+                //cboCategoria.SelectedValue = pro.IdCategoría;
+                //numCantidad.Value = (int)pro.UnidadesEnExistencia;
+            }
+            else
+            {
+                MessageBox.Show("Esta sala no se encuentra registrada o no existe", "Aviso");
+                txtfiltro.SelectAll();
+                txtfiltro.Focus();
+            }
+        }
+
+        usp_sala_listar_all_Result leerNombreSalaBuscar()
+        {
+            usp_sala_listar_all_Result pro = new usp_sala_listar_all_Result();
+            pro.nombre = txtfiltro.Text;
+            return pro;
         }
     }
 }
