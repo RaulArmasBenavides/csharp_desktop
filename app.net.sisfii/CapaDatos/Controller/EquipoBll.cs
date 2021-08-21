@@ -8,5 +8,6 @@ namespace appcongreso.Controller
 {
     public class EquipoBll
     {
+
     }
 }

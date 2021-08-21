@@ -1,4 +1,6 @@
-﻿using System;
+﻿using appcongreso.Controller;
+using appcongreso.EF;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,10 @@ namespace CapaDatos.View
 {
     public partial class FrmSala : Form
     {
+        bdcongresoEntities c = new bdcongresoEntities();
+
+        // INSTANCIAR OBJETO DE LA CLASE ProductoBll capa de negocio 
+        SalaBll obj = new SalaBll();
         public FrmSala()
         {
             InitializeComponent();
@@ -35,6 +41,45 @@ namespace CapaDatos.View
         private void btnImprimir_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void procesar(int opcion)
+        {
+            string msg = "";
+            try
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        obj.SalaAdicionar(leerSala());
+                        msg = "Sala registrado con éxito";
+                        break;
+                    case 2:
+                        obj.SalaActualizar(leerSala());
+                        msg = "Sala actualizado con éxito";
+                        break;
+                    case 3:
+                        obj.SalaEliminar(leerSala2());
+                        msg = "Sala eliminado con éxito";
+                        break;
+                    case 4:
+                        //consultarProducto();
+                        return;
+                }
+                MessageBox.Show(msg, "exito");
+                listaSalas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "error");
+            }
+
+        }
+
+        private object leerSala()
+        {
+            throw new NotImplementedException();
         }
     }
 }

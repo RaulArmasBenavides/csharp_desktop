@@ -10,8 +10,7 @@ namespace CapaPresentacion
     {
         public Inicio()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)

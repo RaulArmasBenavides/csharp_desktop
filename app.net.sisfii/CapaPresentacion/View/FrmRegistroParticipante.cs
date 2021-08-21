@@ -59,7 +59,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show(ex.Message, "error");
             }
-
         }
 
         private usp_participantes_listar_all_Result leerParticipante()
@@ -84,6 +83,8 @@ namespace CapaPresentacion
             //pro.UnidadesEnExistencia = Convert.ToInt16(numCantidad.Value);
             return pro;
         }
+
+
         private usp_participantes_listar_all_Result leerParticipante2()
         {
             //esta funcion sirve para encontrar a un objeto desde la grilla
