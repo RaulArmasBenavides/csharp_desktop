@@ -46,6 +46,8 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtubi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +72,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtubi);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.comboBox2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.dtFecha);
@@ -80,7 +84,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(389, 229);
+            this.groupBox3.Size = new System.Drawing.Size(396, 258);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
@@ -91,7 +95,7 @@
             this.comboBox2.Items.AddRange(new object[] {
             "Descripcion",
             "Fecha"});
-            this.comboBox2.Location = new System.Drawing.Point(161, 69);
+            this.comboBox2.Location = new System.Drawing.Point(161, 105);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 24);
@@ -100,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 69);
+            this.label1.Location = new System.Drawing.Point(32, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 17);
@@ -116,7 +120,7 @@
             this.dtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(161, 112);
+            this.dtFecha.Location = new System.Drawing.Point(161, 141);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(200, 22);
@@ -124,7 +128,7 @@
             // 
             // txtdescrip
             // 
-            this.txtdescrip.Location = new System.Drawing.Point(161, 152);
+            this.txtdescrip.Location = new System.Drawing.Point(161, 33);
             this.txtdescrip.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescrip.Name = "txtdescrip";
             this.txtdescrip.Size = new System.Drawing.Size(200, 22);
@@ -133,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 112);
+            this.label3.Location = new System.Drawing.Point(32, 146);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 17);
@@ -143,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 155);
+            this.label2.Location = new System.Drawing.Point(32, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
@@ -272,6 +276,24 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ubicación";
+            // 
+            // txtubi
+            // 
+            this.txtubi.Location = new System.Drawing.Point(161, 70);
+            this.txtubi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtubi.Name = "txtubi";
+            this.txtubi.Size = new System.Drawing.Size(200, 22);
+            this.txtubi.TabIndex = 9;
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,5 +336,7 @@
         public System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtubi;
     }
 }

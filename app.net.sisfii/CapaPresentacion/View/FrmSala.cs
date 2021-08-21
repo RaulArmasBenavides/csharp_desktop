@@ -56,11 +56,11 @@ namespace CapaDatos.View
                         msg = "Sala registrado con éxito";
                         break;
                     case 2:
-                        obj.SalaActualizar(leerSala());
+                     //   obj.SalaActualizar(leerSala());
                         msg = "Sala actualizado con éxito";
                         break;
                     case 3:
-                        obj.SalaEliminar(leerSala2());
+                        //obj.SalaEliminar(leerSala2());
                         msg = "Sala eliminado con éxito";
                         break;
                     case 4:
@@ -68,7 +68,7 @@ namespace CapaDatos.View
                         return;
                 }
                 MessageBox.Show(msg, "exito");
-                listaSalas();
+                //listaSalas();
             }
             catch (Exception ex)
             {
