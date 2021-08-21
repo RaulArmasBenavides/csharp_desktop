@@ -49,7 +49,7 @@ namespace CapaPresentacion
                         msg = "Participante eliminado con éxito";
                         break;
                     case 4:
-                        consultarParticipante();
+                        //consultarProducto();
                         return;
                 }
                 MessageBox.Show(msg, "exito");
@@ -89,7 +89,9 @@ namespace CapaPresentacion
         {
             //esta funcion sirve para encontrar a un objeto desde la grilla
             var pro2 = new usp_participantes_listar_all_Result();
+            //  pro2.idactividad = int.Parse(this.dgvActividades.CurrentRow.Cells[0].Value.ToString()); // int.Parse(txtid.Text);
             pro2.idparticipante = int.Parse(this.dgvParticipantes.CurrentRow.Cells[0].Value.ToString()); // int.Parse(txtid.Text)
+           
             pro2.ap_paterno = this.dgvParticipantes.CurrentRow.Cells[1].Value.ToString();
             pro2.ap_materno = this.dgvParticipantes.CurrentRow.Cells[2].Value.ToString();
             pro2.nombre = this.dgvParticipantes.CurrentRow.Cells[3].Value.ToString();
@@ -165,46 +167,9 @@ namespace CapaPresentacion
 
         }
 
-
-
-        private void consultarParticipante()
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var pro = obj.ParticipanteBuscar(leerDNIBuscar());
-            if (pro != null)
-            {
-                txtfiltro.Text = pro.DNI;
-                txtDNI.Text = pro.DNI;
-                txtNombre.Text = pro.nombre;
-                txtapmat.Text = pro.ap_materno;
-                txtapmat.Text = pro.ap_paterno;
-                txtCarrera.Text = pro.carrera;
-                txtCorreo.Text = pro.correo;
-                txtTelefono.Text = pro.telefono;
-                txtDireccion.Text = pro.direccion;
-                
-                //txtPrecio.Text = pro.PrecioUnidad.ToString();
-                //cboProveedor.SelectedValue = pro.IdProveedor;
-                //cboCategoria.SelectedValue = pro.IdCategoría;
-                //numCantidad.Value = (int)pro.UnidadesEnExistencia;
-            }
-            else
-            {
-                MessageBox.Show("Este participante no se encuentra registrado o no existe", "Aviso");
-                txtfiltro.SelectAll();
-                txtfiltro.Focus();
-            }
-        }
 
-        usp_participantes_listar_all_Result leerDNIBuscar()
-        {
-            usp_participantes_listar_all_Result pro = new usp_participantes_listar_all_Result();
-            pro.DNI = txtfiltro.Text;
-            return pro;
-        }
-
-        private void LblBuscar_Click(object sender, EventArgs e)
-        {
-            procesar(4);
         }
     }
 }

@@ -272,37 +272,5 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_eliminar_sala" FunctionName="bdcongresoModel.Store.usp_eliminar_sala" />
-    <FunctionImportMapping FunctionImportName="usp_sala_datos" FunctionName="bdcongresoModel.Store.usp_sala_datos">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="bdcongresoModel.usp_sala_datos_Result">
-          <ScalarProperty Name="idsala" ColumnName="idsala" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
-          <ScalarProperty Name="capacidad" ColumnName="capacidad" />
-          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
-          <ScalarProperty Name="tipo_sala" ColumnName="tipo_sala" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="usp_participantes_datos" FunctionName="bdcongresoModel.Store.usp_participantes_datos">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="bdcongresoModel.usp_participantes_datos_Result">
-          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
-          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
-          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-          <ScalarProperty Name="sexo" ColumnName="sexo" />
-          <ScalarProperty Name="correo" ColumnName="correo" />
-          <ScalarProperty Name="DNI" ColumnName="DNI" />
-          <ScalarProperty Name="carrera" ColumnName="carrera" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="tipo_participante" ColumnName="tipo_participante" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -21,26 +21,7 @@ namespace CapaDatos.Model
 
         public usp_participantes_listar_all_Result find(usp_participantes_listar_all_Result t)
         {
-            usp_participantes_listar_all_Result dato = null;
-            var pro = e.usp_participantes_datos(t.DNI);
-            foreach (var item in pro)
-            {
-                dato = new usp_participantes_listar_all_Result()
-                {
-                    idparticipante = item.idparticipante,
-                    nombre = item.nombre,
-                    ap_paterno = item.ap_paterno,
-                    ap_materno = item.ap_materno,
-                    DNI = item.DNI,
-                    correo = item.correo,
-                    direccion = item.direccion,
-                    tipo_participante = item.tipo_participante,
-                    carrera = item.carrera,
-                    sexo = item.sexo,
-                    telefono = item.telefono
-                };
-            }
-            return dato;
+            throw new NotImplementedException();
         }
 
         public List<usp_participantes_listar_all_Result> readAll()

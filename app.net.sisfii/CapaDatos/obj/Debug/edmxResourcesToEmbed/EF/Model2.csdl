@@ -297,7 +297,6 @@
       <Parameter Name="ubicacion" Mode="In" Type="String" />
       <Parameter Name="capacidad" Mode="In" Type="Int32" />
       <Parameter Name="rol_creacion" Mode="In" Type="String" />
-      <Parameter Name="tipo_Sala" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_salas_listar_all" ReturnType="Collection(bdcongresoModel.usp_salas_listar_all_Result)" />
     <FunctionImport Name="usp_actualiza_sala">
@@ -310,12 +309,6 @@
     <FunctionImport Name="usp_sala_listar_all" ReturnType="Collection(bdcongresoModel.usp_sala_listar_all_Result)" />
     <FunctionImport Name="usp_eliminar_sala">
       <Parameter Name="idsala" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="usp_sala_datos" ReturnType="Collection(bdcongresoModel.usp_sala_datos_Result)">
-      <Parameter Name="nombre" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="usp_participantes_datos" ReturnType="Collection(bdcongresoModel.usp_participantes_datos_Result)">
-      <Parameter Name="DNI" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -445,29 +438,5 @@
     <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
     <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="tipo_sala" Nullable="true" MaxLength="10" />
-  </ComplexType>
-  <ComplexType Name="usp_sala_datos_Result">
-    <Property Type="Int32" Name="idsala" Nullable="false" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
-    <Property Type="String" Name="ubicacion" Nullable="false" MaxLength="80" />
-    <Property Type="Int32" Name="capacidad" Nullable="true" />
-    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
-    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
-    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
-    <Property Type="String" Name="tipo_sala" Nullable="true" MaxLength="10" />
-  </ComplexType>
-  <ComplexType Name="usp_participantes_datos_Result">
-    <Property Type="Int32" Name="idparticipante" Nullable="false" />
-    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
-    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
-    <Property Type="String" Name="telefono" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="sexo" Nullable="false" MaxLength="1" />
-    <Property Type="String" Name="correo" Nullable="false" MaxLength="80" />
-    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
-    <Property Type="String" Name="carrera" Nullable="true" MaxLength="80" />
-    <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
-    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
-    <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
   </ComplexType>
 </Schema>
