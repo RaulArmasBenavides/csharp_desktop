@@ -80,4 +80,3 @@ C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.pdb
-C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
