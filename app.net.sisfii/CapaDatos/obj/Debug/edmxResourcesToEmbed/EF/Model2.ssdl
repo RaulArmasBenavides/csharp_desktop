@@ -68,6 +68,7 @@
     <Property Name="fecha_creacion" Type="date" />
     <Property Name="estado" Type="nchar" MaxLength="2" />
     <Property Name="rol_creacion" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="tipo_sala" Type="char" MaxLength="10" />
   </EntityType>
   <EntityType Name="usuarios">
     <Key>
@@ -191,6 +192,13 @@
     <Parameter Name="dirrecion" Type="nvarchar" Mode="In" />
     <Parameter Name="tipo" Type="nchar" Mode="In" />
   </Function>
+  <Function Name="usp_actualiza_sala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsala" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="ubicacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="capacidad" Type="int" Mode="In" />
+    <Parameter Name="tipo_sala" Type="char" Mode="In" />
+  </Function>
   <Function Name="usp_actualizar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
@@ -211,6 +219,9 @@
   </Function>
   <Function Name="usp_eliminar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DNI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="usp_eliminar_sala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idsala" Type="int" Mode="In" />
   </Function>
   <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idusuario" Type="varchar" Mode="In" />
@@ -255,7 +266,7 @@
     <Parameter Name="usuario" Type="nchar" Mode="In" />
     <Parameter Name="clave" Type="nchar" Mode="In" />
   </Function>
-  <Function Name="usp_salas_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="usp_sala_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_usuarios_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_ValidaUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Usuario" Type="nvarchar" Mode="In" />

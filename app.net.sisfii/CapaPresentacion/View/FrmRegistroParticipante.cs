@@ -145,7 +145,7 @@ namespace CapaPresentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estás seguro que quiere eliminar este participante?", "",
+            if (MessageBox.Show("¿Estás seguro que desea desactivar este participante?", "",
        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
@@ -163,6 +163,11 @@ namespace CapaPresentacion
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

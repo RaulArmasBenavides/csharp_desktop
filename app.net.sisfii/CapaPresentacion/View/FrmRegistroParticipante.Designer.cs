@@ -71,7 +71,7 @@
             // 
             this.dgvParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParticipantes.Location = new System.Drawing.Point(408, 15);
-            this.dgvParticipantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvParticipantes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvParticipantes.Name = "dgvParticipantes";
             this.dgvParticipantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParticipantes.Size = new System.Drawing.Size(735, 345);
@@ -88,9 +88,9 @@
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox2.Location = new System.Drawing.Point(408, 367);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(735, 120);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
@@ -102,7 +102,7 @@
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.Location = new System.Drawing.Point(635, 23);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(92, 74);
             this.btnImprimir.TabIndex = 5;
@@ -118,7 +118,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(535, 23);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(92, 74);
             this.btnEliminar.TabIndex = 4;
@@ -134,7 +134,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.Location = new System.Drawing.Point(435, 23);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(92, 74);
             this.btnActualizar.TabIndex = 3;
@@ -150,7 +150,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(335, 23);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 74);
             this.btnAgregar.TabIndex = 2;
@@ -167,9 +167,9 @@
             this.groupBox1.Controls.Add(this.txtidentificador);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(29, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(371, 480);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -198,9 +198,9 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(29, 76);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(320, 377);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
@@ -214,7 +214,7 @@
             "M",
             "F"});
             this.cmbSexo.Location = new System.Drawing.Point(191, 164);
-            this.cmbSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(103, 24);
             this.cmbSexo.TabIndex = 21;
@@ -228,7 +228,7 @@
             "PONENTE",
             "PROFESIONAL"});
             this.cmbTipo.Location = new System.Drawing.Point(191, 329);
-            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(103, 24);
             this.cmbTipo.TabIndex = 20;
@@ -236,7 +236,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(133, 297);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(160, 22);
             this.txtDireccion.TabIndex = 19;
@@ -244,7 +244,7 @@
             // txtCarrera
             // 
             this.txtCarrera.Location = new System.Drawing.Point(133, 265);
-            this.txtCarrera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCarrera.Margin = new System.Windows.Forms.Padding(4);
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(160, 22);
             this.txtCarrera.TabIndex = 18;
@@ -252,7 +252,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(133, 233);
-            this.txtDNI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(160, 22);
             this.txtDNI.TabIndex = 17;
@@ -260,7 +260,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(133, 197);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(160, 22);
             this.txtCorreo.TabIndex = 16;
@@ -268,7 +268,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(133, 132);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(160, 22);
             this.txtTelefono.TabIndex = 15;
@@ -356,7 +356,7 @@
             // txtapmat
             // 
             this.txtapmat.Location = new System.Drawing.Point(133, 97);
-            this.txtapmat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtapmat.Margin = new System.Windows.Forms.Padding(4);
             this.txtapmat.Name = "txtapmat";
             this.txtapmat.Size = new System.Drawing.Size(160, 22);
             this.txtapmat.TabIndex = 6;
@@ -364,7 +364,7 @@
             // txtappat
             // 
             this.txtappat.Location = new System.Drawing.Point(133, 65);
-            this.txtappat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtappat.Margin = new System.Windows.Forms.Padding(4);
             this.txtappat.Name = "txtappat";
             this.txtappat.Size = new System.Drawing.Size(160, 22);
             this.txtappat.TabIndex = 5;
@@ -372,7 +372,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(133, 27);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(160, 22);
             this.txtNombre.TabIndex = 4;
@@ -401,17 +401,18 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(332, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtidentificador
             // 
             this.txtidentificador.Location = new System.Drawing.Point(133, 44);
-            this.txtidentificador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtidentificador.Margin = new System.Windows.Forms.Padding(4);
             this.txtidentificador.Name = "txtidentificador";
             this.txtidentificador.Size = new System.Drawing.Size(189, 22);
             this.txtidentificador.TabIndex = 1;
@@ -423,7 +424,7 @@
             "Descripcion",
             "Fecha"});
             this.comboBox1.Location = new System.Drawing.Point(29, 43);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 24);
             this.comboBox1.TabIndex = 0;
@@ -436,7 +437,7 @@
             this.Controls.Add(this.dgvParticipantes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistroParticipante";
             this.Text = ":: REGISTRO DE PARTICIPANTES::";
             this.Load += new System.EventHandler(this.FrmRegistroParticipante_Load);

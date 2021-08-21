@@ -78,6 +78,7 @@
     <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
     <Property Name="rol_creacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="sala" ToRole="actividades" />
+    <Property Name="tipo_sala" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="usuarios">
     <Key>
@@ -298,6 +299,17 @@
       <Parameter Name="rol_creacion" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_salas_listar_all" ReturnType="Collection(bdcongresoModel.usp_salas_listar_all_Result)" />
+    <FunctionImport Name="usp_actualiza_sala">
+      <Parameter Name="idsala" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="ubicacion" Mode="In" Type="String" />
+      <Parameter Name="capacidad" Mode="In" Type="Int32" />
+      <Parameter Name="tipo_sala" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_sala_listar_all" ReturnType="Collection(bdcongresoModel.usp_sala_listar_all_Result)" />
+    <FunctionImport Name="usp_eliminar_sala">
+      <Parameter Name="idsala" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -416,5 +428,15 @@
     <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
     <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
     <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_sala_listar_all_Result">
+    <Property Type="Int32" Name="idsala" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="ubicacion" Nullable="false" MaxLength="80" />
+    <Property Type="Int32" Name="capacidad" Nullable="true" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="tipo_sala" Nullable="true" MaxLength="10" />
   </ComplexType>
 </Schema>

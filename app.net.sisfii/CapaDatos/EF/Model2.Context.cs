@@ -430,5 +430,44 @@ namespace appcongreso.EF
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_salas_listar_all_Result>("usp_salas_listar_all");
         }
+    
+        public virtual int usp_actualiza_sala(Nullable<int> idsala, string nombre, string ubicacion, Nullable<int> capacidad, string tipo_sala)
+        {
+            var idsalaParameter = idsala.HasValue ?
+                new ObjectParameter("idsala", idsala) :
+                new ObjectParameter("idsala", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var ubicacionParameter = ubicacion != null ?
+                new ObjectParameter("ubicacion", ubicacion) :
+                new ObjectParameter("ubicacion", typeof(string));
+    
+            var capacidadParameter = capacidad.HasValue ?
+                new ObjectParameter("capacidad", capacidad) :
+                new ObjectParameter("capacidad", typeof(int));
+    
+            var tipo_salaParameter = tipo_sala != null ?
+                new ObjectParameter("tipo_sala", tipo_sala) :
+                new ObjectParameter("tipo_sala", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actualiza_sala", idsalaParameter, nombreParameter, ubicacionParameter, capacidadParameter, tipo_salaParameter);
+        }
+    
+        public virtual ObjectResult<usp_sala_listar_all_Result> usp_sala_listar_all()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_sala_listar_all_Result>("usp_sala_listar_all");
+        }
+    
+        public virtual int usp_eliminar_sala(Nullable<int> idsala)
+        {
+            var idsalaParameter = idsala.HasValue ?
+                new ObjectParameter("idsala", idsala) :
+                new ObjectParameter("idsala", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_sala", idsalaParameter);
+        }
     }
 }

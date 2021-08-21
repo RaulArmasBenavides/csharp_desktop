@@ -25,7 +25,16 @@ namespace CapaDatos.View
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("¿Está seguro que desea registrar esta sala ?", "",
+                  MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                procesar(1);
+                //listaParticipantes();
+            }
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -77,9 +86,38 @@ namespace CapaDatos.View
 
         }
 
-        private object leerSala()
+        private usp_sala_listar_all_Result leerSala()
         {
-            throw new NotImplementedException();
+            var pro = new usp_sala_listar_all_Result();
+            pro.nombre = txtdescrip.Text;
+             
+            pro.rol_creacion = "SGIT";
+            //pro.ap_paterno = txtappat.Text;
+            //pro.ap_materno = txtapmat.Text;
+            //pro.telefono = txtTelefono.Text;
+            //pro.correo = txtCorreo.Text;
+            //pro.DNI = txtDNI.Text;
+            //pro.sexo = cmbSexo.Text;
+            //pro.carrera = txtCarrera.Text;
+            //pro.direccion = txtDireccion.Text;
+            //pro.tipo_participante = cmbTipo.Text;
+            return pro;
+        }
+        
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estás seguro que desea desactivar esta sala?", "",
+     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                procesar(3);
+               
+            }
         }
     }
 }

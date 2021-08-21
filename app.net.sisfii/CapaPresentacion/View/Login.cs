@@ -55,7 +55,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Usuario o Password es Incorrecto", "error");
+                MessageBox.Show("Usuario o Password es Incorrecto", "ERROR");
                 txtUsuario.Clear();
                 txtClave.Clear();
                 txtUsuario.Focus();

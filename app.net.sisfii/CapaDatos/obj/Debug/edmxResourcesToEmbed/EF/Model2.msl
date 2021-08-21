@@ -66,6 +66,7 @@
     <EntitySetMapping Name="sala">
       <EntityTypeMapping TypeName="bdcongresoModel.sala">
         <MappingFragment StoreEntitySet="sala">
+          <ScalarProperty Name="tipo_sala" ColumnName="tipo_sala" />
           <ScalarProperty Name="idsala" ColumnName="idsala" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
@@ -255,9 +256,10 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_registrar_sala" FunctionName="bdcongresoModel.Store.usp_registrar_sala" />
-    <FunctionImportMapping FunctionImportName="usp_salas_listar_all" FunctionName="bdcongresoModel.Store.usp_salas_listar_all">
+    <FunctionImportMapping FunctionImportName="usp_actualiza_sala" FunctionName="bdcongresoModel.Store.usp_actualiza_sala" />
+    <FunctionImportMapping FunctionImportName="usp_sala_listar_all" FunctionName="bdcongresoModel.Store.usp_sala_listar_all">
       <ResultMapping>
-        <ComplexTypeMapping TypeName="bdcongresoModel.usp_salas_listar_all_Result">
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_sala_listar_all_Result">
           <ScalarProperty Name="idsala" ColumnName="idsala" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
@@ -265,8 +267,10 @@
           <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="tipo_sala" ColumnName="tipo_sala" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_eliminar_sala" FunctionName="bdcongresoModel.Store.usp_eliminar_sala" />
   </EntityContainerMapping>
 </Mapping>

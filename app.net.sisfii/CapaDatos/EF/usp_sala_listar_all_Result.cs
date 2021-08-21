@@ -10,16 +10,9 @@
 namespace appcongreso.EF
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class sala
+    public partial class usp_sala_listar_all_Result
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public sala()
-        {
-            this.actividades = new HashSet<actividades>();
-        }
-    
         public int idsala { get; set; }
         public string nombre { get; set; }
         public string ubicacion { get; set; }
@@ -28,8 +21,5 @@ namespace appcongreso.EF
         public string estado { get; set; }
         public string rol_creacion { get; set; }
         public string tipo_sala { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<actividades> actividades { get; set; }
     }
 }

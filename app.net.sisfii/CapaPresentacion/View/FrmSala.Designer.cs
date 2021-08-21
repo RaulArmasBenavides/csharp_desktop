@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSala));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtubi = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboTipoSala = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.txtdescrip = new System.Windows.Forms.TextBox();
@@ -46,13 +48,14 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtubi = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.npdCapacidad = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonencias)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -72,9 +75,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.npdCapacidad);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txtubi);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.cboTipoSala);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.dtFecha);
             this.groupBox3.Controls.Add(this.txtdescrip);
@@ -89,17 +94,36 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
             // 
-            // comboBox2
+            // txtubi
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Descripcion",
-            "Fecha"});
-            this.comboBox2.Location = new System.Drawing.Point(161, 105);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 5;
+            this.txtubi.Location = new System.Drawing.Point(161, 70);
+            this.txtubi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtubi.Name = "txtubi";
+            this.txtubi.Size = new System.Drawing.Size(200, 22);
+            this.txtubi.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ubicación";
+            // 
+            // cboTipoSala
+            // 
+            this.cboTipoSala.FormattingEnabled = true;
+            this.cboTipoSala.Items.AddRange(new object[] {
+            "L",
+            "S",
+            "A"});
+            this.cboTipoSala.Location = new System.Drawing.Point(161, 105);
+            this.cboTipoSala.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTipoSala.Name = "cboTipoSala";
+            this.cboTipoSala.Size = new System.Drawing.Size(200, 24);
+            this.cboTipoSala.TabIndex = 5;
             // 
             // label1
             // 
@@ -120,7 +144,7 @@
             this.dtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtFecha.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(161, 141);
+            this.dtFecha.Location = new System.Drawing.Point(161, 181);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(200, 22);
@@ -137,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 146);
+            this.label3.Location = new System.Drawing.Point(32, 186);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 17);
@@ -244,6 +268,7 @@
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -276,23 +301,22 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 75);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Ubicación";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(32, 144);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Capacidad";
             // 
-            // txtubi
+            // npdCapacidad
             // 
-            this.txtubi.Location = new System.Drawing.Point(161, 70);
-            this.txtubi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtubi.Name = "txtubi";
-            this.txtubi.Size = new System.Drawing.Size(200, 22);
-            this.txtubi.TabIndex = 9;
+            this.npdCapacidad.Location = new System.Drawing.Point(161, 144);
+            this.npdCapacidad.Name = "npdCapacidad";
+            this.npdCapacidad.Size = new System.Drawing.Size(200, 22);
+            this.npdCapacidad.TabIndex = 11;
             // 
             // FrmSala
             // 
@@ -312,6 +336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonencias)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,8 +360,10 @@
         private System.Windows.Forms.Button btnAgregar;
         public System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboTipoSala;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtubi;
+        private System.Windows.Forms.NumericUpDown npdCapacidad;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -23,7 +23,7 @@ namespace appcongreso.Controller
 
 
         //metodos de persistencia de datos en sqlserver
-        public void SalaAdicionar(usp_salas_listar_all_Result pro)
+        public void SalaAdicionar(usp_sala_listar_all_Result pro)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace appcongreso.Controller
             }
         }
 
-        public void SalaActualizar(usp_salas_listar_all_Result pro)
+        public void SalaActualizar(usp_sala_listar_all_Result pro)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace appcongreso.Controller
             }
         }
 
-        public void SalaEliminar(usp_salas_listar_all_Result pro)
+        public void SalaEliminar(usp_sala_listar_all_Result pro)
         {
             try
             {
@@ -59,12 +59,8 @@ namespace appcongreso.Controller
             }
         }
 
-        public void SalaAdicionar(object v)
-        {
-            throw new NotImplementedException();
-        }
 
-        public usp_salas_listar_all_Result SalaBuscar(usp_salas_listar_all_Result pro)
+        public usp_sala_listar_all_Result SalaBuscar(usp_sala_listar_all_Result pro)
         {
             try
             {
@@ -78,7 +74,7 @@ namespace appcongreso.Controller
 
 
 
-        public List<usp_salas_listar_all_Result> SalaListar()
+        public List<usp_sala_listar_all_Result> SalaListar()
         {
             try
             {
