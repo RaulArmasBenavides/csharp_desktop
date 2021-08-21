@@ -204,6 +204,14 @@
     <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
     <Parameter Name="fecha" Type="date" Mode="In" />
   </Function>
+  <Function Name="usp_actualizar_equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEquipo" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nchar" Mode="In" />
+    <Parameter Name="SO" Type="nchar" Mode="In" />
+    <Parameter Name="Procesador" Type="nchar" Mode="In" />
+    <Parameter Name="RAM" Type="nchar" Mode="In" />
+    <Parameter Name="TarjetaMadre" Type="nchar" Mode="In" />
+  </Function>
   <Function Name="usp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="usuario" Type="nchar" Mode="In" />
     <Parameter Name="clave" Type="nchar" Mode="In" />
@@ -217,6 +225,9 @@
   <Function Name="usp_eliminar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
   </Function>
+  <Function Name="usp_eliminar_Equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idEquipo" Type="int" Mode="In" />
+  </Function>
   <Function Name="usp_eliminar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DNI" Type="varchar" Mode="In" />
   </Function>
@@ -226,6 +237,7 @@
   <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idusuario" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="usp_equipo_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="usp_participantes_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DNI" Type="nchar" Mode="In" />
   </Function>

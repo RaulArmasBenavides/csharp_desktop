@@ -317,6 +317,18 @@
     <FunctionImport Name="usp_participantes_datos" ReturnType="Collection(bdcongresoModel.usp_participantes_datos_Result)">
       <Parameter Name="DNI" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_actualizar_equipo">
+      <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="SO" Mode="In" Type="String" />
+      <Parameter Name="Procesador" Mode="In" Type="String" />
+      <Parameter Name="RAM" Mode="In" Type="String" />
+      <Parameter Name="TarjetaMadre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_equipo_listar_all" ReturnType="Collection(bdcongresoModel.usp_equipo_listar_all_Result)" />
+    <FunctionImport Name="usp_eliminar_Equipo">
+      <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -469,5 +481,14 @@
     <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
     <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
     <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_equipo_listar_all_Result">
+    <Property Type="Int32" Name="idEquipo" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
   </ComplexType>
 </Schema>

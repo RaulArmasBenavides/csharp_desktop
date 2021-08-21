@@ -5,13 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4dfffef6c8c945b18395c3f28af05a89" Name="Diagram1">
-        <EntityTypeShape EntityType="bdcongresoModel.actividades" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.asistencias" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.Equipo" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.listaequipos" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.participantes" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.sala" Width="1.5" PointX="8.375" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.usuarios" Width="1.5" PointX="6.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.actividades" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.asistencias" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.Equipo" Width="1.5" PointX="3.125" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.listaequipos" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.participantes" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.sala" Width="1.5" PointX="9.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.usuarios" Width="1.5" PointX="7.75" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="bdcongresoModel.FK__actividad__idasi__54CB950F" ManuallyRouted="false" />
         <AssociationConnector Association="bdcongresoModel.FK__actividad__idlis__53D770D6" ManuallyRouted="false" />
         <AssociationConnector Association="bdcongresoModel.FK__actividad__idsal__55BFB948" ManuallyRouted="false" />

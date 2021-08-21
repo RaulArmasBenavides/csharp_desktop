@@ -491,5 +491,48 @@ namespace appcongreso.EF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_participantes_datos_Result>("usp_participantes_datos", dNIParameter);
         }
+    
+        public virtual int usp_actualizar_equipo(Nullable<int> idEquipo, string nombre, string sO, string procesador, string rAM, string tarjetaMadre)
+        {
+            var idEquipoParameter = idEquipo.HasValue ?
+                new ObjectParameter("idEquipo", idEquipo) :
+                new ObjectParameter("idEquipo", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var sOParameter = sO != null ?
+                new ObjectParameter("SO", sO) :
+                new ObjectParameter("SO", typeof(string));
+    
+            var procesadorParameter = procesador != null ?
+                new ObjectParameter("Procesador", procesador) :
+                new ObjectParameter("Procesador", typeof(string));
+    
+            var rAMParameter = rAM != null ?
+                new ObjectParameter("RAM", rAM) :
+                new ObjectParameter("RAM", typeof(string));
+    
+            var tarjetaMadreParameter = tarjetaMadre != null ?
+                new ObjectParameter("TarjetaMadre", tarjetaMadre) :
+                new ObjectParameter("TarjetaMadre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actualizar_equipo", idEquipoParameter, nombreParameter, sOParameter, procesadorParameter, rAMParameter, tarjetaMadreParameter);
+        }
+    
+        public virtual ObjectResult<usp_equipo_listar_all_Result> usp_equipo_listar_all()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_equipo_listar_all_Result>("usp_equipo_listar_all");
+        }
+    
+        public virtual int usp_eliminar_Equipo(Nullable<int> idEquipo)
+        {
+            var idEquipoParameter = idEquipo.HasValue ?
+                new ObjectParameter("idEquipo", idEquipo) :
+                new ObjectParameter("idEquipo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_Equipo", idEquipoParameter);
+        }
     }
 }

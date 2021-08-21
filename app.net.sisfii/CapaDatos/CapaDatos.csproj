@@ -121,6 +121,9 @@
     <Compile Include="EF\usp_BusquedaActividadforFecha_Result.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\usp_equipo_listar_all_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\usp_participantes_datos_Result.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>

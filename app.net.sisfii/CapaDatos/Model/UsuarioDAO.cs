@@ -17,8 +17,8 @@ namespace CapaDatos.Model
     {
 
         //clases 
-        SqlCommand cmd;
-        SqlDataReader dr;
+        //SqlCommand cmd;
+        //SqlDataReader dr;
 
         bdcongresoEntities e = new bdcongresoEntities();
         

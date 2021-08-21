@@ -209,6 +209,14 @@
           <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
           <Parameter Name="fecha" Type="date" Mode="In" />
         </Function>
+        <Function Name="usp_actualizar_equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idEquipo" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+          <Parameter Name="SO" Type="nchar" Mode="In" />
+          <Parameter Name="Procesador" Type="nchar" Mode="In" />
+          <Parameter Name="RAM" Type="nchar" Mode="In" />
+          <Parameter Name="TarjetaMadre" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="usuario" Type="nchar" Mode="In" />
           <Parameter Name="clave" Type="nchar" Mode="In" />
@@ -222,6 +230,9 @@
         <Function Name="usp_eliminar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
+        <Function Name="usp_eliminar_Equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idEquipo" Type="int" Mode="In" />
+        </Function>
         <Function Name="usp_eliminar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DNI" Type="varchar" Mode="In" />
         </Function>
@@ -231,6 +242,7 @@
         <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idusuario" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="usp_equipo_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_participantes_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DNI" Type="nchar" Mode="In" />
         </Function>
@@ -632,7 +644,19 @@
           <Parameter Name="nombre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_participantes_datos" ReturnType="Collection(bdcongresoModel.usp_participantes_datos_Result)">
-            <Parameter Name="DNI" Mode="In" Type="String" />
+          <Parameter Name="DNI" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_actualizar_equipo">
+            <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="SO" Mode="In" Type="String" />
+            <Parameter Name="Procesador" Mode="In" Type="String" />
+            <Parameter Name="RAM" Mode="In" Type="String" />
+            <Parameter Name="TarjetaMadre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_equipo_listar_all" ReturnType="Collection(bdcongresoModel.usp_equipo_listar_all_Result)" />
+          <FunctionImport Name="usp_eliminar_Equipo">
+            <Parameter Name="idEquipo" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -786,6 +810,15 @@
           <Property Type="String" Name="direccion" Nullable="true" MaxLength="80" />
           <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
           <Property Type="String" Name="tipo_participante" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_equipo_listar_all_Result">
+          <Property Type="Int32" Name="idEquipo" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1096,6 +1129,21 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_actualizar_equipo" FunctionName="bdcongresoModel.Store.usp_actualizar_equipo" />
+          <FunctionImportMapping FunctionImportName="usp_equipo_listar_all" FunctionName="bdcongresoModel.Store.usp_equipo_listar_all">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_listar_all_Result">
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SO" ColumnName="SO" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_eliminar_Equipo" FunctionName="bdcongresoModel.Store.usp_eliminar_Equipo" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

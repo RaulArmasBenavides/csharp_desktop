@@ -304,5 +304,20 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_actualizar_equipo" FunctionName="bdcongresoModel.Store.usp_actualizar_equipo" />
+    <FunctionImportMapping FunctionImportName="usp_equipo_listar_all" FunctionName="bdcongresoModel.Store.usp_equipo_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_listar_all_Result">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_eliminar_Equipo" FunctionName="bdcongresoModel.Store.usp_eliminar_Equipo" />
   </EntityContainerMapping>
 </Mapping>
