@@ -405,7 +405,7 @@ namespace appcongreso.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ValidaUsuario_Result>("usp_ValidaUsuario", usuarioParameter, claveParameter);
         }
     
-        public virtual int usp_registrar_sala(string nombre, string ubicacion, Nullable<int> capacidad, string rol_creacion, string tipo_Sala)
+        public virtual int usp_registrar_sala(string nombre, string ubicacion, Nullable<int> capacidad, string rol_creacion)
         {
             var nombreParameter = nombre != null ?
                 new ObjectParameter("nombre", nombre) :
@@ -423,11 +423,7 @@ namespace appcongreso.EF
                 new ObjectParameter("rol_creacion", rol_creacion) :
                 new ObjectParameter("rol_creacion", typeof(string));
     
-            var tipo_SalaParameter = tipo_Sala != null ?
-                new ObjectParameter("tipo_Sala", tipo_Sala) :
-                new ObjectParameter("tipo_Sala", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_sala", nombreParameter, ubicacionParameter, capacidadParameter, rol_creacionParameter, tipo_SalaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_sala", nombreParameter, ubicacionParameter, capacidadParameter, rol_creacionParameter);
         }
     
         public virtual ObjectResult<usp_salas_listar_all_Result> usp_salas_listar_all()
@@ -473,6 +469,7 @@ namespace appcongreso.EF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_sala", idsalaParameter);
         }
+<<<<<<< HEAD
     
         public virtual ObjectResult<usp_sala_datos_Result> usp_sala_datos(string nombre)
         {
@@ -534,5 +531,7 @@ namespace appcongreso.EF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_Equipo", idEquipoParameter);
         }
+=======
+>>>>>>> 3eff26bc1a73b94224c86f2404181b1adc4e6dad
     }
 }

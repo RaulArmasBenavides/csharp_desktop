@@ -272,6 +272,7 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_eliminar_sala" FunctionName="bdcongresoModel.Store.usp_eliminar_sala" />
+<<<<<<< HEAD
     <FunctionImportMapping FunctionImportName="usp_sala_datos" FunctionName="bdcongresoModel.Store.usp_sala_datos">
       <ResultMapping>
         <ComplexTypeMapping TypeName="bdcongresoModel.usp_sala_datos_Result">
@@ -319,5 +320,7 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_eliminar_Equipo" FunctionName="bdcongresoModel.Store.usp_eliminar_Equipo" />
+=======
+>>>>>>> 3eff26bc1a73b94224c86f2404181b1adc4e6dad
   </EntityContainerMapping>
 </Mapping>

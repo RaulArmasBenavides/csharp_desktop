@@ -297,7 +297,6 @@
       <Parameter Name="ubicacion" Mode="In" Type="String" />
       <Parameter Name="capacidad" Mode="In" Type="Int32" />
       <Parameter Name="rol_creacion" Mode="In" Type="String" />
-      <Parameter Name="tipo_Sala" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_salas_listar_all" ReturnType="Collection(bdcongresoModel.usp_salas_listar_all_Result)" />
     <FunctionImport Name="usp_actualiza_sala">
@@ -311,6 +310,7 @@
     <FunctionImport Name="usp_eliminar_sala">
       <Parameter Name="idsala" Mode="In" Type="Int32" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="usp_sala_datos" ReturnType="Collection(bdcongresoModel.usp_sala_datos_Result)">
       <Parameter Name="nombre" Mode="In" Type="String" />
     </FunctionImport>
@@ -329,6 +329,8 @@
     <FunctionImport Name="usp_eliminar_Equipo">
       <Parameter Name="idEquipo" Mode="In" Type="Int32" />
     </FunctionImport>
+=======
+>>>>>>> 3eff26bc1a73b94224c86f2404181b1adc4e6dad
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -458,6 +460,7 @@
     <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="tipo_sala" Nullable="true" MaxLength="10" />
   </ComplexType>
+<<<<<<< HEAD
   <ComplexType Name="usp_sala_datos_Result">
     <Property Type="Int32" Name="idsala" Nullable="false" />
     <Property Type="String" Name="nombre" Nullable="false" MaxLength="80" />
@@ -491,4 +494,6 @@
     <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
   </ComplexType>
+=======
+>>>>>>> 3eff26bc1a73b94224c86f2404181b1adc4e6dad
 </Schema>

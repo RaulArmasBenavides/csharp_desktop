@@ -57,14 +57,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.LblBuscar = new System.Windows.Forms.PictureBox();
-            this.txtfiltro = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtidentificador = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipantes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvParticipantes
@@ -163,8 +163,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.LblBuscar);
-            this.groupBox1.Controls.Add(this.txtfiltro);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.txtidentificador);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(29, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -397,25 +397,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // LblBuscar
+            // pictureBox1
             // 
-            this.LblBuscar.Image = ((System.Drawing.Image)(resources.GetObject("LblBuscar.Image")));
-            this.LblBuscar.Location = new System.Drawing.Point(332, 43);
-            this.LblBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.LblBuscar.Name = "LblBuscar";
-            this.LblBuscar.Size = new System.Drawing.Size(24, 24);
-            this.LblBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LblBuscar.TabIndex = 2;
-            this.LblBuscar.TabStop = false;
-            this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(332, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // txtfiltro
+            // txtidentificador
             // 
-            this.txtfiltro.Location = new System.Drawing.Point(133, 44);
-            this.txtfiltro.Margin = new System.Windows.Forms.Padding(4);
-            this.txtfiltro.Name = "txtfiltro";
-            this.txtfiltro.Size = new System.Drawing.Size(189, 22);
-            this.txtfiltro.TabIndex = 1;
+            this.txtidentificador.Location = new System.Drawing.Point(133, 44);
+            this.txtidentificador.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidentificador.Name = "txtidentificador";
+            this.txtidentificador.Size = new System.Drawing.Size(189, 22);
+            this.txtidentificador.TabIndex = 1;
             // 
             // comboBox1
             // 
@@ -447,7 +447,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,8 +466,8 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox LblBuscar;
-        private System.Windows.Forms.TextBox txtfiltro;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtidentificador;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtapmat;
