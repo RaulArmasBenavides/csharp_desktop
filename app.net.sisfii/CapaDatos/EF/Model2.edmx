@@ -23,7 +23,25 @@
             <PropertyRef Name="idasistencias" />
           </Key>
           <Property Name="idasistencias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="idparticipante" Type="int" />
+          <Property Name="codigo" Type="nchar" MaxLength="5" />
+          <Property Name="estado" Type="nchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="detalle_asistencias">
+          <Key>
+            <PropertyRef Name="intdetasis" />
+          </Key>
+          <Property Name="intdetasis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="estado" Type="nchar" MaxLength="2" />
+          <Property Name="DNI" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="codigo" Type="nchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="detalle_list_equipos">
+          <Key>
+            <PropertyRef Name="intdetalleeq" />
+          </Key>
+          <Property Name="intdetalleeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="estado" Type="nchar" MaxLength="2" />
+          <Property Name="idEquipo" Type="int" />
         </EntityType>
         <EntityType Name="Equipo">
           <Key>
@@ -35,7 +53,7 @@
           <Property Name="Procesador" Type="nchar" MaxLength="30" />
           <Property Name="RAM" Type="nchar" MaxLength="10" />
           <Property Name="TarjetaMadre" Type="nchar" MaxLength="10" />
-          <Property Name="estado" Type="nchar" MaxLength="2" />
+          <Property Name="estado" Type="nchar" MaxLength="2" Nullable="false" />
         </EntityType>
         <EntityType Name="listaequipos">
           <Key>
@@ -43,7 +61,6 @@
           </Key>
           <Property Name="idlistaeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="estado" Type="nchar" MaxLength="2" />
-          <Property Name="idEquipo" Type="int" />
         </EntityType>
         <EntityType Name="participantes">
           <Key>
@@ -61,6 +78,7 @@
           <Property Name="direccion" Type="nvarchar" MaxLength="80" />
           <Property Name="estado" Type="nchar" MaxLength="2" />
           <Property Name="tipo_participante" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="idusuario" Type="int" />
         </EntityType>
         <EntityType Name="sala">
           <Key>
@@ -126,34 +144,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__asistenci__idpar__40C49C62">
-          <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="participantes">
-              <PropertyRef Name="idparticipante" />
-            </Principal>
-            <Dependent Role="asistencias">
-              <PropertyRef Name="idparticipante" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__listaequi__idEqu__4F12BBB9">
-          <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="*" />
+        <Association Name="FK__detalle_l__idEqu__075714DC">
+          <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+          <End Role="detalle_list_equipos" Type="Self.detalle_list_equipos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Equipo">
               <PropertyRef Name="idEquipo" />
             </Principal>
-            <Dependent Role="listaequipos">
+            <Dependent Role="detalle_list_equipos">
               <PropertyRef Name="idEquipo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__participa__idusu__7FB5F314">
+          <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="participantes" Type="Self.participantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="idusuario" />
+            </Principal>
+            <Dependent Role="participantes">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_dni' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_dni" />-->
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -220,6 +239,9 @@
         <Function Name="usp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="usuario" Type="nchar" Mode="In" />
           <Parameter Name="clave" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_asistencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
         </Function>
         <Function Name="usp_BusquedaActividadforDescripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
@@ -299,6 +321,8 @@
         <EntityContainer Name="bdcongresoModelStoreContainer">
           <EntitySet Name="actividades" EntityType="Self.actividades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="asistencias" EntityType="Self.asistencias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detalle_asistencias" EntityType="Self.detalle_asistencias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="detalle_list_equipos" EntityType="Self.detalle_list_equipos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Equipo" EntityType="Self.Equipo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="listaequipos" EntityType="Self.listaequipos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="participantes" EntityType="Self.participantes" Schema="dbo" store:Type="Tables" />
@@ -316,13 +340,13 @@
             <End Role="sala" EntitySet="sala" />
             <End Role="actividades" EntitySet="actividades" />
           </AssociationSet>
-          <AssociationSet Name="FK__asistenci__idpar__40C49C62" Association="Self.FK__asistenci__idpar__40C49C62">
-            <End Role="participantes" EntitySet="participantes" />
-            <End Role="asistencias" EntitySet="asistencias" />
-          </AssociationSet>
-          <AssociationSet Name="FK__listaequi__idEqu__4F12BBB9" Association="Self.FK__listaequi__idEqu__4F12BBB9">
+          <AssociationSet Name="FK__detalle_l__idEqu__075714DC" Association="Self.FK__detalle_l__idEqu__075714DC">
             <End Role="Equipo" EntitySet="Equipo" />
-            <End Role="listaequipos" EntitySet="listaequipos" />
+            <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__participa__idusu__7FB5F314" Association="Self.FK__participa__idusu__7FB5F314">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="participantes" EntitySet="participantes" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -341,18 +365,9 @@
           <Property Name="idlistaeq" Type="Int32" />
           <Property Name="idasistencias" Type="Int32" />
           <Property Name="idsala" Type="Int32" />
-          <NavigationProperty Name="asistencias" Relationship="Self.FK__actividad__idasi__54CB950F" FromRole="actividades" ToRole="asistencias" />
           <NavigationProperty Name="listaequipos" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="actividades" ToRole="listaequipos" />
           <NavigationProperty Name="sala" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="actividades" ToRole="sala" />
-        </EntityType>
-        <EntityType Name="asistencias">
-          <Key>
-            <PropertyRef Name="idasistencias" />
-          </Key>
-          <Property Name="idasistencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idparticipante" Type="Int32" />
-          <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idasi__54CB950F" FromRole="asistencias" ToRole="actividades" />
-          <NavigationProperty Name="participantes" Relationship="Self.FK__asistenci__idpar__40C49C62" FromRole="asistencias" ToRole="participantes" />
+          <NavigationProperty Name="asistencias" Relationship="bdcongresoModel.FK__actividad__idasi__54CB950F" FromRole="actividades" ToRole="asistencias" />
         </EntityType>
         <EntityType Name="Equipo">
           <Key>
@@ -364,8 +379,8 @@
           <Property Name="Procesador" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <Property Name="RAM" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TarjetaMadre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="listaequipos" Relationship="Self.FK__listaequi__idEqu__4F12BBB9" FromRole="Equipo" ToRole="listaequipos" />
+          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="detalle_list_equipos" Relationship="bdcongresoModel.FK__detalle_l__idEqu__075714DC" FromRole="Equipo" ToRole="detalle_list_equipos" />
         </EntityType>
         <EntityType Name="listaequipos">
           <Key>
@@ -373,9 +388,7 @@
           </Key>
           <Property Name="idlistaeq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
-          <Property Name="idEquipo" Type="Int32" />
           <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="listaequipos" ToRole="actividades" />
-          <NavigationProperty Name="Equipo" Relationship="Self.FK__listaequi__idEqu__4F12BBB9" FromRole="listaequipos" ToRole="Equipo" />
         </EntityType>
         <EntityType Name="participantes">
           <Key>
@@ -393,7 +406,10 @@
           <Property Name="direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
           <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
           <Property Name="tipo_participante" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="asistencias" Relationship="Self.FK__asistenci__idpar__40C49C62" FromRole="participantes" ToRole="asistencias" />
+          <NavigationProperty Name="participantes1" Relationship="bdcongresoModel.FK_participantes_participantes" FromRole="participantes" ToRole="participantes1" />
+          <NavigationProperty Name="participantes2" Relationship="bdcongresoModel.FK_participantes_participantes" FromRole="participantes1" ToRole="participantes" />
+          <Property Name="idusuario" Type="Int32" />
+          <NavigationProperty Name="usuarios" Relationship="bdcongresoModel.FK__participa__idusu__7FB5F314" FromRole="participantes" ToRole="usuarios" />
         </EntityType>
         <EntityType Name="sala">
           <Key>
@@ -417,21 +433,8 @@
           <Property Name="usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="clave" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="participantes" Relationship="bdcongresoModel.FK__participa__idusu__7FB5F314" FromRole="usuarios" ToRole="participantes" />
         </EntityType>
-        <Association Name="FK__actividad__idasi__54CB950F">
-          <End Role="asistencias" Type="Self.asistencias" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="asistencias">
-              <PropertyRef Name="idasistencias" />
-            </Principal>
-            <Dependent Role="actividades">
-              <PropertyRef Name="idasistencias" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__actividad__idlis__53D770D6">
           <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -460,46 +463,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__asistenci__idpar__40C49C62">
-          <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="participantes">
-              <PropertyRef Name="idparticipante" />
-            </Principal>
-            <Dependent Role="asistencias">
-              <PropertyRef Name="idparticipante" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__listaequi__idEqu__4F12BBB9">
-          <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Equipo">
-              <PropertyRef Name="idEquipo" />
-            </Principal>
-            <Dependent Role="listaequipos">
-              <PropertyRef Name="idEquipo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="bdcongresoEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="actividades" EntityType="Self.actividades" />
-          <EntitySet Name="asistencias" EntityType="Self.asistencias" />
           <EntitySet Name="Equipo" EntityType="Self.Equipo" />
           <EntitySet Name="listaequipos" EntityType="Self.listaequipos" />
           <EntitySet Name="participantes" EntityType="Self.participantes" />
           <EntitySet Name="sala" EntityType="Self.sala" />
           <EntitySet Name="usuarios" EntityType="Self.usuarios" />
-          <AssociationSet Name="FK__actividad__idasi__54CB950F" Association="Self.FK__actividad__idasi__54CB950F">
-            <End Role="asistencias" EntitySet="asistencias" />
-            <End Role="actividades" EntitySet="actividades" />
-          </AssociationSet>
           <AssociationSet Name="FK__actividad__idlis__53D770D6" Association="Self.FK__actividad__idlis__53D770D6">
             <End Role="listaequipos" EntitySet="listaequipos" />
             <End Role="actividades" EntitySet="actividades" />
@@ -507,14 +477,6 @@
           <AssociationSet Name="FK__actividad__idsal__55BFB948" Association="Self.FK__actividad__idsal__55BFB948">
             <End Role="sala" EntitySet="sala" />
             <End Role="actividades" EntitySet="actividades" />
-          </AssociationSet>
-          <AssociationSet Name="FK__asistenci__idpar__40C49C62" Association="Self.FK__asistenci__idpar__40C49C62">
-            <End Role="participantes" EntitySet="participantes" />
-            <End Role="asistencias" EntitySet="asistencias" />
-          </AssociationSet>
-          <AssociationSet Name="FK__listaequi__idEqu__4F12BBB9" Association="Self.FK__listaequi__idEqu__4F12BBB9">
-            <End Role="Equipo" EntitySet="Equipo" />
-            <End Role="listaequipos" EntitySet="listaequipos" />
           </AssociationSet>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -656,7 +618,29 @@
           </FunctionImport>
           <FunctionImport Name="usp_equipo_listar_all" ReturnType="Collection(bdcongresoModel.usp_equipo_listar_all_Result)" />
           <FunctionImport Name="usp_eliminar_Equipo">
-            <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+          <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="detalle_asistencias" EntityType="bdcongresoModel.detalle_asistencias" />
+          <AssociationSet Name="FK_participantes_participantes" Association="bdcongresoModel.FK_participantes_participantes">
+            <End Role="participantes" EntitySet="participantes" />
+            <End Role="participantes1" EntitySet="participantes" />
+          </AssociationSet>
+          <EntitySet Name="asistencias" EntityType="bdcongresoModel.asistencias" />
+          <AssociationSet Name="FK__actividad__idasi__54CB950F" Association="bdcongresoModel.FK__actividad__idasi__54CB950F">
+            <End Role="asistencias" EntitySet="asistencias" />
+            <End Role="actividades" EntitySet="actividades" />
+          </AssociationSet>
+          <AssociationSet Name="FK__participa__idusu__7FB5F314" Association="bdcongresoModel.FK__participa__idusu__7FB5F314">
+            <End Role="usuarios" EntitySet="usuarios" />
+            <End Role="participantes" EntitySet="participantes" />
+          </AssociationSet>
+          <EntitySet Name="detalle_list_equipos" EntityType="bdcongresoModel.detalle_list_equipos" />
+          <AssociationSet Name="FK__detalle_l__idEqu__075714DC" Association="bdcongresoModel.FK__detalle_l__idEqu__075714DC">
+            <End Role="Equipo" EntitySet="Equipo" />
+            <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
+          </AssociationSet>
+          <FunctionImport Name="usp_asistencias" ReturnType="Collection(bdcongresoModel.usp_asistencias_Result)">
+            <Parameter Name="codigo" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -820,6 +804,91 @@
           <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
           <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
         </ComplexType>
+        <EntityType Name="detalle_asistencias">
+          <Key>
+            <PropertyRef Name="intdetasis" />
+          </Key>
+          <Property Name="intdetasis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="codigo" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_participantes_participantes">
+          <End Type="bdcongresoModel.participantes" Role="participantes" Multiplicity="1" />
+          <End Type="bdcongresoModel.participantes" Role="participantes1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="participantes">
+              <PropertyRef Name="idparticipante" />
+            </Principal>
+            <Dependent Role="participantes1">
+              <PropertyRef Name="idparticipante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="asistencias">
+          <Key>
+            <PropertyRef Name="idasistencias" />
+          </Key>
+          <Property Name="idasistencias" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codigo" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="actividades" Relationship="bdcongresoModel.FK__actividad__idasi__54CB950F" FromRole="asistencias" ToRole="actividades" />
+          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__actividad__idasi__54CB950F">
+          <End Type="bdcongresoModel.asistencias" Role="asistencias" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="bdcongresoModel.actividades" Role="actividades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="asistencias">
+              <PropertyRef Name="idasistencias" />
+            </Principal>
+            <Dependent Role="actividades">
+              <PropertyRef Name="idasistencias" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__participa__idusu__7FB5F314">
+          <End Type="bdcongresoModel.usuarios" Role="usuarios" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="bdcongresoModel.participantes" Role="participantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuarios">
+              <PropertyRef Name="idusuario" />
+            </Principal>
+            <Dependent Role="participantes">
+              <PropertyRef Name="idusuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="detalle_list_equipos">
+          <Key>
+            <PropertyRef Name="intdetalleeq" />
+          </Key>
+          <Property Name="intdetalleeq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="idEquipo" Type="Int32" />
+          <NavigationProperty Name="Equipo" Relationship="bdcongresoModel.FK__detalle_l__idEqu__075714DC" FromRole="detalle_list_equipos" ToRole="Equipo" />
+        </EntityType>
+        <Association Name="FK__detalle_l__idEqu__075714DC">
+          <End Type="bdcongresoModel.Equipo" Role="Equipo" Multiplicity="0..1" />
+          <End Type="bdcongresoModel.detalle_list_equipos" Role="detalle_list_equipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipo">
+              <PropertyRef Name="idEquipo" />
+            </Principal>
+            <Dependent Role="detalle_list_equipos">
+              <PropertyRef Name="idEquipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="usp_asistencias_Result">
+          <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -837,14 +906,6 @@
                 <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
                 <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
                 <ScalarProperty Name="idsala" ColumnName="idsala" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="asistencias">
-            <EntityTypeMapping TypeName="bdcongresoModel.asistencias">
-              <MappingFragment StoreEntitySet="asistencias">
-                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
-                <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -866,13 +927,13 @@
               <MappingFragment StoreEntitySet="listaequipos">
                 <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="participantes">
             <EntityTypeMapping TypeName="bdcongresoModel.participantes">
               <MappingFragment StoreEntitySet="participantes">
+                <ScalarProperty Name="idusuario" ColumnName="idusuario" />
                 <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
                 <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
                 <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
@@ -1144,6 +1205,44 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="usp_eliminar_Equipo" FunctionName="bdcongresoModel.Store.usp_eliminar_Equipo" />
+          <EntitySetMapping Name="detalle_asistencias">
+            <EntityTypeMapping TypeName="bdcongresoModel.detalle_asistencias">
+              <MappingFragment StoreEntitySet="detalle_asistencias">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="intdetasis" ColumnName="intdetasis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asistencias">
+            <EntityTypeMapping TypeName="bdcongresoModel.asistencias">
+              <MappingFragment StoreEntitySet="asistencias">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="detalle_list_equipos">
+            <EntityTypeMapping TypeName="bdcongresoModel.detalle_list_equipos">
+              <MappingFragment StoreEntitySet="detalle_list_equipos">
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="intdetalleeq" ColumnName="intdetalleeq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_asistencias" FunctionName="bdcongresoModel.Store.usp_asistencias">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_Result">
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+                <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

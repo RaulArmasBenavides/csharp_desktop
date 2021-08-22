@@ -10,6 +10,7 @@ namespace appcongreso.Model
 {
     public class EquipoDAO : Service<usp_equipo_listar_all_Result>
     {
+        // entidades  usando ENTITY FRAMEWORK
         bdcongresoEntities e = new bdcongresoEntities();
         public void create(usp_equipo_listar_all_Result t)
         {

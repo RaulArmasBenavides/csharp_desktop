@@ -28,12 +28,14 @@ namespace appcongreso.EF
         }
     
         public virtual DbSet<actividades> actividades { get; set; }
-        public virtual DbSet<asistencias> asistencias { get; set; }
         public virtual DbSet<Equipo> Equipo { get; set; }
         public virtual DbSet<listaequipos> listaequipos { get; set; }
         public virtual DbSet<participantes> participantes { get; set; }
         public virtual DbSet<sala> sala { get; set; }
         public virtual DbSet<usuarios> usuarios { get; set; }
+        public virtual DbSet<detalle_asistencias> detalle_asistencias { get; set; }
+        public virtual DbSet<asistencias> asistencias { get; set; }
+        public virtual DbSet<detalle_list_equipos> detalle_list_equipos { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {
@@ -533,6 +535,15 @@ namespace appcongreso.EF
                 new ObjectParameter("idEquipo", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_eliminar_Equipo", idEquipoParameter);
+        }
+    
+        public virtual ObjectResult<usp_asistencias_Result> usp_asistencias(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_asistencias_Result>("usp_asistencias", codigoParameter);
         }
     }
 }

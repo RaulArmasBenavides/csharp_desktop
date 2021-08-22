@@ -23,8 +23,8 @@ namespace appcongreso.EF
         public Nullable<int> idasistencias { get; set; }
         public Nullable<int> idsala { get; set; }
     
-        public virtual asistencias asistencias { get; set; }
         public virtual listaequipos listaequipos { get; set; }
         public virtual sala sala { get; set; }
+        public virtual asistencias asistencias { get; set; }
     }
 }

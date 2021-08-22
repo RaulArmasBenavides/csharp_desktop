@@ -18,7 +18,25 @@
       <PropertyRef Name="idasistencias" />
     </Key>
     <Property Name="idasistencias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idparticipante" Type="int" />
+    <Property Name="codigo" Type="nchar" MaxLength="5" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="detalle_asistencias">
+    <Key>
+      <PropertyRef Name="intdetasis" />
+    </Key>
+    <Property Name="intdetasis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="DNI" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="codigo" Type="nchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detalle_list_equipos">
+    <Key>
+      <PropertyRef Name="intdetalleeq" />
+    </Key>
+    <Property Name="intdetalleeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="idEquipo" Type="int" />
   </EntityType>
   <EntityType Name="Equipo">
     <Key>
@@ -30,7 +48,7 @@
     <Property Name="Procesador" Type="nchar" MaxLength="30" />
     <Property Name="RAM" Type="nchar" MaxLength="10" />
     <Property Name="TarjetaMadre" Type="nchar" MaxLength="10" />
-    <Property Name="estado" Type="nchar" MaxLength="2" />
+    <Property Name="estado" Type="nchar" MaxLength="2" Nullable="false" />
   </EntityType>
   <EntityType Name="listaequipos">
     <Key>
@@ -38,7 +56,6 @@
     </Key>
     <Property Name="idlistaeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="estado" Type="nchar" MaxLength="2" />
-    <Property Name="idEquipo" Type="int" />
   </EntityType>
   <EntityType Name="participantes">
     <Key>
@@ -56,6 +73,7 @@
     <Property Name="direccion" Type="nvarchar" MaxLength="80" />
     <Property Name="estado" Type="nchar" MaxLength="2" />
     <Property Name="tipo_participante" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="idusuario" Type="int" />
   </EntityType>
   <EntityType Name="sala">
     <Key>
@@ -121,34 +139,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__asistenci__idpar__40C49C62">
-    <End Role="participantes" Type="Self.participantes" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="asistencias" Type="Self.asistencias" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="participantes">
-        <PropertyRef Name="idparticipante" />
-      </Principal>
-      <Dependent Role="asistencias">
-        <PropertyRef Name="idparticipante" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__listaequi__idEqu__4F12BBB9">
-    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="*" />
+  <Association Name="FK__detalle_l__idEqu__075714DC">
+    <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+    <End Role="detalle_list_equipos" Type="Self.detalle_list_equipos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Equipo">
         <PropertyRef Name="idEquipo" />
       </Principal>
-      <Dependent Role="listaequipos">
+      <Dependent Role="detalle_list_equipos">
         <PropertyRef Name="idEquipo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__participa__idusu__7FB5F314">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="participantes" Type="Self.participantes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="idusuario" />
+      </Principal>
+      <Dependent Role="participantes">
+        <PropertyRef Name="idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_dni' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_dni" />-->
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -215,6 +234,9 @@
   <Function Name="usp_actualizar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="usuario" Type="nchar" Mode="In" />
     <Parameter Name="clave" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="usp_asistencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="nchar" Mode="In" />
   </Function>
   <Function Name="usp_BusquedaActividadforDescripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
@@ -294,6 +316,8 @@
   <EntityContainer Name="bdcongresoModelStoreContainer">
     <EntitySet Name="actividades" EntityType="Self.actividades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="asistencias" EntityType="Self.asistencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalle_asistencias" EntityType="Self.detalle_asistencias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalle_list_equipos" EntityType="Self.detalle_list_equipos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Equipo" EntityType="Self.Equipo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="listaequipos" EntityType="Self.listaequipos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="participantes" EntityType="Self.participantes" Schema="dbo" store:Type="Tables" />
@@ -311,13 +335,13 @@
       <End Role="sala" EntitySet="sala" />
       <End Role="actividades" EntitySet="actividades" />
     </AssociationSet>
-    <AssociationSet Name="FK__asistenci__idpar__40C49C62" Association="Self.FK__asistenci__idpar__40C49C62">
-      <End Role="participantes" EntitySet="participantes" />
-      <End Role="asistencias" EntitySet="asistencias" />
-    </AssociationSet>
-    <AssociationSet Name="FK__listaequi__idEqu__4F12BBB9" Association="Self.FK__listaequi__idEqu__4F12BBB9">
+    <AssociationSet Name="FK__detalle_l__idEqu__075714DC" Association="Self.FK__detalle_l__idEqu__075714DC">
       <End Role="Equipo" EntitySet="Equipo" />
-      <End Role="listaequipos" EntitySet="listaequipos" />
+      <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__participa__idusu__7FB5F314" Association="Self.FK__participa__idusu__7FB5F314">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="participantes" EntitySet="participantes" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

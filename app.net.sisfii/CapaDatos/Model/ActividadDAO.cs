@@ -6,7 +6,7 @@ using System.Linq;
 namespace CapaDatos.Model
 {
     public class ActividadDAO : Service<usp_actividades_listar_all_Result>
-    {   // entidades del congreso usando ENTITY FRAMEWORK
+    {   // entidades  usando ENTITY FRAMEWORK
         bdcongresoEntities e = new bdcongresoEntities();
         
 

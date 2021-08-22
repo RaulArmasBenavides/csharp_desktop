@@ -211,7 +211,7 @@ namespace CapaPresentacion
         private void helpCenterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Help.ShowHelp(this, "C://Users//Blutharsch//Documents//Visual Studio 2013//Projects//Casting//AyudaCasting.chm");
-            Help.ShowHelp(this, "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwjW2c28spPmAhUDpFkKHTdTAfUQFjABegQIAxAB&url=https%3A%2F%2Fwww.aleiiaf.org%2Fclein%2Fque-es-clein&usg=AOvVaw3F4jYtQATytFyRNl1pQZxF");
+            Help.ShowHelp(this, "https://www.icacit.org.pe/web/es/");
 
 
         }
@@ -336,7 +336,7 @@ namespace CapaPresentacion
 
         private void visitaNuestraWebToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "https://clein.org/");
+            Help.ShowHelp(this, "https://campusindustrial.unmsm.edu.pe/moodle/login/index.php");
      
         }
 
@@ -372,6 +372,23 @@ namespace CapaPresentacion
             this.Hide();
             Login l = new Login();
             l.Show();
+        }
+
+        private void AsistenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAsistencias fr = new FrmAsistencias();
+            Application.OpenForms.Cast<Form>();
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmSala);
+
+            if (fm != null)
+            {
+                //si la instancia existe la pongo en primer plano
+                fm.BringToFront();
+                return;
+            }
+
+            fr.MdiParent = this;
+            fr.Show();
         }
     }
 }

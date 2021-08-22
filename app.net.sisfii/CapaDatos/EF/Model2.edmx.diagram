@@ -4,19 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4dfffef6c8c945b18395c3f28af05a89" Name="Diagram1">
-        <EntityTypeShape EntityType="bdcongresoModel.actividades" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.asistencias" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.Equipo" Width="1.5" PointX="3.125" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.listaequipos" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.participantes" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.sala" Width="1.5" PointX="9.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="bdcongresoModel.usuarios" Width="1.5" PointX="7.75" PointY="4.25" IsExpanded="true" />
-        <AssociationConnector Association="bdcongresoModel.FK__actividad__idasi__54CB950F" ManuallyRouted="false" />
+      <Diagram DiagramId="4dfffef6c8c945b18395c3f28af05a89" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="bdcongresoModel.actividades" Width="1.5" PointX="12.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.Equipo" Width="1.5" PointX="0.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.listaequipos" Width="1.5" PointX="6.375" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.participantes" Width="1.5" PointX="9.875" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.sala" Width="1.5" PointX="17.375" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdcongresoModel.usuarios" Width="1.5" PointX="16.625" PointY="6" IsExpanded="true" />
         <AssociationConnector Association="bdcongresoModel.FK__actividad__idlis__53D770D6" ManuallyRouted="false" />
         <AssociationConnector Association="bdcongresoModel.FK__actividad__idsal__55BFB948" ManuallyRouted="false" />
-        <AssociationConnector Association="bdcongresoModel.FK__asistenci__idpar__40C49C62" ManuallyRouted="false" />
-        <AssociationConnector Association="bdcongresoModel.FK__listaequi__idEqu__4F12BBB9" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="bdcongresoModel.detalle_asistencias" Width="2" PointX="4.5" PointY="1.625" />
+        <AssociationConnector Association="bdcongresoModel.FK_participantes_participantes" />
+        <EntityTypeShape EntityType="bdcongresoModel.asistencias" Width="1.5" PointX="8.5" PointY="0.75" />
+        <AssociationConnector Association="bdcongresoModel.FK__actividad__idasi__54CB950F" />
+        <AssociationConnector Association="bdcongresoModel.FK__participa__idusu__7FB5F314" />
+        <EntityTypeShape EntityType="bdcongresoModel.detalle_list_equipos" Width="1.5" PointX="2.375" PointY="4.875" />
+        <AssociationConnector Association="bdcongresoModel.FK__detalle_l__idEqu__075714DC" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -48,7 +48,8 @@ namespace appcongreso.Model
                     idsala = item.idsala,
                     nombre = item.nombre,
                     capacidad = item.capacidad,
-                    tipo_sala = item.tipo_sala
+                    tipo_sala = item.tipo_sala,
+                    ubicacion = item.ubicacion
                     //IdProducto = item.IdProducto,
                     //NombreProducto = item.NombreProducto,
                     //IdProveedor = item.IdProveedor,

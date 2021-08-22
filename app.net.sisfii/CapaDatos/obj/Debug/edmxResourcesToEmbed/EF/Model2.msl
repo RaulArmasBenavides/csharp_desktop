@@ -15,14 +15,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="asistencias">
-      <EntityTypeMapping TypeName="bdcongresoModel.asistencias">
-        <MappingFragment StoreEntitySet="asistencias">
-          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
-          <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Equipo">
       <EntityTypeMapping TypeName="bdcongresoModel.Equipo">
         <MappingFragment StoreEntitySet="Equipo">
@@ -41,13 +33,13 @@
         <MappingFragment StoreEntitySet="listaequipos">
           <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
           <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="participantes">
       <EntityTypeMapping TypeName="bdcongresoModel.participantes">
         <MappingFragment StoreEntitySet="participantes">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
           <ScalarProperty Name="idparticipante" ColumnName="idparticipante" />
           <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
           <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
@@ -319,5 +311,43 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_eliminar_Equipo" FunctionName="bdcongresoModel.Store.usp_eliminar_Equipo" />
+    <EntitySetMapping Name="detalle_asistencias">
+      <EntityTypeMapping TypeName="bdcongresoModel.detalle_asistencias">
+        <MappingFragment StoreEntitySet="detalle_asistencias">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="intdetasis" ColumnName="intdetasis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="asistencias">
+      <EntityTypeMapping TypeName="bdcongresoModel.asistencias">
+        <MappingFragment StoreEntitySet="asistencias">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detalle_list_equipos">
+      <EntityTypeMapping TypeName="bdcongresoModel.detalle_list_equipos">
+        <MappingFragment StoreEntitySet="detalle_list_equipos">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="intdetalleeq" ColumnName="intdetalleeq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_asistencias" FunctionName="bdcongresoModel.Store.usp_asistencias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_Result">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

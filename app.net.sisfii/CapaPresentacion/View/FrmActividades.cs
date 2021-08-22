@@ -1,5 +1,6 @@
 ﻿using appcongreso.EF;
 using CapaDatos.Controller;
+using CapaPresentacion.View;
 using System;
 using System.Windows.Forms;
 
@@ -21,7 +22,7 @@ namespace CapaDatos.View
         }
         private void listaActividades()
         {
-            dgvActividades.DataSource = obj.actividadeListar();
+            //dgvActividades.DataSource = obj.actividadeListar();
             
         }
         private void procesar(int opcion)
@@ -167,7 +168,7 @@ namespace CapaDatos.View
             var pro = new usp_actividades_listar_all_Result();
             //pro.idactividad = int.Parse(txtid.Text);
             pro.descripcion = txtdescrip.Text;
-            pro.fecha_creacion = Convert.ToDateTime(dtFecha.Text);
+            //pro.fecha_creacion = Convert.ToDateTime(dtFecha.Text);
             //   pro.IdProveedor = (int)cboProveedor.SelectedValue;
             //   pro.IdCategoría = (int)cboCategoria.SelectedValue;
             //    pro.PrecioUnidad = decimal.Parse(txtPrecio.Text);
@@ -178,9 +179,9 @@ namespace CapaDatos.View
         {
             //esta funcion sirve para encontrar a un objeto desde la grilla
             var pro2 = new usp_actividades_listar_all_Result();
-            pro2.idactividad = int.Parse(this.dgvActividades.CurrentRow.Cells[0].Value.ToString()); // int.Parse(txtid.Text);
-            pro2.descripcion = this.dgvActividades.CurrentRow.Cells[1].Value.ToString(); //txtdescrip.Text;
-            pro2.fecha_creacion = Convert.ToDateTime(this.dgvActividades.CurrentRow.Cells[2].Value.ToString()); //Convert.ToDateTime(txtfecha.Text);
+            //pro2.idactividad = int.Parse(this.dgvActividades.CurrentRow.Cells[0].Value.ToString()); // int.Parse(txtid.Text);
+            //pro2.descripcion = this.dgvActividades.CurrentRow.Cells[1].Value.ToString(); //txtdescrip.Text;
+            //pro2.fecha_creacion = Convert.ToDateTime(this.dgvActividades.CurrentRow.Cells[2].Value.ToString()); //Convert.ToDateTime(txtfecha.Text);
             return pro2;
         }
 
@@ -192,7 +193,16 @@ namespace CapaDatos.View
               toolStripStatusLabel1.Text = "Id de prueba: "+Id;
               comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
               comboBox1.SelectedIndex = 0;*/
+            FormatearControles();
             listaActividades();
+        }
+
+        private void FormatearControles()
+        {
+            dtpicker1.Format = DateTimePickerFormat.Custom;
+            dtpicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dtpicker2.Format = DateTimePickerFormat.Custom;
+            dtpicker2.CustomFormat = "MM/dd/yyyy hh:mm:ss";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -325,6 +335,23 @@ namespace CapaDatos.View
         private void btnImprimir_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListaEquipos_Click(object sender, EventArgs e)
+        {
+            FrmListaEquipos f = new FrmListaEquipos();
+            f.ShowDialog();
+        }
+
+        private void btnListaAsistenci_Click(object sender, EventArgs e)
+        {
+            FrmAsistencias f = new FrmAsistencias();
+            f.ShowDialog();
         }
     }
 

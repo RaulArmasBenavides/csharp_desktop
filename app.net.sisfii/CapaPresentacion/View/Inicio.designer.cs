@@ -47,11 +47,13 @@
             this.reuniónDeDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AsistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mantenedorDeEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.listaDeEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitaNuestraWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -222,7 +224,8 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actividadesToolStripMenuItem,
-            this.registroToolStripMenuItem});
+            this.AsistenciaToolStripMenuItem,
+            this.reporteToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -234,22 +237,30 @@
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(170, 28);
-            this.actividadesToolStripMenuItem.Text = "Consulta";
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(266, 28);
+            this.actividadesToolStripMenuItem.Text = "Consulta Individual";
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
-            // registroToolStripMenuItem
+            // AsistenciaToolStripMenuItem
             // 
-            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
-            this.registroToolStripMenuItem.Size = new System.Drawing.Size(170, 28);
-            this.registroToolStripMenuItem.Text = "Registro";
+            this.AsistenciaToolStripMenuItem.Name = "AsistenciaToolStripMenuItem";
+            this.AsistenciaToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
+            this.AsistenciaToolStripMenuItem.Text = "Lista de Asistencias";
+            this.AsistenciaToolStripMenuItem.Click += new System.EventHandler(this.AsistenciaToolStripMenuItem_Click);
+            // 
+            // reporteToolStripMenuItem
+            // 
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
+            this.reporteToolStripMenuItem.Text = "Reporte de Actividades";
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SalaToolStripMenuItem,
+            this.mantenedorDeEquiposToolStripMenuItem,
             this.toolStripSeparator2,
-            this.mantenedorDeEquiposToolStripMenuItem});
+            this.listaDeEquiposToolStripMenuItem});
             this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
@@ -266,17 +277,23 @@
             this.SalaToolStripMenuItem.Text = "Mantenedor de Salas";
             this.SalaToolStripMenuItem.Click += new System.EventHandler(this.cuentaToolStripMenuItem_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(308, 6);
-            // 
             // mantenedorDeEquiposToolStripMenuItem
             // 
             this.mantenedorDeEquiposToolStripMenuItem.Name = "mantenedorDeEquiposToolStripMenuItem";
             this.mantenedorDeEquiposToolStripMenuItem.Size = new System.Drawing.Size(311, 28);
             this.mantenedorDeEquiposToolStripMenuItem.Text = "Mantenedor de Equipos";
             this.mantenedorDeEquiposToolStripMenuItem.Click += new System.EventHandler(this.mantenedorDeEquiposToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(308, 6);
+            // 
+            // listaDeEquiposToolStripMenuItem
+            // 
+            this.listaDeEquiposToolStripMenuItem.Name = "listaDeEquiposToolStripMenuItem";
+            this.listaDeEquiposToolStripMenuItem.Size = new System.Drawing.Size(311, 28);
+            this.listaDeEquiposToolStripMenuItem.Text = "Lista de Equipos";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -296,14 +313,14 @@
             this.helpCenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.helpCenterToolStripMenuItem.Name = "helpCenterToolStripMenuItem";
             this.helpCenterToolStripMenuItem.Size = new System.Drawing.Size(260, 28);
-            this.helpCenterToolStripMenuItem.Text = "Contacto";
+            this.helpCenterToolStripMenuItem.Text = "Contacto ICACIC";
             this.helpCenterToolStripMenuItem.Click += new System.EventHandler(this.helpCenterToolStripMenuItem_Click);
             // 
             // visitaNuestraWebToolStripMenuItem
             // 
             this.visitaNuestraWebToolStripMenuItem.Name = "visitaNuestraWebToolStripMenuItem";
-            this.visitaNuestraWebToolStripMenuItem.Size = new System.Drawing.Size(260, 28);
-            this.visitaNuestraWebToolStripMenuItem.Text = "Visita nuestra web";
+            this.visitaNuestraWebToolStripMenuItem.Size = new System.Drawing.Size(258, 28);
+            this.visitaNuestraWebToolStripMenuItem.Text = "Campus Virtual FII";
             this.visitaNuestraWebToolStripMenuItem.Click += new System.EventHandler(this.visitaNuestraWebToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
@@ -360,11 +377,13 @@
         private System.Windows.Forms.ToolStripMenuItem stpVer;
         private System.Windows.Forms.ToolStripMenuItem estudiantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visitaNuestraWebToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AsistenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem horariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reuniónDeDocentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenedorDeEquiposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeEquiposToolStripMenuItem;
     }
 }

@@ -17,7 +17,7 @@ namespace appcongreso.EF
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Equipo()
         {
-            this.listaequipos = new HashSet<listaequipos>();
+            this.detalle_list_equipos = new HashSet<detalle_list_equipos>();
         }
     
         public int idEquipo { get; set; }
@@ -29,6 +29,6 @@ namespace appcongreso.EF
         public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<listaequipos> listaequipos { get; set; }
+        public virtual ICollection<detalle_list_equipos> detalle_list_equipos { get; set; }
     }
 }

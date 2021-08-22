@@ -14,9 +14,18 @@ namespace appcongreso.EF
     
     public partial class usuarios
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public usuarios()
+        {
+            this.participantes = new HashSet<participantes>();
+        }
+    
         public int idusuario { get; set; }
         public string usuario { get; set; }
         public string clave { get; set; }
         public string estado { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<participantes> participantes { get; set; }
     }
 }

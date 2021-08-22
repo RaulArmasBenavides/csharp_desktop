@@ -14,12 +14,6 @@ namespace appcongreso.EF
     
     public partial class participantes
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public participantes()
-        {
-            this.asistencias = new HashSet<asistencias>();
-        }
-    
         public int idparticipante { get; set; }
         public string ap_paterno { get; set; }
         public string ap_materno { get; set; }
@@ -32,8 +26,10 @@ namespace appcongreso.EF
         public string direccion { get; set; }
         public string estado { get; set; }
         public string tipo_participante { get; set; }
+        public Nullable<int> idusuario { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<asistencias> asistencias { get; set; }
+        public virtual participantes participantes1 { get; set; }
+        public virtual participantes participantes2 { get; set; }
+        public virtual usuarios usuarios { get; set; }
     }
 }

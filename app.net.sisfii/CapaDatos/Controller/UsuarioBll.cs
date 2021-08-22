@@ -79,7 +79,16 @@ namespace CapaDatos.Controller
 
         public ObjectResult<usp_ValidaUsuario_Result> UsuarioValidar(usp_usuarios_listar_all_Result usuario)
         {
-            return dao.validar(usuario);
+            try
+            {
+                return dao.validar(usuario);
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        
         }
 
     } 

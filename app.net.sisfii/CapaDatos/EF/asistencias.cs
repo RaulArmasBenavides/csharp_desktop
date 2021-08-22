@@ -21,10 +21,10 @@ namespace appcongreso.EF
         }
     
         public int idasistencias { get; set; }
-        public Nullable<int> idparticipante { get; set; }
+        public string codigo { get; set; }
+        public string estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<actividades> actividades { get; set; }
-        public virtual participantes participantes { get; set; }
     }
 }
