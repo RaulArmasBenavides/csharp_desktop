@@ -33,7 +33,7 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.verTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.castingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +51,7 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mantenedorDeEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpCenterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visitaNuestraWebToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,7 +86,7 @@
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarToolStripMenuItem,
             this.toolStripSeparator4,
-            this.verTodosToolStripMenuItem});
+            this.CerrarSesionToolStripMenuItem});
             this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,14 +115,14 @@
             this.toolStripSeparator4.Size = new System.Drawing.Size(244, 6);
             this.toolStripSeparator4.Click += new System.EventHandler(this.toolStripSeparator4_Click);
             // 
-            // verTodosToolStripMenuItem
+            // CerrarSesionToolStripMenuItem
             // 
-            this.verTodosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verTodosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
-            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(247, 28);
-            this.verTodosToolStripMenuItem.Text = "&Cerrar Sesión";
-            this.verTodosToolStripMenuItem.Click += new System.EventHandler(this.verTodosToolStripMenuItem_Click);
+            this.CerrarSesionToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarSesionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem";
+            this.CerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(247, 28);
+            this.CerrarSesionToolStripMenuItem.Text = "&Cerrar Sesión";
+            this.CerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.CerrarSesionToolStripMenuItem_Click);
             // 
             // castingToolStripMenuItem
             // 
@@ -247,7 +248,8 @@
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SalaToolStripMenuItem,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.mantenedorDeEquiposToolStripMenuItem});
             this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
@@ -260,14 +262,21 @@
             this.SalaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SalaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SalaToolStripMenuItem.Name = "SalaToolStripMenuItem";
-            this.SalaToolStripMenuItem.Size = new System.Drawing.Size(285, 28);
+            this.SalaToolStripMenuItem.Size = new System.Drawing.Size(311, 28);
             this.SalaToolStripMenuItem.Text = "Mantenedor de Salas";
             this.SalaToolStripMenuItem.Click += new System.EventHandler(this.cuentaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(282, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(308, 6);
+            // 
+            // mantenedorDeEquiposToolStripMenuItem
+            // 
+            this.mantenedorDeEquiposToolStripMenuItem.Name = "mantenedorDeEquiposToolStripMenuItem";
+            this.mantenedorDeEquiposToolStripMenuItem.Size = new System.Drawing.Size(311, 28);
+            this.mantenedorDeEquiposToolStripMenuItem.Text = "Mantenedor de Equipos";
+            this.mantenedorDeEquiposToolStripMenuItem.Click += new System.EventHandler(this.mantenedorDeEquiposToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -333,7 +342,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem castingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem candidatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarNuevoToolStripMenuItem;
@@ -356,5 +365,6 @@
         private System.Windows.Forms.ToolStripMenuItem horariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reuniónDeDocentesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenedorDeEquiposToolStripMenuItem;
     }
 }

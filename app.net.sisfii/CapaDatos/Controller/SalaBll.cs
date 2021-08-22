@@ -13,7 +13,7 @@ namespace appcongreso.Controller
     public class SalaBll
     {
 
-        //variable de la clase usuarioeDAO
+        //variable de la clase SalaDAO
         SalaDAO dao;
 
         public SalaBll()

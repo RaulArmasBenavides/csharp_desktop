@@ -1,4 +1,5 @@
 ﻿using CapaDatos.View;
+using CapaPresentacion.View;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -44,16 +45,16 @@ namespace CapaPresentacion
             f.Show();*/
         }
 
-        private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           //   Clientes f = new Clientes();
-           // DataCliente dc = new DataCliente();
-           // dc.MdiParent = this;
-           // f.Dispose();
-           // dc.Show();
+        //private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //   //   Clientes f = new Clientes();
+        //   // DataCliente dc = new DataCliente();
+        //   // dc.MdiParent = this;
+        //   // f.Dispose();
+        //   // dc.Show();
 
 
-        }
+        //}
 
         private void registrarNuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -106,6 +107,9 @@ namespace CapaPresentacion
             //vp.Show();
         }
 
+
+
+        //Mantenedor de Salas
         private void cuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -130,9 +134,7 @@ namespace CapaPresentacion
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* this.Hide();
-            Login l = new Login();
-            l.Show();*/
+         
         }
 
         private void contratarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -346,6 +348,30 @@ namespace CapaPresentacion
         private void toolStripSeparator6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mantenedorDeEquiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEquipo fr = new FrmEquipo();
+            Application.OpenForms.Cast<Form>();
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmSala);
+
+            if (fm != null)
+            {
+                //si la instancia existe la pongo en primer plano
+                fm.BringToFront();
+                return;
+            }
+
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void CerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login l = new Login();
+            l.Show();
         }
     }
 }

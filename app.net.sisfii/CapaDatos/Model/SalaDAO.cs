@@ -15,7 +15,7 @@ namespace appcongreso.Model
         {
             try
             {
-                e.usp_registrar_sala(t.nombre, t.ubicacion, t.capacidad, t.rol_creacion);
+                e.usp_registrar_sala(t.nombre, t.ubicacion, t.capacidad, t.rol_creacion,t.tipo_sala);
             }
             catch (Exception ex)
             {
@@ -39,7 +39,25 @@ namespace appcongreso.Model
 
         public usp_sala_listar_all_Result find(usp_sala_listar_all_Result t)
         {
-            throw new NotImplementedException();
+            usp_sala_listar_all_Result dato = null;
+            var pro = e.usp_sala_datos(t.nombre);
+            foreach (var item in pro)
+            {
+                dato = new usp_sala_listar_all_Result()
+                {
+                    idsala = item.idsala,
+                    nombre = item.nombre,
+                    capacidad = item.capacidad,
+                    tipo_sala = item.tipo_sala
+                    //IdProducto = item.IdProducto,
+                    //NombreProducto = item.NombreProducto,
+                    //IdProveedor = item.IdProveedor,
+                    //IdCategoría = item.IdCategoría,
+                    //PrecioUnidad = item.PrecioUnidad,
+                    //UnidadesEnExistencia = item.UnidadesEnExistencia
+                };
+            }
+            return dato;
         }
 
         public List<usp_sala_listar_all_Result> readAll()

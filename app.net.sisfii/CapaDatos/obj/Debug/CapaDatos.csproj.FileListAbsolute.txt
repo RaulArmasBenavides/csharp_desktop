@@ -80,4 +80,3 @@ C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.Cache
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.pdb
-C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache

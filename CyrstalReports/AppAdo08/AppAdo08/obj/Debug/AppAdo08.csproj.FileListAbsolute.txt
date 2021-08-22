@@ -35,3 +35,6 @@ C:\Users\RAUL\Documents\rmab\ADO.NET\AdoNet_2017\Demos\AppAdo08\AppAdo08\obj\Deb
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo08\AppAdo08\bin\Debug\AppAdo08.exe.config
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo08\AppAdo08\obj\Debug\AppAdo08.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo08\AppAdo08\obj\Debug\AppAdo08.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\CyrstalReports\AppAdo08\AppAdo08\bin\Debug\AppAdo08.exe.config
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\CyrstalReports\AppAdo08\AppAdo08\obj\Debug\AppAdo08.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\CyrstalReports\AppAdo08\AppAdo08\obj\Debug\AppAdo08.pdb
