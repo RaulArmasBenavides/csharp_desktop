@@ -16,7 +16,7 @@ namespace appcongreso.Model
         {
             try
             {
-                e.usp_registrar_Equipo(t.Nombre,t.Procesador,t.RAM,t.SO,t.TarjetaMadre);
+                e.usp_registrar_Equipo(t.Nombre,t.SO,t.Procesador,t.RAM,t.TarjetaMadre);
             }
             catch (Exception ex)
             {
@@ -26,32 +26,55 @@ namespace appcongreso.Model
 
         public void delete(usp_equipo_listar_all_Result t)
         {
-            e.usp_eliminar_Equipo(t.idEquipo);
+            try
+            {
+                e.usp_eliminar_Equipo(t.idEquipo);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+         
         }
 
         public usp_equipo_listar_all_Result find(usp_equipo_listar_all_Result t)
        {
-            //usp_participantes_listar_all_Result dato = null;
-            //var pro = e.usp_participantes_datos(t.DNI);
-            //foreach (var item in pro)
-            //{
-            //    dato = new usp_participantes_listar_all_Result()
-            //    {
-            //        idparticipante = item.idparticipante,
-            //        nombre = item.nombre,
-            //        ap_paterno = item.ap_paterno,
-            //        ap_materno = item.ap_materno,
-            //        DNI = item.DNI,
-            //        correo = item.correo,
-            //        direccion = item.direccion,
-            //        tipo_participante = item.tipo_participante,
-            //        carrera = item.carrera,
-            //        sexo = item.sexo,
-            //        telefono = item.telefono
-            //    };
-            //}
-            //    return dato;
-            throw new NotImplementedException();
+            usp_equipo_listar_all_Result dato = null;
+            var pro = e.usp_equipo_datos(t.idEquipo);
+            foreach (var item in pro)
+            {
+                dato = new usp_equipo_listar_all_Result()
+                {
+                    idEquipo = item.idEquipo,
+                    Nombre = item.Nombre,
+                    SO = item.SO,
+                    RAM = item.RAM,
+                    Procesador= item.Procesador,
+                    TarjetaMadre = item.TarjetaMadre
+                };
+            }
+            return dato;
+        }
+
+
+        public usp_equipo_listar_all_Result find_codigo(usp_equipo_listar_all_Result t)
+        {
+            usp_equipo_listar_all_Result dato = null;
+            var pro = e.usp_equipo_datos_codigo(t.Nombre);
+            foreach (var item in pro)
+            {
+                dato = new usp_equipo_listar_all_Result()
+                {
+                    idEquipo = item.idEquipo,
+                    Nombre = item.Nombre,
+                    SO = item.SO,
+                    RAM = item.RAM,
+                    Procesador = item.Procesador,
+                    TarjetaMadre = item.TarjetaMadre
+                };
+            }
+            return dato;
         }
 
         public List<usp_equipo_listar_all_Result> readAll()
@@ -61,7 +84,15 @@ namespace appcongreso.Model
 
         public void update(usp_equipo_listar_all_Result t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                e.usp_actualizar_equipo(t.idEquipo,t.Nombre,t.SO,t.Procesador,t.RAM,t.TarjetaMadre);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

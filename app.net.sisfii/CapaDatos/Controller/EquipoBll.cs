@@ -69,7 +69,17 @@ namespace appcongreso.Controller
                 throw ex;
             }
         }
-
+        public usp_equipo_listar_all_Result EquipoBuscar_Nombre(usp_equipo_listar_all_Result pro)
+        {
+            try
+            {
+                return dao.find_codigo(pro);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
 
 
         public List<usp_equipo_listar_all_Result> EquipoListar()

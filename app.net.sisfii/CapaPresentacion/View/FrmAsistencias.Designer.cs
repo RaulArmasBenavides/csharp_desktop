@@ -45,6 +45,8 @@
             this.LblApellido = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
+            this.txtidListaAsistencias = new System.Windows.Forms.TextBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.LblLimpiar = new System.Windows.Forms.PictureBox();
             this.LblBuscar = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
@@ -83,6 +85,7 @@
             // 
             // dgvAsistencias
             // 
+            this.dgvAsistencias.AllowUserToAddRows = false;
             this.dgvAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAsistencias.Location = new System.Drawing.Point(45, 180);
             this.dgvAsistencias.Margin = new System.Windows.Forms.Padding(4);
@@ -102,12 +105,16 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(954, 307);
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrabar.Image = global::CapaPresentacion.Properties.Resources.Save_as;
+            this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGrabar.Location = new System.Drawing.Point(780, 299);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(153, 60);
+            this.btnGrabar.Size = new System.Drawing.Size(90, 68);
             this.btnGrabar.TabIndex = 10;
-            this.btnGrabar.Text = "Grabar Lista Asistencias";
+            this.btnGrabar.Text = "Grabar ";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // txtEstado
             // 
@@ -223,6 +230,32 @@
             this.Label8.TabIndex = 3;
             this.Label8.Text = "Nombre";
             // 
+            // txtidListaAsistencias
+            // 
+            this.txtidListaAsistencias.Enabled = false;
+            this.txtidListaAsistencias.Location = new System.Drawing.Point(780, 12);
+            this.txtidListaAsistencias.Name = "txtidListaAsistencias";
+            this.txtidListaAsistencias.Size = new System.Drawing.Size(100, 22);
+            this.txtidListaAsistencias.TabIndex = 36;
+            this.txtidListaAsistencias.Visible = false;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcel.Location = new System.Drawing.Point(780, 223);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(90, 69);
+            this.btnExcel.TabIndex = 37;
+            this.btnExcel.Text = "A Excel";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcel.UseVisualStyleBackColor = true;
+
+            // 
             // LblLimpiar
             // 
             this.LblLimpiar.ErrorImage = null;
@@ -253,10 +286,10 @@
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(954, 374);
+            this.btnImprimir.Location = new System.Drawing.Point(780, 374);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(153, 52);
+            this.btnImprimir.Size = new System.Drawing.Size(90, 52);
             this.btnImprimir.TabIndex = 8;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -269,15 +302,15 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(658, 248);
+            this.btnEliminar.Location = new System.Drawing.Point(658, 223);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 64);
+            this.btnEliminar.Size = new System.Drawing.Size(35, 35);
             this.btnEliminar.TabIndex = 7;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -287,9 +320,8 @@
             this.btnAgregar.Location = new System.Drawing.Point(658, 180);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(86, 60);
+            this.btnAgregar.Size = new System.Drawing.Size(35, 35);
             this.btnAgregar.TabIndex = 6;
-            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -299,7 +331,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 522);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(908, 444);
+            this.Controls.Add(this.btnExcel);
+            this.Controls.Add(this.txtidListaAsistencias);
             this.Controls.Add(this.LblLimpiar);
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.GroupBox2);
@@ -315,6 +351,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAsistencias";
             this.Text = ":: REGISTRO DE ASISTENCIAS ::";
+            this.Load += new System.EventHandler(this.FrmAsistencias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencias)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
@@ -348,5 +385,7 @@
         internal System.Windows.Forms.Label Label8;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.PictureBox LblBuscar;
+        internal System.Windows.Forms.TextBox txtidListaAsistencias;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

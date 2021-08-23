@@ -60,5 +60,29 @@ namespace appcongreso.Model
         {
             throw new NotImplementedException();
         }
+
+        public void RegistrarListaAsistentes(string codigo , List<usp_asistencias_Result> lista , bool Esnuevo)
+        {
+
+            if(Esnuevo)
+            {  //registro nuevo
+                entidades.usp_registrar_asistencia(codigo);
+            }
+             if(lista.Count >0)
+             RegistrarDetalleCabecera(codigo, lista, Esnuevo);
+        }
+        public void RegistrarDetalleCabecera(string codigo, List<usp_asistencias_Result> lista, bool Esnuevo)
+        {
+            if(!Esnuevo)
+            {
+                entidades.usp_borrar_det_asistencia(codigo);
+            }
+          
+            foreach (var item in lista)
+            {
+                entidades.usp_registrar_det_asistencia(item.DNI, item.codigo);
+            }
+        }
+
     }
 }

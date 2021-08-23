@@ -1,7 +1,10 @@
-﻿using appcongreso.EF;
+﻿using appcongreso.Controller;
+using appcongreso.EF;
 using CapaDatos.Controller;
 using CapaPresentacion.View;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CapaDatos.View
@@ -12,6 +15,7 @@ namespace CapaDatos.View
 
         // INSTANCIAR OBJETO DE LA CLASE ProductoBll capa de negocio 
         ActividadBll obj = new ActividadBll();
+        SalaBll salabll = new SalaBll();
         usp_actividades_listar_all_Result pro;
         //verPruebas v;
         public FrmActividades()
@@ -46,19 +50,19 @@ namespace CapaDatos.View
                         break;
                     case 4:
                        // var pro = new usp_BusquedaActividadforDescripcion_Result();
-                        string s = cboCriterio.SelectedItem.ToString();
-                        if (s == "Descripcion")
-                        {
+                        //string s = cboCriterio.SelectedItem.ToString();
+                        //if (s == "Descripcion")
+                        //{
                            
-                            consultarActividad(1);
-                        }
-                        else if (s == "Fecha")
-                        {
-                            //var pro = new usp_BusquedaActividadforDescripcion_Result();
-                            //obj.actividadeBuscarporDescripcion(pro);
-                            //consultarActividad(2,s);
+                        //    consultarActividad(1);
+                        //}
+                        //else if (s == "Fecha")
+                        //{
+                        //    //var pro = new usp_BusquedaActividadforDescripcion_Result();
+                        //    //obj.actividadeBuscarporDescripcion(pro);
+                        //    //consultarActividad(2,s);
 
-                        }
+                        //}
 
                         return;
                 }
@@ -194,6 +198,7 @@ namespace CapaDatos.View
               comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
               comboBox1.SelectedIndex = 0;*/
             FormatearControles();
+            CargarCombos();
             listaActividades();
         }
 
@@ -205,6 +210,14 @@ namespace CapaDatos.View
             dtpicker2.CustomFormat = "MM/dd/yyyy hh:mm:ss";
         }
 
+        void CargarCombos()
+        {
+            List<usp_sala_listar_all_Result> lista = salabll.SalaListar();
+            cboSala.DataSource = lista;
+            cboSala.DisplayMember = "Nombre";
+            cboSala.ValueMember = "idSala";
+        }
+   
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -344,14 +357,50 @@ namespace CapaDatos.View
 
         private void btnListaEquipos_Click(object sender, EventArgs e)
         {
-            FrmListaEquipos f = new FrmListaEquipos();
-            f.ShowDialog();
+            //FrmListaEquipos f = new FrmListaEquipos();
+            //f.ShowDialog();
+            FrmListaEquipos fr = new FrmListaEquipos();
+            Application.OpenForms.Cast<Form>();
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaEquipos);
+            if (fm != null)
+            {
+                //si la instancia existe la pongo en primer plano
+                fm.BringToFront();
+                return;
+            }
+            //fr.MdiParent = this;
+            fr.ShowDialog();
+            //internal
+            if (!fr.txtidListaEquipo.Text.Equals(""))
+             this.txtidListaEquipos.Text = fr.txtidListaEquipo.Text;
+
         }
 
         private void btnListaAsistenci_Click(object sender, EventArgs e)
         {
-            FrmAsistencias f = new FrmAsistencias();
-            f.ShowDialog();
+            //FrmAsistencias f = new FrmAsistencias();
+            //f.ShowDialog();
+            FrmAsistencias fr = new FrmAsistencias();
+            Application.OpenForms.Cast<Form>();
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmAsistencias);
+
+            if (fm != null)
+            {
+                //si la instancia existe la pongo en primer plano
+                fm.BringToFront();
+                return;
+            }
+
+           // fr.MdiParent = this;
+            fr.ShowDialog();
+            //internal
+            if (!fr.txtidListaAsistencias.Text.Equals(""))
+                this.txtIdListaAsistencias.Text = fr.txtidListaAsistencias.Text;
+        }
+
+        private void LblBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

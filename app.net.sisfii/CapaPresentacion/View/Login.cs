@@ -40,12 +40,17 @@ namespace CapaPresentacion
          }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            //usp_usuarios_listar_all_Result usuarioep = new usp_usuarios_listar_all_Result();
+        { 
+            if(txtUsuario.Equals("") || txtClave.Text.Equals(""))
+            {
+                MessageBox.Show("Debe ingresar usuario y password", "ERROR");
+                return;
+            }
+
             usp_usuarios_listar_all_Result pro2 = new usp_usuarios_listar_all_Result();
            //usuarios usuarioep = new usuarios();
-            pro2.usuario= txtUsuario.Text;
-            pro2.clave = txtClave.Text;
+            pro2.usuario= txtUsuario.Text.Trim();
+            pro2.clave = txtClave.Text.Trim();
             if (obj.UsuarioValidar(pro2) != null)
             {
                 this.Hide();

@@ -130,8 +130,8 @@
             // 
             this.castingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentesToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.stpVer,
+            this.toolStripMenuItem1,
             this.toolStripSeparator3});
             this.castingToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.castingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("castingToolStripMenuItem.Image")));
@@ -237,7 +237,7 @@
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(266, 28);
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
             this.actividadesToolStripMenuItem.Text = "Consulta Individual";
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
@@ -253,6 +253,7 @@
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
             this.reporteToolStripMenuItem.Text = "Reporte de Actividades";
+            this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -262,9 +263,10 @@
             this.toolStripSeparator2,
             this.listaDeEquiposToolStripMenuItem});
             this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.Billboard;
             this.usuariosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(146, 28);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(170, 28);
             this.usuariosToolStripMenuItem.Text = "Instalaciones";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -294,6 +296,7 @@
             this.listaDeEquiposToolStripMenuItem.Name = "listaDeEquiposToolStripMenuItem";
             this.listaDeEquiposToolStripMenuItem.Size = new System.Drawing.Size(311, 28);
             this.listaDeEquiposToolStripMenuItem.Text = "Lista de Equipos";
+            this.listaDeEquiposToolStripMenuItem.Click += new System.EventHandler(this.listaDeEquiposToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -312,7 +315,7 @@
             // 
             this.helpCenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.helpCenterToolStripMenuItem.Name = "helpCenterToolStripMenuItem";
-            this.helpCenterToolStripMenuItem.Size = new System.Drawing.Size(260, 28);
+            this.helpCenterToolStripMenuItem.Size = new System.Drawing.Size(258, 28);
             this.helpCenterToolStripMenuItem.Text = "Contacto ICACIC";
             this.helpCenterToolStripMenuItem.Click += new System.EventHandler(this.helpCenterToolStripMenuItem_Click);
             // 

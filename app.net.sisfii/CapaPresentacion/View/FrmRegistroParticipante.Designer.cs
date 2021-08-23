@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroParticipante));
             this.dgvParticipantes = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblLimpiar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipantes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).BeginInit();
             this.SuspendLayout();
@@ -72,18 +73,18 @@
             // dgvParticipantes
             // 
             this.dgvParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParticipantes.Location = new System.Drawing.Point(593, 15);
+            this.dgvParticipantes.Location = new System.Drawing.Point(470, 15);
             this.dgvParticipantes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvParticipantes.Name = "dgvParticipantes";
             this.dgvParticipantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParticipantes.Size = new System.Drawing.Size(550, 345);
+            this.dgvParticipantes.Size = new System.Drawing.Size(742, 345);
             this.dgvParticipantes.TabIndex = 3;
             this.dgvParticipantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipantes_CellContentClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.AutoSize = true;
             this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.btnExcel);
             this.groupBox2.Controls.Add(this.btnImprimir);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnActualizar);
@@ -93,17 +94,34 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(735, 120);
+            this.groupBox2.Size = new System.Drawing.Size(742, 127);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcel.Location = new System.Drawing.Point(524, 24);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(90, 74);
+            this.btnExcel.TabIndex = 53;
+            this.btnExcel.Text = "A Excel";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(635, 23);
+            this.btnImprimir.Location = new System.Drawing.Point(622, 24);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(92, 74);
@@ -119,7 +137,7 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(535, 23);
+            this.btnEliminar.Location = new System.Drawing.Point(424, 24);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(92, 74);
@@ -135,7 +153,7 @@
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(435, 23);
+            this.btnActualizar.Location = new System.Drawing.Point(324, 24);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(92, 74);
@@ -151,7 +169,7 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(335, 23);
+            this.btnAgregar.Location = new System.Drawing.Point(224, 24);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 74);
@@ -164,30 +182,31 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.LblLimpiar);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.LblBuscar);
             this.groupBox1.Controls.Add(this.txtfiltro);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(29, 15);
+            this.groupBox1.Location = new System.Drawing.Point(29, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(433, 480);
+            this.groupBox1.Size = new System.Drawing.Size(433, 482);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del participante";
             // 
-            // pictureBox1
+            // LblLimpiar
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Clean_2;
-            this.pictureBox1.Location = new System.Drawing.Point(364, 42);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.LblLimpiar.Image = global::CapaPresentacion.Properties.Resources.Clean_2;
+            this.LblLimpiar.Location = new System.Drawing.Point(364, 42);
+            this.LblLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.LblLimpiar.Name = "LblLimpiar";
+            this.LblLimpiar.Size = new System.Drawing.Size(24, 24);
+            this.LblLimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LblLimpiar.TabIndex = 6;
+            this.LblLimpiar.TabStop = false;
+            this.LblLimpiar.Click += new System.EventHandler(this.LblLimpiar_Click);
             // 
             // groupBox3
             // 
@@ -227,11 +246,11 @@
             this.cmbSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cmbSexo.Location = new System.Drawing.Point(211, 164);
+            this.cmbSexo.Location = new System.Drawing.Point(133, 163);
             this.cmbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(177, 24);
-            this.cmbSexo.TabIndex = 21;
+            this.cmbSexo.TabIndex = 8;
             // 
             // cmbTipo
             // 
@@ -241,7 +260,7 @@
             "ESTUDIANTE",
             "PONENTE",
             "PROFESIONAL"});
-            this.cmbTipo.Location = new System.Drawing.Point(227, 327);
+            this.cmbTipo.Location = new System.Drawing.Point(133, 329);
             this.cmbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(161, 24);
@@ -253,7 +272,7 @@
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(255, 22);
-            this.txtDireccion.TabIndex = 19;
+            this.txtDireccion.TabIndex = 12;
             // 
             // txtCarrera
             // 
@@ -261,15 +280,16 @@
             this.txtCarrera.Margin = new System.Windows.Forms.Padding(4);
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(255, 22);
-            this.txtCarrera.TabIndex = 18;
+            this.txtCarrera.TabIndex = 11;
             // 
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(133, 233);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(255, 22);
-            this.txtDNI.TabIndex = 17;
+            this.txtDNI.TabIndex = 10;
             // 
             // txtCorreo
             // 
@@ -277,7 +297,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(255, 22);
-            this.txtCorreo.TabIndex = 16;
+            this.txtCorreo.TabIndex = 9;
             // 
             // txtTelefono
             // 
@@ -285,7 +305,7 @@
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(255, 22);
-            this.txtTelefono.TabIndex = 15;
+            this.txtTelefono.TabIndex = 7;
             // 
             // label10
             // 
@@ -447,7 +467,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 540);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(1225, 541);
             this.Controls.Add(this.dgvParticipantes);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -459,12 +480,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -501,6 +521,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbSexo;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox LblLimpiar;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

@@ -20,6 +20,7 @@
         <AssociationConnector Association="bdcongresoModel.FK__participa__idusu__7FB5F314" />
         <EntityTypeShape EntityType="bdcongresoModel.detalle_list_equipos" Width="1.5" PointX="2.375" PointY="4.875" />
         <AssociationConnector Association="bdcongresoModel.FK__detalle_l__idEqu__075714DC" />
+        <AssociationConnector Association="bdcongresoModel.FK_listaequipos_listaequipos" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

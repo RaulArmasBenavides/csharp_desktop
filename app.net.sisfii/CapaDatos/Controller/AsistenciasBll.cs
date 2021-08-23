@@ -32,7 +32,17 @@ namespace appcongreso.Controller
             }
         }
 
-
+        public void RegistrarListaAsistentes(string codigo , List<usp_asistencias_Result> pro, bool Esnuevo)
+        {
+            try
+            {
+               dao.RegistrarListaAsistentes(codigo, pro, Esnuevo);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
 
         //public List<usp_sala_listar_all_Result> SalaListar()
         //{

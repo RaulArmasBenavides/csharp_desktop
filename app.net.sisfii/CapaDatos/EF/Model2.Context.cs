@@ -545,5 +545,121 @@ namespace appcongreso.EF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_asistencias_Result>("usp_asistencias", codigoParameter);
         }
+    
+        public virtual ObjectResult<usp_equipo_datos_Result> usp_equipo_datos(Nullable<int> idEquipo)
+        {
+            var idEquipoParameter = idEquipo.HasValue ?
+                new ObjectParameter("idEquipo", idEquipo) :
+                new ObjectParameter("idEquipo", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_equipo_datos_Result>("usp_equipo_datos", idEquipoParameter);
+        }
+    
+        public virtual int usp_registrar_asistencia(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_asistencia", codigoParameter);
+        }
+    
+        public virtual int usp_registrar_det_asistencia(string dNI, string codigo)
+        {
+            var dNIParameter = dNI != null ?
+                new ObjectParameter("DNI", dNI) :
+                new ObjectParameter("DNI", typeof(string));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_det_asistencia", dNIParameter, codigoParameter);
+        }
+    
+        public virtual int usp_borrar_det_asistencia(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_borrar_det_asistencia", codigoParameter);
+        }
+    
+        public virtual int usp_borrar_det_list_equipos(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_borrar_det_list_equipos", codigoParameter);
+        }
+    
+        public virtual int usp_registrar_det_list_equipos(Nullable<int> idEquipo, string codigo)
+        {
+            var idEquipoParameter = idEquipo.HasValue ?
+                new ObjectParameter("idEquipo", idEquipo) :
+                new ObjectParameter("idEquipo", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_det_list_equipos", idEquipoParameter, codigoParameter);
+        }
+    
+        public virtual int usp_registrar_lista_equipos(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_lista_equipos", codigoParameter);
+        }
+    
+        public virtual int usp_lista_equipos(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_lista_equipos", codigoParameter);
+        }
+    
+        public virtual int usp_lista_equipos1(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_lista_equipos1", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_lista_equipos_Result> usp_lista_equipos2(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_lista_equipos_Result>("usp_lista_equipos2", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_lista_equipos_oficial_Result> usp_lista_equipos_oficial(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_lista_equipos_oficial_Result>("usp_lista_equipos_oficial", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_equipo_datos_codigo_Result> usp_equipo_datos_codigo(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_equipo_datos_codigo_Result>("usp_equipo_datos_codigo", nombreParameter);
+        }
     }
 }

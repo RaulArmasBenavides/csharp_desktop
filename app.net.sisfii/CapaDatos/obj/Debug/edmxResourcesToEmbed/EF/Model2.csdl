@@ -34,8 +34,11 @@
       <PropertyRef Name="idlistaeq" />
     </Key>
     <Property Name="idlistaeq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="listaequipos" ToRole="actividades" />
+    <Property Name="codigo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="listaequipos1" Relationship="bdcongresoModel.FK_listaequipos_listaequipos" FromRole="listaequipos" ToRole="listaequipos1" />
+    <NavigationProperty Name="listaequipos2" Relationship="bdcongresoModel.FK_listaequipos_listaequipos" FromRole="listaequipos1" ToRole="listaequipos" />
   </EntityType>
   <EntityType Name="participantes">
     <Key>
@@ -289,6 +292,48 @@
     <FunctionImport Name="usp_asistencias" ReturnType="Collection(bdcongresoModel.usp_asistencias_Result)">
       <Parameter Name="codigo" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_equipo_datos" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_Result)">
+      <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <AssociationSet Name="FK_listaequipos_listaequipos" Association="bdcongresoModel.FK_listaequipos_listaequipos">
+      <End Role="listaequipos" EntitySet="listaequipos" />
+      <End Role="listaequipos1" EntitySet="listaequipos" />
+    </AssociationSet>
+    <FunctionImport Name="usp_registrar_asistencia">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_det_asistencia">
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_borrar_det_asistencia">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_borrar_det_list_equipos">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_det_list_equipos">
+      <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_lista_equipos">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_lista_equipos">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_lista_equipos1">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_lista_equipos2" ReturnType="Collection(bdcongresoModel.usp_lista_equipos_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_lista_equipos_oficial" ReturnType="Collection(bdcongresoModel.usp_lista_equipos_oficial_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_equipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_codigo_Result)">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -517,6 +562,7 @@
     <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
     <Property Name="idEquipo" Type="Int32" />
     <NavigationProperty Name="Equipo" Relationship="bdcongresoModel.FK__detalle_l__idEqu__075714DC" FromRole="detalle_list_equipos" ToRole="Equipo" />
+    <Property Name="codigo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
   </EntityType>
   <Association Name="FK__detalle_l__idEqu__075714DC">
     <End Type="bdcongresoModel.Equipo" Role="Equipo" Multiplicity="0..1" />
@@ -535,5 +581,55 @@
     <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="usp_equipo_datos_Result">
+    <Property Type="Int32" Name="idEquipo" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+  </ComplexType>
+  <Association Name="FK_listaequipos_listaequipos">
+    <End Type="bdcongresoModel.listaequipos" Role="listaequipos" Multiplicity="1" />
+    <End Type="bdcongresoModel.listaequipos" Role="listaequipos1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="listaequipos">
+        <PropertyRef Name="idlistaeq" />
+      </Principal>
+      <Dependent Role="listaequipos1">
+        <PropertyRef Name="idlistaeq" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usp_lista_equipos_Result">
+    <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+    <Property Type="Int32" Name="idEquipo" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_lista_equipos_oficial_Result">
+    <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+    <Property Type="Int32" Name="idEquipo" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_equipo_datos_codigo_Result">
+    <Property Type="Int32" Name="idEquipo" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
   </ComplexType>
 </Schema>

@@ -43,8 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtidListaEquipos = new System.Windows.Forms.TextBox();
+            this.txtIdListaAsistencias = new System.Windows.Forms.TextBox();
             this.btnListaEquipos = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,17 +55,13 @@
             this.txtdescrip = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtidentificador = new System.Windows.Forms.TextBox();
-            this.cboCriterio = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,12 +70,11 @@
             this.groupBox1.Controls.Add(this.LblBuscar);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.txtidentificador);
-            this.groupBox1.Controls.Add(this.cboCriterio);
             this.groupBox1.Location = new System.Drawing.Point(35, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1125, 493);
+            this.groupBox1.Size = new System.Drawing.Size(1049, 493);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la actividad";
@@ -87,7 +82,8 @@
             // 
             // LblLimpiar
             // 
-            this.LblLimpiar.Location = new System.Drawing.Point(361, 23);
+            this.LblLimpiar.Image = global::CapaPresentacion.Properties.Resources.Clean_2;
+            this.LblLimpiar.Location = new System.Drawing.Point(259, 23);
             this.LblLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.LblLimpiar.Name = "LblLimpiar";
             this.LblLimpiar.Size = new System.Drawing.Size(24, 24);
@@ -98,13 +94,14 @@
             // LblBuscar
             // 
             this.LblBuscar.Image = ((System.Drawing.Image)(resources.GetObject("LblBuscar.Image")));
-            this.LblBuscar.Location = new System.Drawing.Point(332, 23);
+            this.LblBuscar.Location = new System.Drawing.Point(227, 23);
             this.LblBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.LblBuscar.Name = "LblBuscar";
             this.LblBuscar.Size = new System.Drawing.Size(24, 24);
             this.LblBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.LblBuscar.TabIndex = 35;
             this.LblBuscar.TabStop = false;
+            this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click);
             // 
             // groupBox3
             // 
@@ -118,8 +115,8 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.dtpicker1);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtidListaEquipos);
+            this.groupBox3.Controls.Add(this.txtIdListaAsistencias);
             this.groupBox3.Controls.Add(this.btnListaEquipos);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label1);
@@ -129,11 +126,11 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtdescrip);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(30, 71);
+            this.groupBox3.Location = new System.Drawing.Point(30, 55);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(1035, 399);
+            this.groupBox3.Size = new System.Drawing.Size(972, 399);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
@@ -141,9 +138,9 @@
             // btnListaAsistenci
             // 
             this.btnListaAsistenci.Image = ((System.Drawing.Image)(resources.GetObject("btnListaAsistenci.Image")));
-            this.btnListaAsistenci.Location = new System.Drawing.Point(388, 176);
+            this.btnListaAsistenci.Location = new System.Drawing.Point(388, 162);
             this.btnListaAsistenci.Name = "btnListaAsistenci";
-            this.btnListaAsistenci.Size = new System.Drawing.Size(87, 36);
+            this.btnListaAsistenci.Size = new System.Drawing.Size(87, 28);
             this.btnListaAsistenci.TabIndex = 10020;
             this.btnListaAsistenci.UseVisualStyleBackColor = true;
             this.btnListaAsistenci.Click += new System.EventHandler(this.btnListaAsistenci_Click);
@@ -151,7 +148,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(61, 259);
+            this.label11.Location = new System.Drawing.Point(71, 234);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 17);
@@ -161,7 +158,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 146);
+            this.label10.Location = new System.Drawing.Point(32, 130);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 17);
@@ -171,18 +168,15 @@
             // cboSala
             // 
             this.cboSala.FormattingEnabled = true;
-            this.cboSala.Items.AddRange(new object[] {
-            "Descripcion",
-            "Fecha"});
-            this.cboSala.Location = new System.Drawing.Point(166, 143);
+            this.cboSala.Location = new System.Drawing.Point(166, 130);
             this.cboSala.Margin = new System.Windows.Forms.Padding(4);
             this.cboSala.Name = "cboSala";
-            this.cboSala.Size = new System.Drawing.Size(215, 24);
+            this.cboSala.Size = new System.Drawing.Size(775, 24);
             this.cboSala.TabIndex = 10017;
             // 
             // dtpicker2
             // 
-            this.dtpicker2.Location = new System.Drawing.Point(544, 96);
+            this.dtpicker2.Location = new System.Drawing.Point(612, 96);
             this.dtpicker2.Name = "dtpicker2";
             this.dtpicker2.Size = new System.Drawing.Size(329, 22);
             this.dtpicker2.TabIndex = 10016;
@@ -191,7 +185,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(467, 96);
+            this.label9.Location = new System.Drawing.Point(535, 96);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 17);
@@ -201,7 +195,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 101);
+            this.label8.Location = new System.Drawing.Point(60, 96);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 17);
@@ -211,7 +205,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 223);
+            this.label7.Location = new System.Drawing.Point(50, 201);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 17);
@@ -221,7 +215,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 183);
+            this.label3.Location = new System.Drawing.Point(32, 165);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 17);
@@ -230,52 +224,52 @@
             // 
             // dtpicker1
             // 
-            this.dtpicker1.Location = new System.Drawing.Point(131, 96);
+            this.dtpicker1.Location = new System.Drawing.Point(166, 96);
             this.dtpicker1.Name = "dtpicker1";
-            this.dtpicker1.Size = new System.Drawing.Size(329, 22);
+            this.dtpicker1.Size = new System.Drawing.Size(353, 22);
             this.dtpicker1.TabIndex = 10011;
             this.dtpicker1.Value = new System.DateTime(2021, 8, 22, 2, 40, 36, 0);
             // 
-            // textBox3
+            // txtidListaEquipos
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 220);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(215, 28);
-            this.textBox3.TabIndex = 10010;
+            this.txtidListaEquipos.Location = new System.Drawing.Point(166, 195);
+            this.txtidListaEquipos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidListaEquipos.Multiline = true;
+            this.txtidListaEquipos.Name = "txtidListaEquipos";
+            this.txtidListaEquipos.Size = new System.Drawing.Size(215, 28);
+            this.txtidListaEquipos.TabIndex = 10010;
             // 
-            // textBox2
+            // txtIdListaAsistencias
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 180);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 32);
-            this.textBox2.TabIndex = 10009;
+            this.txtIdListaAsistencias.Location = new System.Drawing.Point(166, 162);
+            this.txtIdListaAsistencias.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdListaAsistencias.Multiline = true;
+            this.txtIdListaAsistencias.Name = "txtIdListaAsistencias";
+            this.txtIdListaAsistencias.Size = new System.Drawing.Size(215, 28);
+            this.txtIdListaAsistencias.TabIndex = 10009;
             // 
             // btnListaEquipos
             // 
             this.btnListaEquipos.Image = ((System.Drawing.Image)(resources.GetObject("btnListaEquipos.Image")));
-            this.btnListaEquipos.Location = new System.Drawing.Point(388, 215);
+            this.btnListaEquipos.Location = new System.Drawing.Point(388, 196);
             this.btnListaEquipos.Name = "btnListaEquipos";
-            this.btnListaEquipos.Size = new System.Drawing.Size(87, 36);
+            this.btnListaEquipos.Size = new System.Drawing.Size(87, 27);
             this.btnListaEquipos.TabIndex = 10008;
             this.btnListaEquipos.UseVisualStyleBackColor = true;
             this.btnListaEquipos.Click += new System.EventHandler(this.btnListaEquipos_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 67);
+            this.textBox1.Location = new System.Drawing.Point(166, 65);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(775, 22);
             this.textBox1.TabIndex = 10007;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 70);
+            this.label1.Location = new System.Drawing.Point(52, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 17);
@@ -305,11 +299,11 @@
             // txtDescripcion
             // 
             this.txtDescripcion.AcceptsReturn = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(166, 256);
+            this.txtDescripcion.Location = new System.Drawing.Point(166, 231);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(614, 112);
+            this.txtDescripcion.Size = new System.Drawing.Size(775, 147);
             this.txtDescripcion.TabIndex = 10002;
             // 
             // label6
@@ -324,16 +318,16 @@
             // 
             // txtdescrip
             // 
-            this.txtdescrip.Location = new System.Drawing.Point(131, 37);
+            this.txtdescrip.Location = new System.Drawing.Point(166, 35);
             this.txtdescrip.Margin = new System.Windows.Forms.Padding(4);
             this.txtdescrip.Name = "txtdescrip";
-            this.txtdescrip.Size = new System.Drawing.Size(132, 22);
+            this.txtdescrip.Size = new System.Drawing.Size(775, 22);
             this.txtdescrip.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 37);
+            this.label2.Location = new System.Drawing.Point(83, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
@@ -342,113 +336,63 @@
             // 
             // txtidentificador
             // 
-            this.txtidentificador.Location = new System.Drawing.Point(135, 25);
+            this.txtidentificador.Location = new System.Drawing.Point(30, 23);
             this.txtidentificador.Margin = new System.Windows.Forms.Padding(4);
             this.txtidentificador.Name = "txtidentificador";
             this.txtidentificador.Size = new System.Drawing.Size(189, 22);
             this.txtidentificador.TabIndex = 1;
             // 
-            // cboCriterio
+            // button1
             // 
-            this.cboCriterio.FormattingEnabled = true;
-            this.cboCriterio.Items.AddRange(new object[] {
-            "Descripcion",
-            "Fecha"});
-            this.cboCriterio.Location = new System.Drawing.Point(30, 23);
-            this.cboCriterio.Margin = new System.Windows.Forms.Padding(4);
-            this.cboCriterio.Name = "cboCriterio";
-            this.cboCriterio.Size = new System.Drawing.Size(95, 24);
-            this.cboCriterio.TabIndex = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(1101, 69);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 47);
+            this.button1.TabIndex = 57;
+            this.button1.Text = "Actualizar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // btnGrabar
             // 
-            this.groupBox2.AutoSize = true;
-            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox2.Controls.Add(this.btnImprimir);
-            this.groupBox2.Controls.Add(this.btnEliminar);
-            this.groupBox2.Controls.Add(this.btnActualizar);
-            this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.groupBox2.Location = new System.Drawing.Point(589, 516);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(735, 120);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Opciones";
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrabar.Image = global::CapaPresentacion.Properties.Resources.Save_as;
+            this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnGrabar.Location = new System.Drawing.Point(1101, 21);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(104, 41);
+            this.btnGrabar.TabIndex = 55;
+            this.btnGrabar.Text = "Grabar ";
+            this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGrabar.UseVisualStyleBackColor = true;
             // 
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(635, 23);
+            this.btnImprimir.Location = new System.Drawing.Point(1101, 124);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(92, 74);
-            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.Size = new System.Drawing.Size(104, 49);
+            this.btnImprimir.TabIndex = 54;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(535, 23);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(92, 74);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(435, 23);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(92, 74);
-            this.btnActualizar.TabIndex = 3;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(335, 23);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 74);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // FrmActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1359, 649);
-            this.Controls.Add(this.groupBox2);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(1264, 532);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmActividades";
@@ -461,24 +405,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtidentificador;
-        private System.Windows.Forms.ComboBox cboCriterio;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtdescrip;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -486,8 +422,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtidListaEquipos;
+        private System.Windows.Forms.TextBox txtIdListaAsistencias;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -500,5 +436,8 @@
         private System.Windows.Forms.PictureBox LblBuscar;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.Button btnListaAsistenci;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

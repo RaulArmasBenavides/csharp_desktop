@@ -18,8 +18,7 @@ namespace Neptuno.Venta.AppWind.Formularios
          private DataRow drw;
          private decimal total=0;
 
-         private int stk;
-
+        
          void LlenarCombos()
          {
             // cboCliente.DataSource = oVenta.ClienteListar();
@@ -114,35 +113,36 @@ namespace Neptuno.Venta.AppWind.Formularios
              }
             catch (Exception ex)
             {
+                throw ex;
             }
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtCantidad.Text != "")
-                {
-                    int cant = Int32.Parse(txtCantidad.Text);
-                    if (cant<stk)
-                    {
-                        txtSubTotal.Text = (cant * decimal.Parse(txtPrecio.Text)).ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Solo quedan: " + stk.ToString() + " unidades en stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                        txtCantidad.SelectAll();
-                        txtCantidad.Focus();
-                    }
-                }
-                else
-                {
-                    txtSubTotal.Clear();
-                }
-            }
-            catch (Exception)
-            {                
-           }
+           // try
+           // {
+           //     if (txtCantidad.Text != "")
+           //     {
+           //         int cant = Int32.Parse(txtCantidad.Text);
+           //         if (cant<stk)
+           //         {
+           //             txtSubTotal.Text = (cant * decimal.Parse(txtPrecio.Text)).ToString();
+           //         }
+           //         else
+           //         {
+           //            // MessageBox.Show("Solo quedan: " + stk.ToString() + " unidades en stock.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+           //             txtCantidad.SelectAll();
+           //             txtCantidad.Focus();
+           //         }
+           //     }
+           //     else
+           //     {
+           //         txtSubTotal.Clear();
+           //     }
+           // }
+           // catch (Exception)
+           // {                
+           //}
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

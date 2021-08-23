@@ -72,10 +72,10 @@ namespace appcongreso.Model
             {
                 e.usp_actualiza_sala(t.idsala, t.nombre, t.ubicacion, t.capacidad, t.tipo_sala);
             }
-            catch (Exception)
+            catch (Exception ex )
             {
 
-                throw;
+                throw ex;
             }
          
         }

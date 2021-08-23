@@ -354,7 +354,7 @@ namespace CapaPresentacion
         {
             FrmEquipo fr = new FrmEquipo();
             Application.OpenForms.Cast<Form>();
-            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmSala);
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmEquipo);
 
             if (fm != null)
             {
@@ -378,7 +378,7 @@ namespace CapaPresentacion
         {
             FrmAsistencias fr = new FrmAsistencias();
             Application.OpenForms.Cast<Form>();
-            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmSala);
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmAsistencias);
 
             if (fm != null)
             {
@@ -389,6 +389,27 @@ namespace CapaPresentacion
 
             fr.MdiParent = this;
             fr.Show();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaDeEquiposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaEquipos fr = new FrmListaEquipos();
+            Application.OpenForms.Cast<Form>();
+            Form fm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is FrmListaEquipos);
+            if (fm != null)
+            {
+                //si la instancia existe la pongo en primer plano
+                fm.BringToFront();
+                return;
+            }
+            fr.MdiParent = this;
+            fr.Show();
+
         }
     }
 }

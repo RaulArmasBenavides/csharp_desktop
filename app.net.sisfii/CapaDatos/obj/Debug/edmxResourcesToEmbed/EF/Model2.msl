@@ -31,6 +31,7 @@
     <EntitySetMapping Name="listaequipos">
       <EntityTypeMapping TypeName="bdcongresoModel.listaequipos">
         <MappingFragment StoreEntitySet="listaequipos">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
           <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
           <ScalarProperty Name="estado" ColumnName="estado" />
         </MappingFragment>
@@ -333,6 +334,7 @@
     <EntitySetMapping Name="detalle_list_equipos">
       <EntityTypeMapping TypeName="bdcongresoModel.detalle_list_equipos">
         <MappingFragment StoreEntitySet="detalle_list_equipos">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
           <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="intdetalleeq" ColumnName="intdetalleeq" />
@@ -346,6 +348,66 @@
           <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
           <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
           <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_equipo_datos" FunctionName="bdcongresoModel.Store.usp_equipo_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_datos_Result">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_registrar_asistencia" FunctionName="bdcongresoModel.Store.usp_registrar_asistencia" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_det_asistencia" FunctionName="bdcongresoModel.Store.usp_registrar_det_asistencia" />
+    <FunctionImportMapping FunctionImportName="usp_borrar_det_asistencia" FunctionName="bdcongresoModel.Store.usp_borrar_det_asistencia" />
+    <FunctionImportMapping FunctionImportName="usp_borrar_det_list_equipos" FunctionName="bdcongresoModel.Store.usp_borrar_det_list_equipos" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_det_list_equipos" FunctionName="bdcongresoModel.Store.usp_registrar_det_list_equipos" />
+    <FunctionImportMapping FunctionImportName="usp_registrar_lista_equipos" FunctionName="bdcongresoModel.Store.usp_registrar_lista_equipos" />
+    <FunctionImportMapping FunctionImportName="usp_lista_equipos2" FunctionName="bdcongresoModel.Store.usp_lista_equipos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_lista_equipos_Result">
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_lista_equipos_oficial" FunctionName="bdcongresoModel.Store.usp_lista_equipos_oficial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_lista_equipos_oficial_Result">
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_equipo_datos_codigo" FunctionName="bdcongresoModel.Store.usp_equipo_datos_codigo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_datos_codigo_Result">
+          <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

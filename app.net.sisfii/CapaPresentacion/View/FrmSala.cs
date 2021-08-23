@@ -32,9 +32,54 @@ namespace CapaDatos.View
             }
             else
             {
-                procesar(1);
-                listaSalas();
+                if (Validaciones("C"))
+                {
+                    procesar(1);
+                    LimpiaControles();
+                    listaSalas();
+                }
             }
+        }
+
+        private bool Validaciones( string tipo_accion)
+        {
+            //string mensaje = "";
+
+            if (tipo_accion.Equals("C"))
+            {
+                    if (txtdescrip.Text.Equals(""))
+                {
+                    MessageBox.Show("El campo Descripción es obligatorio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (txtubi.Text.Equals(""))
+                {
+                    MessageBox.Show("El campo Ubicación es obligatorio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            if (tipo_accion.Equals("U"))
+            {
+                if (txtdescrip.Text.Equals(""))
+                {
+                    MessageBox.Show("Primero debe consultar la sala que desea actualizar", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+
+            else
+            if (tipo_accion.Equals("D"))
+            {
+                if (txtdescrip.Text.Equals(""))
+                {
+                    MessageBox.Show("Primero debe consultar la sala que desea desactivar", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -119,12 +164,15 @@ namespace CapaDatos.View
             }
             else
             {
-                procesar(3);
-               
+                if (Validaciones("D"))
+                {
+                    procesar(3);
+                    LimpiaControles();
+                    listaSalas();
+                }
+              
             }
         }
-
- 
 
         private void listaSalas()
         {
@@ -140,8 +188,12 @@ namespace CapaDatos.View
             }
             else
             {
-                procesar(2);
-                listaSalas();
+                if (Validaciones("U"))
+                {
+                    procesar(2);
+                    LimpiaControles();
+                    listaSalas();
+                 }
             }
         }
 
@@ -162,11 +214,12 @@ namespace CapaDatos.View
             {
                 txtdescrip.Text = pro.nombre;
                 txtidsala.Text = pro.idsala.ToString();
-                txtubi.Text = pro.ubicacion;  
+                txtubi.Text = pro.ubicacion;
                 //txtPrecio.Text = pro.PrecioUnidad.ToString();
                 //cboProveedor.SelectedValue = pro.IdProveedor;
                 //cboCategoria.SelectedValue = pro.IdCategoría;
                 //numCantidad.Value = (int)pro.UnidadesEnExistencia;
+                btnAgregar.Enabled = false;
             }
             else
             {
@@ -179,7 +232,7 @@ namespace CapaDatos.View
         usp_sala_listar_all_Result leerNombreSalaBuscar()
         {
             usp_sala_listar_all_Result pro = new usp_sala_listar_all_Result();
-            pro.nombre = txtfiltro.Text;
+            pro.nombre = txtdescrip.Text.Trim();
             return pro;
         }
 
@@ -199,9 +252,35 @@ namespace CapaDatos.View
             txtdescrip.Text = "";
             txtubi.Text = "";
             txtfiltro.Text = "";
-            
+            npdCapacidad.Value = 0;
+            cboTipoSala.SelectedIndex = -1;
+            btnAgregar.Enabled = true;
         }
 
-     
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvSalas.SelectAll();
+                DataObject copydata = dgvSalas.GetClipboardContent();
+                if (copydata != null) Clipboard.SetDataObject(copydata);
+                Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
+                xlapp.Visible = true;
+                Microsoft.Office.Interop.Excel.Workbook xlWbook;
+                Microsoft.Office.Interop.Excel.Worksheet xlsheet;
+                object miseddata = System.Reflection.Missing.Value;
+                xlWbook = xlapp.Workbooks.Add(miseddata);
+
+                xlsheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWbook.Worksheets.get_Item(1);
+                Microsoft.Office.Interop.Excel.Range xlr = (Microsoft.Office.Interop.Excel.Range)xlsheet.Cells[1, 1];
+                xlr.Select();
+
+                xlsheet.PasteSpecial(xlr, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al exportar a Excel " + ex.Message, "error");
+            }
+        }
     }
 }

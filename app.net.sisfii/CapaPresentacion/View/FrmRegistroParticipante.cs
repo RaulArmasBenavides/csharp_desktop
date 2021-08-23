@@ -1,4 +1,5 @@
 ﻿using appcongreso.EF;
+using appcongreso.Utils;
 using CapaDatos.Controller;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace CapaPresentacion
     public partial class FrmRegistroParticipante : Form
     {
         bdcongresoEntities c = new bdcongresoEntities();
-
+        Validator v = new Validator();
         // INSTANCIAR OBJETO DE LA CLASE ProductoBll capa de negocio 
         ParticipanteBll obj = new ParticipanteBll();
         public FrmRegistroParticipante()
@@ -120,8 +121,12 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    procesar(1);
-                    listaParticipantes();
+                    if (Validaciones("C"))
+                    {
+                        procesar(1);
+                        LimpiaControles();
+                        
+                    }
                 }
             }
             catch (Exception ex)
@@ -131,7 +136,47 @@ namespace CapaPresentacion
             }
      
         }
+        
+         //tipo_accion C R U D
+        private bool Validaciones(string tipo_accion)
+        {
+            string mensaje = "";
 
+            if(tipo_accion.Equals("C"))
+            {
+                if (txtDNI.Text.Equals(""))
+                {
+                    MessageBox.Show("El campo DNI es obligatorio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                if (!v.ValidarMailDNS(txtCorreo.Text, ref mensaje))
+                {
+                    MessageBox.Show("El formato del correo no es válido :" + mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            if(tipo_accion.Equals("U"))
+            {
+                if (txtDNI.Text.Equals(""))
+                {
+                    MessageBox.Show("Para la actualización el campo DNI es obligatorio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+
+            else
+            if (tipo_accion.Equals("D"))
+            {
+                if (txtDNI.Text.Equals(""))
+                {
+                    MessageBox.Show("Para la desactivación el campo DNI es obligatorio", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            return true;
+        }
       
     
 
@@ -144,8 +189,11 @@ namespace CapaPresentacion
             }
             else
             {
-                procesar(2);
-                listaParticipantes();
+                if(Validaciones("U"))
+                {
+                    procesar(2);
+                    LimpiaControles();
+                }
             }
         }
 
@@ -158,8 +206,11 @@ namespace CapaPresentacion
             }
             else
             {
-                procesar(3);
-                listaParticipantes();
+                if (Validaciones("D"))
+                {
+                    procesar(3);
+                    LimpiaControles();
+                }
             }
         }
 
@@ -189,11 +240,12 @@ namespace CapaPresentacion
                 txtCorreo.Text = pro.correo;
                 txtTelefono.Text = pro.telefono;
                 txtDireccion.Text = pro.direccion;
-                
+
                 //txtPrecio.Text = pro.PrecioUnidad.ToString();
                 //cboProveedor.SelectedValue = pro.IdProveedor;
                 //cboCategoria.SelectedValue = pro.IdCategoría;
                 //numCantidad.Value = (int)pro.UnidadesEnExistencia;
+                btnAgregar.Enabled = false;
             }
             else
             {
@@ -213,6 +265,54 @@ namespace CapaPresentacion
         private void LblBuscar_Click(object sender, EventArgs e)
         {
             procesar(4);
+        }
+
+        private void LblLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiaControles();
+        }
+
+        private void LimpiaControles()
+        {
+            txtapmat.Clear();
+            txtappat.Clear();
+            txtNombre.Clear();
+            txtTelefono.Clear();
+            txtDNI.Clear();
+            txtCarrera.Clear();
+            txtCorreo.Clear();
+            txtDireccion.Clear();
+
+            listaParticipantes();
+            btnAgregar.Enabled = true;
+
+
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvParticipantes.SelectAll();
+                DataObject copydata = dgvParticipantes.GetClipboardContent();
+                if (copydata != null) Clipboard.SetDataObject(copydata);
+                Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
+                xlapp.Visible = true;
+                Microsoft.Office.Interop.Excel.Workbook xlWbook;
+                Microsoft.Office.Interop.Excel.Worksheet xlsheet;
+                object miseddata = System.Reflection.Missing.Value;
+                xlWbook = xlapp.Workbooks.Add(miseddata);
+
+                xlsheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWbook.Worksheets.get_Item(1);
+                Microsoft.Office.Interop.Excel.Range xlr = (Microsoft.Office.Interop.Excel.Range)xlsheet.Cells[1, 1];
+                xlr.Select();
+
+                xlsheet.PasteSpecial(xlr, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al exportar a Excel " + ex.Message, "error");
+            }
         }
     }
 }

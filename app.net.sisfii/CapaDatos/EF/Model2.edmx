@@ -42,6 +42,7 @@
           <Property Name="intdetalleeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="estado" Type="nchar" MaxLength="2" />
           <Property Name="idEquipo" Type="int" />
+          <Property Name="codigo" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="Equipo">
           <Key>
@@ -60,7 +61,8 @@
             <PropertyRef Name="idlistaeq" />
           </Key>
           <Property Name="idlistaeq" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="estado" Type="nchar" MaxLength="2" />
+          <Property Name="estado" Type="nchar" MaxLength="2" Nullable="false" />
+          <Property Name="codigo" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="participantes">
           <Key>
@@ -116,20 +118,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__actividad__idlis__53D770D6">
-          <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="listaequipos">
-              <PropertyRef Name="idlistaeq" />
-            </Principal>
-            <Dependent Role="actividades">
-              <PropertyRef Name="idlistaeq" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__actividad__idsal__55BFB948">
           <End Role="sala" Type="Self.sala" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -141,18 +129,6 @@
             </Principal>
             <Dependent Role="actividades">
               <PropertyRef Name="idsala" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__detalle_l__idEqu__075714DC">
-          <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
-          <End Role="detalle_list_equipos" Type="Self.detalle_list_equipos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Equipo">
-              <PropertyRef Name="idEquipo" />
-            </Principal>
-            <Dependent Role="detalle_list_equipos">
-              <PropertyRef Name="idEquipo" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -170,6 +146,36 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_actividades_listaequipos">
+          <End Role="listaequipos" Type="Self.listaequipos" Multiplicity="0..1" />
+          <End Role="actividades" Type="Self.actividades" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="listaequipos">
+              <PropertyRef Name="idlistaeq" />
+            </Principal>
+            <Dependent Role="actividades">
+              <PropertyRef Name="idlistaeq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_detalle_asistencias_asistencias' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_detalle_asistencias_asistencias" />-->
+        <Association Name="FK_detalle_list_equipos_Equipo">
+          <End Role="Equipo" Type="Self.Equipo" Multiplicity="0..1" />
+          <End Role="detalle_list_equipos" Type="Self.detalle_list_equipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipo">
+              <PropertyRef Name="idEquipo" />
+            </Principal>
+            <Dependent Role="detalle_list_equipos">
+              <PropertyRef Name="idEquipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_detalle_list_equipos_listaequipos' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_detalle_list_equipos_listaequipos" />-->
         <!--Errors Found During Generation:
 warning 6035: The relationship 'FK_dni' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
         <Association Name="FK_dni" />-->
@@ -243,6 +249,12 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
         <Function Name="usp_asistencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="codigo" Type="nchar" Mode="In" />
         </Function>
+        <Function Name="usp_borrar_det_asistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_borrar_det_list_equipos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_BusquedaActividadforDescripcion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
         </Function>
@@ -264,7 +276,19 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
         <Function Name="usp_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idusuario" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="usp_equipo_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idEquipo" Type="int" Mode="In" />
+        </Function>
+        <Function Name="usp_equipo_datos_codigo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_equipo_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="usp_lista_equipos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_lista_equipos_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_participantes_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DNI" Type="nchar" Mode="In" />
         </Function>
@@ -279,12 +303,26 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Parameter Name="idlistaeq" Type="int" Mode="In" />
           <Parameter Name="idsala" Type="int" Mode="In" />
         </Function>
+        <Function Name="usp_registrar_asistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_registrar_det_asistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DNI" Type="nchar" Mode="In" />
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_registrar_det_list_equipos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idEquipo" Type="int" Mode="In" />
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_registrar_Equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
           <Parameter Name="SO" Type="nvarchar" Mode="In" />
           <Parameter Name="Procesador" Type="nvarchar" Mode="In" />
           <Parameter Name="RAM" Type="nvarchar" Mode="In" />
           <Parameter Name="TMADRE" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="usp_registrar_lista_equipos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
         </Function>
         <Function Name="usp_registrar_participante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
@@ -332,21 +370,21 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
             <End Role="asistencias" EntitySet="asistencias" />
             <End Role="actividades" EntitySet="actividades" />
           </AssociationSet>
-          <AssociationSet Name="FK__actividad__idlis__53D770D6" Association="Self.FK__actividad__idlis__53D770D6">
-            <End Role="listaequipos" EntitySet="listaequipos" />
-            <End Role="actividades" EntitySet="actividades" />
-          </AssociationSet>
           <AssociationSet Name="FK__actividad__idsal__55BFB948" Association="Self.FK__actividad__idsal__55BFB948">
             <End Role="sala" EntitySet="sala" />
             <End Role="actividades" EntitySet="actividades" />
           </AssociationSet>
-          <AssociationSet Name="FK__detalle_l__idEqu__075714DC" Association="Self.FK__detalle_l__idEqu__075714DC">
-            <End Role="Equipo" EntitySet="Equipo" />
-            <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
-          </AssociationSet>
           <AssociationSet Name="FK__participa__idusu__7FB5F314" Association="Self.FK__participa__idusu__7FB5F314">
             <End Role="usuarios" EntitySet="usuarios" />
             <End Role="participantes" EntitySet="participantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_actividades_listaequipos" Association="Self.FK_actividades_listaequipos">
+            <End Role="listaequipos" EntitySet="listaequipos" />
+            <End Role="actividades" EntitySet="actividades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_detalle_list_equipos_Equipo" Association="Self.FK_detalle_list_equipos_Equipo">
+            <End Role="Equipo" EntitySet="Equipo" />
+            <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -387,8 +425,11 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
             <PropertyRef Name="idlistaeq" />
           </Key>
           <Property Name="idlistaeq" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="actividades" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="listaequipos" ToRole="actividades" />
+          <Property Name="codigo" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="listaequipos1" Relationship="bdcongresoModel.FK_listaequipos_listaequipos" FromRole="listaequipos" ToRole="listaequipos1" />
+          <NavigationProperty Name="listaequipos2" Relationship="bdcongresoModel.FK_listaequipos_listaequipos" FromRole="listaequipos1" ToRole="listaequipos" />
         </EntityType>
         <EntityType Name="participantes">
           <Key>
@@ -640,7 +681,49 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
             <End Role="detalle_list_equipos" EntitySet="detalle_list_equipos" />
           </AssociationSet>
           <FunctionImport Name="usp_asistencias" ReturnType="Collection(bdcongresoModel.usp_asistencias_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_equipo_datos" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_Result)">
+          <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <AssociationSet Name="FK_listaequipos_listaequipos" Association="bdcongresoModel.FK_listaequipos_listaequipos">
+            <End Role="listaequipos" EntitySet="listaequipos" />
+            <End Role="listaequipos1" EntitySet="listaequipos" />
+          </AssociationSet>
+          <FunctionImport Name="usp_registrar_asistencia">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_registrar_det_asistencia">
+            <Parameter Name="DNI" Mode="In" Type="String" />
             <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_borrar_det_asistencia">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_borrar_det_list_equipos">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_registrar_det_list_equipos">
+            <Parameter Name="idEquipo" Mode="In" Type="Int32" />
+            <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_registrar_lista_equipos">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_lista_equipos">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_lista_equipos1">
+            <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_lista_equipos2" ReturnType="Collection(bdcongresoModel.usp_lista_equipos_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_lista_equipos_oficial" ReturnType="Collection(bdcongresoModel.usp_lista_equipos_oficial_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_equipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_codigo_Result)">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -870,6 +953,7 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Property Name="estado" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
           <Property Name="idEquipo" Type="Int32" />
           <NavigationProperty Name="Equipo" Relationship="bdcongresoModel.FK__detalle_l__idEqu__075714DC" FromRole="detalle_list_equipos" ToRole="Equipo" />
+          <Property Name="codigo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
         <Association Name="FK__detalle_l__idEqu__075714DC">
           <End Type="bdcongresoModel.Equipo" Role="Equipo" Multiplicity="0..1" />
@@ -888,6 +972,56 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+        </ComplexType>
+        <ComplexType Name="usp_equipo_datos_Result">
+          <Property Type="Int32" Name="idEquipo" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+        </ComplexType>
+        <Association Name="FK_listaequipos_listaequipos">
+          <End Type="bdcongresoModel.listaequipos" Role="listaequipos" Multiplicity="1" />
+          <End Type="bdcongresoModel.listaequipos" Role="listaequipos1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="listaequipos">
+              <PropertyRef Name="idlistaeq" />
+            </Principal>
+            <Dependent Role="listaequipos1">
+              <PropertyRef Name="idlistaeq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="usp_lista_equipos_Result">
+          <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+          <Property Type="Int32" Name="idEquipo" Nullable="false" />
+          <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_lista_equipos_oficial_Result">
+          <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+          <Property Type="Int32" Name="idEquipo" Nullable="false" />
+          <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_equipo_datos_codigo_Result">
+          <Property Type="Int32" Name="idEquipo" Nullable="false" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Procesador" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -925,6 +1059,7 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <EntitySetMapping Name="listaequipos">
             <EntityTypeMapping TypeName="bdcongresoModel.listaequipos">
               <MappingFragment StoreEntitySet="listaequipos">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
               </MappingFragment>
@@ -1227,6 +1362,7 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <EntitySetMapping Name="detalle_list_equipos">
             <EntityTypeMapping TypeName="bdcongresoModel.detalle_list_equipos">
               <MappingFragment StoreEntitySet="detalle_list_equipos">
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="intdetalleeq" ColumnName="intdetalleeq" />
@@ -1240,6 +1376,66 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
                 <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
                 <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_equipo_datos" FunctionName="bdcongresoModel.Store.usp_equipo_datos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_datos_Result">
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SO" ColumnName="SO" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_registrar_asistencia" FunctionName="bdcongresoModel.Store.usp_registrar_asistencia" />
+          <FunctionImportMapping FunctionImportName="usp_registrar_det_asistencia" FunctionName="bdcongresoModel.Store.usp_registrar_det_asistencia" />
+          <FunctionImportMapping FunctionImportName="usp_borrar_det_asistencia" FunctionName="bdcongresoModel.Store.usp_borrar_det_asistencia" />
+          <FunctionImportMapping FunctionImportName="usp_borrar_det_list_equipos" FunctionName="bdcongresoModel.Store.usp_borrar_det_list_equipos" />
+          <FunctionImportMapping FunctionImportName="usp_registrar_det_list_equipos" FunctionName="bdcongresoModel.Store.usp_registrar_det_list_equipos" />
+          <FunctionImportMapping FunctionImportName="usp_registrar_lista_equipos" FunctionName="bdcongresoModel.Store.usp_registrar_lista_equipos" />
+          <FunctionImportMapping FunctionImportName="usp_lista_equipos2" FunctionName="bdcongresoModel.Store.usp_lista_equipos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_lista_equipos_Result">
+                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="SO" ColumnName="SO" />
+                <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_lista_equipos_oficial" FunctionName="bdcongresoModel.Store.usp_lista_equipos_oficial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_lista_equipos_oficial_Result">
+                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="SO" ColumnName="SO" />
+                <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_equipo_datos_codigo" FunctionName="bdcongresoModel.Store.usp_equipo_datos_codigo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_equipo_datos_codigo_Result">
+                <ScalarProperty Name="idEquipo" ColumnName="idEquipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="SO" ColumnName="SO" />
+                <ScalarProperty Name="Procesador" ColumnName="Procesador" />
+                <ScalarProperty Name="RAM" ColumnName="RAM" />
+                <ScalarProperty Name="TarjetaMadre" ColumnName="TarjetaMadre" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

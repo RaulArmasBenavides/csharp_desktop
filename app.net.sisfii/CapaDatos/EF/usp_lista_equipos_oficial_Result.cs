@@ -10,15 +10,16 @@
 namespace appcongreso.EF
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class detalle_list_equipos
+    public partial class usp_lista_equipos_oficial_Result
     {
-        public int intdetalleeq { get; set; }
-        public string estado { get; set; }
-        public Nullable<int> idEquipo { get; set; }
+        public int idlistaeq { get; set; }
+        public int idEquipo { get; set; }
         public string codigo { get; set; }
-    
-        public virtual Equipo Equipo { get; set; }
+        public string Nombre { get; set; }
+        public string Procesador { get; set; }
+        public string RAM { get; set; }
+        public string SO { get; set; }
+        public string TarjetaMadre { get; set; }
     }
 }

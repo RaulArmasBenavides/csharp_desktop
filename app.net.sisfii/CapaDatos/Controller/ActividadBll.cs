@@ -41,7 +41,7 @@ namespace CapaDatos.Controller
         }
 
         public void actividadeEliminar(usp_actividades_listar_all_Result pro)
-        { //comment
+        {
             try
             {
                 dao.delete(pro);
