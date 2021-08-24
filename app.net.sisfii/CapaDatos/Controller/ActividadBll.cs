@@ -16,7 +16,7 @@ namespace CapaDatos.Controller
         }
 
         //metodos de persistencia de datos en sqlserver
-        public void actividadeAdicionar(usp_actividades_listar_all_Result pro)
+        public void actividadeAdicionar(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public void actividadeActualizar(usp_actividades_listar_all_Result pro)
+        public void actividadeActualizar(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public void actividadeEliminar(usp_actividades_listar_all_Result pro)
+        public void actividadeEliminar(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -52,7 +52,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public usp_actividades_listar_all_Result actividadeBuscar(usp_actividades_listar_all_Result pro)
+        public usp_actividades_listar_all2_Result ActividadBuscar(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public usp_actividades_listar_all_Result actividadeBuscarporFecha(usp_actividades_listar_all_Result pro)
+        public usp_actividades_listar_all2_Result actividadeBuscarporFecha(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public usp_actividades_listar_all_Result actividadeBuscarporDescripcion(usp_actividades_listar_all_Result pro)
+        public usp_actividades_listar_all2_Result actividadeBuscarporDescripcion(usp_actividades_listar_all2_Result pro)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace CapaDatos.Controller
             }
         }
 
-        public List<usp_actividades_listar_all_Result> actividadeListar()
+        public List<usp_actividades_listar_all2_Result> ActividadListar()
         {
             try
             {

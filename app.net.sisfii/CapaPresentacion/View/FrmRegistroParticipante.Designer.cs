@@ -61,7 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LblBuscar = new System.Windows.Forms.PictureBox();
             this.txtfiltro = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipantes)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,7 +102,6 @@
             // btnExcel
             // 
             this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcel.Location = new System.Drawing.Point(524, 24);
@@ -119,7 +118,6 @@
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.Location = new System.Drawing.Point(622, 24);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
@@ -135,7 +133,6 @@
             // btnEliminar
             // 
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(424, 24);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
@@ -151,7 +148,6 @@
             // btnActualizar
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.Location = new System.Drawing.Point(324, 24);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
@@ -167,7 +163,6 @@
             // btnAgregar
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(224, 24);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
@@ -182,11 +177,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.LblLimpiar);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.LblBuscar);
             this.groupBox1.Controls.Add(this.txtfiltro);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(29, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -451,17 +446,15 @@
             this.txtfiltro.Size = new System.Drawing.Size(189, 22);
             this.txtfiltro.TabIndex = 1;
             // 
-            // comboBox1
+            // label11
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Descripcion",
-            "Fecha"});
-            this.comboBox1.Location = new System.Drawing.Point(29, 43);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 24);
-            this.comboBox1.TabIndex = 0;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(86, 44);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 17);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "DNI";
             // 
             // FrmRegistroParticipante
             // 
@@ -474,7 +467,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRegistroParticipante";
-            this.Text = ":: REGISTRO DE PARTICIPANTES::";
+            this.Text = ":: MANTENEDOR DE PARTICIPANTES::";
             this.Load += new System.EventHandler(this.FrmRegistroParticipante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipantes)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -503,7 +496,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox LblBuscar;
         private System.Windows.Forms.TextBox txtfiltro;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtapmat;
         private System.Windows.Forms.TextBox txtappat;
@@ -523,5 +515,6 @@
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Label label11;
     }
 }

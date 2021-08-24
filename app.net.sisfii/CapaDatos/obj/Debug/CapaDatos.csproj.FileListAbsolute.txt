@@ -85,8 +85,14 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\appcongreso.exe
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\appcongreso.pdb
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\PdfSharp.Charting.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\PdfSharp.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.xml
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\PdfSharp.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\PdfSharp.Charting.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.Properties.Resources.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\obj\Debug\CapaDatos.csproj.GenerateResource.Cache
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaDatos\obj\Debug\appcongreso.exe

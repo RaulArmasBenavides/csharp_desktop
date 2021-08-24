@@ -36,5 +36,19 @@ namespace appcongreso.Controller
                 throw ex;
             }
         }
+
+
+        public List<usp_listaequipos_listar_all_Result> ListarAll2()
+        {
+            try
+            {
+                return dao.readAll2();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

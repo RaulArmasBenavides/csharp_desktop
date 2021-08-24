@@ -215,11 +215,16 @@ namespace CapaDatos.View
                 txtdescrip.Text = pro.nombre;
                 txtidsala.Text = pro.idsala.ToString();
                 txtubi.Text = pro.ubicacion;
+                cboTipoSala.Text = pro.tipo_sala;
+                npdCapacidad.Value = Convert.ToInt32(pro.capacidad);
                 //txtPrecio.Text = pro.PrecioUnidad.ToString();
                 //cboProveedor.SelectedValue = pro.IdProveedor;
                 //cboCategoria.SelectedValue = pro.IdCategoría;
-                //numCantidad.Value = (int)pro.UnidadesEnExistencia;
+            
+                
                 btnAgregar.Enabled = false;
+                btnActualizar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
             else
             {
@@ -232,7 +237,7 @@ namespace CapaDatos.View
         usp_sala_listar_all_Result leerNombreSalaBuscar()
         {
             usp_sala_listar_all_Result pro = new usp_sala_listar_all_Result();
-            pro.nombre = txtdescrip.Text.Trim();
+            pro.nombre = txtfiltro.Text.Trim();
             return pro;
         }
 
@@ -243,7 +248,9 @@ namespace CapaDatos.View
 
         private void FrmSala_Load(object sender, EventArgs e)
         {
+            LimpiaControles();
             listaSalas();
+
         }
 
 
@@ -255,6 +262,8 @@ namespace CapaDatos.View
             npdCapacidad.Value = 0;
             cboTipoSala.SelectedIndex = -1;
             btnAgregar.Enabled = true;
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
 
         private void btnExcel_Click(object sender, EventArgs e)

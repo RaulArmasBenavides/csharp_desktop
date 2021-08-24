@@ -36,19 +36,12 @@
             this.CerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.castingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.horariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stpVer = new System.Windows.Forms.ToolStripMenuItem();
             this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.candidatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarNuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reuniónDeDocentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AsistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenedorDeEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,7 +62,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem,
             this.castingToolStripMenuItem,
-            this.candidatosToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.usuariosToolStripMenuItem,
             this.ayudaToolStripMenuItem,
@@ -131,44 +123,22 @@
             this.castingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agentesToolStripMenuItem,
             this.stpVer,
-            this.toolStripMenuItem1,
             this.toolStripSeparator3});
             this.castingToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.castingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("castingToolStripMenuItem.Image")));
             this.castingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.castingToolStripMenuItem.Name = "castingToolStripMenuItem";
-            this.castingToolStripMenuItem.Size = new System.Drawing.Size(128, 28);
-            this.castingToolStripMenuItem.Text = "Alumnos";
+            this.castingToolStripMenuItem.Size = new System.Drawing.Size(170, 28);
+            this.castingToolStripMenuItem.Text = "Participantes";
             this.castingToolStripMenuItem.Click += new System.EventHandler(this.castingToolStripMenuItem_Click);
             // 
             // agentesToolStripMenuItem
             // 
             this.agentesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.agentesToolStripMenuItem.Name = "agentesToolStripMenuItem";
-            this.agentesToolStripMenuItem.Size = new System.Drawing.Size(315, 28);
-            this.agentesToolStripMenuItem.Text = "Mantenedor de Alumnos";
+            this.agentesToolStripMenuItem.Size = new System.Drawing.Size(358, 28);
+            this.agentesToolStripMenuItem.Text = "Mantenedor de Participantes";
             this.agentesToolStripMenuItem.Click += new System.EventHandler(this.agentesToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.horariosToolStripMenuItem,
-            this.pagosToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(315, 28);
-            this.toolStripMenuItem1.Text = "Matrícula";
-            // 
-            // horariosToolStripMenuItem
-            // 
-            this.horariosToolStripMenuItem.Name = "horariosToolStripMenuItem";
-            this.horariosToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
-            this.horariosToolStripMenuItem.Text = "Horarios";
-            // 
-            // pagosToolStripMenuItem
-            // 
-            this.pagosToolStripMenuItem.Name = "pagosToolStripMenuItem";
-            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
-            this.pagosToolStripMenuItem.Text = "Pagos";
             // 
             // stpVer
             // 
@@ -191,41 +161,11 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(312, 6);
             // 
-            // candidatosToolStripMenuItem
-            // 
-            this.candidatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarNuevoToolStripMenuItem,
-            this.reuniónDeDocentesToolStripMenuItem});
-            this.candidatosToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.candidatosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("candidatosToolStripMenuItem.Image")));
-            this.candidatosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.candidatosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.candidatosToolStripMenuItem.Name = "candidatosToolStripMenuItem";
-            this.candidatosToolStripMenuItem.Size = new System.Drawing.Size(135, 28);
-            this.candidatosToolStripMenuItem.Text = "Docentes";
-            this.candidatosToolStripMenuItem.Click += new System.EventHandler(this.candidatosToolStripMenuItem_Click);
-            // 
-            // registrarNuevoToolStripMenuItem
-            // 
-            this.registrarNuevoToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrarNuevoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.registrarNuevoToolStripMenuItem.Name = "registrarNuevoToolStripMenuItem";
-            this.registrarNuevoToolStripMenuItem.Size = new System.Drawing.Size(323, 28);
-            this.registrarNuevoToolStripMenuItem.Text = "Mantenedor de Docentes";
-            this.registrarNuevoToolStripMenuItem.Click += new System.EventHandler(this.registrarNuevoToolStripMenuItem_Click);
-            // 
-            // reuniónDeDocentesToolStripMenuItem
-            // 
-            this.reuniónDeDocentesToolStripMenuItem.Name = "reuniónDeDocentesToolStripMenuItem";
-            this.reuniónDeDocentesToolStripMenuItem.Size = new System.Drawing.Size(323, 28);
-            this.reuniónDeDocentesToolStripMenuItem.Text = "Reunión de Docentes";
-            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actividadesToolStripMenuItem,
-            this.AsistenciaToolStripMenuItem,
-            this.reporteToolStripMenuItem});
+            this.AsistenciaToolStripMenuItem});
             this.reportesToolStripMenuItem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reportesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reportesToolStripMenuItem.Image")));
             this.reportesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -247,13 +187,6 @@
             this.AsistenciaToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
             this.AsistenciaToolStripMenuItem.Text = "Lista de Asistencias";
             this.AsistenciaToolStripMenuItem.Click += new System.EventHandler(this.AsistenciaToolStripMenuItem_Click);
-            // 
-            // reporteToolStripMenuItem
-            // 
-            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(304, 28);
-            this.reporteToolStripMenuItem.Text = "Reporte de Actividades";
-            this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -364,8 +297,6 @@
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem castingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem candidatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarNuevoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SalaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
@@ -381,12 +312,7 @@
         private System.Windows.Forms.ToolStripMenuItem estudiantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visitaNuestraWebToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AsistenciaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem horariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reuniónDeDocentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenedorDeEquiposToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeEquiposToolStripMenuItem;
     }
 }

@@ -103,6 +103,26 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fii {
+            get {
+                object obj = ResourceManager.GetObject("fii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icacit {
+            get {
+                object obj = ResourceManager.GetObject("icacit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap List {
             get {
                 object obj = ResourceManager.GetObject("List", resourceCulture);
@@ -126,6 +146,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap Save_as {
             get {
                 object obj = ResourceManager.GetObject("Save_as", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UNMSM {
+            get {
+                object obj = ResourceManager.GetObject("UNMSM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

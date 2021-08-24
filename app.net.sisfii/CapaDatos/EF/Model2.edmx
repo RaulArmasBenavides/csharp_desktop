@@ -17,6 +17,10 @@
           <Property Name="idlistaeq" Type="int" />
           <Property Name="idasistencias" Type="int" />
           <Property Name="idsala" Type="int" />
+          <Property Name="fec_inicio" Type="datetime" />
+          <Property Name="fec_Fin" Type="datetime" />
+          <Property Name="Nombre" Type="nchar" MaxLength="5" />
+          <Property Name="rol_responsable" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="asistencias">
           <Key>
@@ -222,6 +226,17 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Parameter Name="dirrecion" Type="nvarchar" Mode="In" />
           <Parameter Name="tipo" Type="nchar" Mode="In" />
         </Function>
+        <Function Name="usp_actualiza_participante_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ap_paterno" Type="varchar" Mode="In" />
+          <Parameter Name="ap_materno" Type="varchar" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="nchar" Mode="In" />
+          <Parameter Name="sexo" Type="nchar" Mode="In" />
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+          <Parameter Name="DNI" Type="nchar" Mode="In" />
+          <Parameter Name="dirrecion" Type="nvarchar" Mode="In" />
+          <Parameter Name="tipo" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_actualiza_sala" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idsala" Type="int" Mode="In" />
           <Parameter Name="nombre" Type="nvarchar" Mode="In" />
@@ -229,10 +244,16 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Parameter Name="capacidad" Type="int" Mode="In" />
           <Parameter Name="tipo_sala" Type="char" Mode="In" />
         </Function>
-        <Function Name="usp_actualizar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="usp_actualizar_actividad_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
-          <Parameter Name="fecha" Type="date" Mode="In" />
+          <Parameter Name="idlistaeq" Type="int" Mode="In" />
+          <Parameter Name="idsala" Type="int" Mode="In" />
+          <Parameter Name="idasistencias" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
+          <Parameter Name="fec_inicio" Type="datetime" Mode="In" />
+          <Parameter Name="fec_fin" Type="datetime" Mode="In" />
+          <Parameter Name="rol_responsable" Type="nchar" Mode="In" />
         </Function>
         <Function Name="usp_actualizar_equipo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idEquipo" Type="int" Mode="In" />
@@ -247,6 +268,15 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Parameter Name="clave" Type="nchar" Mode="In" />
         </Function>
         <Function Name="usp_asistencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_asistencias_datos_codigo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_asistencias_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_asistencias_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="codigo" Type="nchar" Mode="In" />
         </Function>
         <Function Name="usp_borrar_det_asistencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -289,6 +319,12 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
         <Function Name="usp_lista_equipos_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="codigo" Type="nchar" Mode="In" />
         </Function>
+        <Function Name="usp_listaequipo_datos_codigo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="usp_listaequipos_listar_all" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="codigo" Type="nchar" Mode="In" />
+        </Function>
         <Function Name="usp_participantes_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DNI" Type="nchar" Mode="In" />
         </Function>
@@ -296,9 +332,13 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
         <Function Name="usp_participantes_listar_estudiantes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_participantes_listar_ponentes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_participantes_listar_profesionales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="usp_registrar_actividad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="usp_registrar_actividad_oficial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="nchar" Mode="In" />
           <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+          <Parameter Name="rol_responsable" Type="nchar" Mode="In" />
           <Parameter Name="rol_creacion" Type="nchar" Mode="In" />
+          <Parameter Name="fec_inicio" Type="datetime" Mode="In" />
+          <Parameter Name="fec_fin" Type="datetime" Mode="In" />
           <Parameter Name="idasistencias" Type="int" Mode="In" />
           <Parameter Name="idlistaeq" Type="int" Mode="In" />
           <Parameter Name="idsala" Type="int" Mode="In" />
@@ -406,6 +446,10 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <NavigationProperty Name="listaequipos" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="actividades" ToRole="listaequipos" />
           <NavigationProperty Name="sala" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="actividades" ToRole="sala" />
           <NavigationProperty Name="asistencias" Relationship="bdcongresoModel.FK__actividad__idasi__54CB950F" FromRole="actividades" ToRole="asistencias" />
+          <Property Name="fec_inicio" Type="DateTime" Precision="3" />
+          <Property Name="fec_Fin" Type="DateTime" Precision="3" />
+          <Property Name="Nombre" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="rol_responsable" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Equipo">
           <Key>
@@ -549,7 +593,7 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
-          <FunctionImport Name="usp_actividades_listar_all" ReturnType="Collection(bdcongresoModel.usp_actividades_listar_all_Result)" />
+          <FunctionImport Name="usp_actividades_listar_all" />
           <FunctionImport Name="usp_actualiza_participante">
             <Parameter Name="ap_paterno" Mode="In" Type="String" />
             <Parameter Name="ap_materno" Mode="In" Type="String" />
@@ -592,6 +636,8 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <FunctionImport Name="usp_registrar_actividad">
             <Parameter Name="descripcion" Mode="In" Type="String" />
             <Parameter Name="rol_creacion" Mode="In" Type="String" />
+            <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
             <Parameter Name="idasistencias" Mode="In" Type="Int32" />
             <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
             <Parameter Name="idsala" Mode="In" Type="Int32" />
@@ -723,7 +769,57 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Parameter Name="codigo" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_equipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_codigo_Result)">
+          <Parameter Name="Nombre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_asistencias_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_asistencias_datos_codigo_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_listaequipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_listaequipo_datos_codigo_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_actividades_listar_all1" />
+          <FunctionImport Name="usp_asistencias_oficial" ReturnType="Collection(bdcongresoModel.usp_asistencias_oficial_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_asistencias_listar_all" ReturnType="Collection(bdcongresoModel.usp_asistencias_listar_all_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_listaequipos_listar_all" ReturnType="Collection(bdcongresoModel.usp_listaequipos_listar_all_Result)">
+          <Parameter Name="codigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_registrar_actividad_oficial">
             <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+            <Parameter Name="rol_responsable" Mode="In" Type="String" />
+            <Parameter Name="rol_creacion" Mode="In" Type="String" />
+            <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
+            <Parameter Name="idasistencias" Mode="In" Type="Int32" />
+            <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
+            <Parameter Name="idsala" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="usp_actividades_listar_all2" ReturnType="Collection(bdcongresoModel.usp_actividades_listar_all2_Result)" />
+          <FunctionImport Name="usp_actualizar_actividad_oficial">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+            <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
+            <Parameter Name="idsala" Mode="In" Type="Int32" />
+            <Parameter Name="idasistencias" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+            <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
+            <Parameter Name="rol_responsable" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_actualiza_participante_oficial">
+            <Parameter Name="ap_paterno" Mode="In" Type="String" />
+            <Parameter Name="ap_materno" Mode="In" Type="String" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="sexo" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="DNI" Mode="In" Type="String" />
+            <Parameter Name="dirrecion" Mode="In" Type="String" />
+            <Parameter Name="tipo" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
@@ -736,16 +832,6 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Property Type="Int32" Name="ID" Nullable="false" />
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="usp_actividades_listar_all_Result">
-          <Property Type="Int32" Name="idactividad" Nullable="false" />
-          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
-          <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
-          <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
-          <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
-          <Property Type="Int32" Name="idlistaeq" Nullable="true" />
-          <Property Type="Int32" Name="idasistencias" Nullable="true" />
-          <Property Type="Int32" Name="idsala" Nullable="true" />
         </ComplexType>
         <ComplexType Name="usp_BusquedaActividadforDescripcion_Result">
           <Property Type="Int32" Name="idactividad" Nullable="false" />
@@ -1023,6 +1109,47 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
           <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
         </ComplexType>
+        <ComplexType Name="usp_asistencias_datos_codigo_Result">
+          <Property Type="Int32" Name="idasistencias" Nullable="false" />
+          <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="usp_listaequipo_datos_codigo_Result">
+          <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+          <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_asistencias_oficial_Result">
+          <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+          <Property Type="Int32" Name="idasistencias" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="usp_asistencias_listar_all_Result">
+          <Property Type="Int32" Name="idasistencias" Nullable="false" />
+          <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+        </ComplexType>
+        <ComplexType Name="usp_listaequipos_listar_all_Result">
+          <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+          <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="usp_actividades_listar_all2_Result">
+          <Property Type="Int32" Name="idactividad" Nullable="false" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
+          <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+          <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+          <Property Type="Int32" Name="idlistaeq" Nullable="true" />
+          <Property Type="Int32" Name="idasistencias" Nullable="true" />
+          <Property Type="Int32" Name="idsala" Nullable="true" />
+          <Property Type="DateTime" Name="fec_inicio" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="fec_Fin" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Nombre" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="rol_responsable" Nullable="true" MaxLength="10" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1032,6 +1159,10 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           <EntitySetMapping Name="actividades">
             <EntityTypeMapping TypeName="bdcongresoModel.actividades">
               <MappingFragment StoreEntitySet="actividades">
+                <ScalarProperty Name="rol_responsable" ColumnName="rol_responsable" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="fec_Fin" ColumnName="fec_Fin" />
+                <ScalarProperty Name="fec_inicio" ColumnName="fec_inicio" />
                 <ScalarProperty Name="idactividad" ColumnName="idactividad" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
@@ -1132,22 +1263,7 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bdcongresoModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bdcongresoModel.Store.sp_upgraddiagrams" />
-          <FunctionImportMapping FunctionImportName="usp_actividades_listar_all" FunctionName="bdcongresoModel.Store.usp_actividades_listar_all">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="bdcongresoModel.usp_actividades_listar_all_Result">
-                <ScalarProperty Name="idactividad" ColumnName="idactividad" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
-                <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
-                <ScalarProperty Name="estado" ColumnName="estado" />
-                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
-                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
-                <ScalarProperty Name="idsala" ColumnName="idsala" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="usp_actualiza_participante" FunctionName="bdcongresoModel.Store.usp_actualiza_participante" />
-          <FunctionImportMapping FunctionImportName="usp_actualizar_actividad" FunctionName="bdcongresoModel.Store.usp_actualizar_actividad" />
           <FunctionImportMapping FunctionImportName="usp_actualizar_usuario" FunctionName="bdcongresoModel.Store.usp_actualizar_usuario" />
           <FunctionImportMapping FunctionImportName="usp_BusquedaActividadforDescripcion" FunctionName="bdcongresoModel.Store.usp_BusquedaActividadforDescripcion">
             <ResultMapping>
@@ -1252,7 +1368,6 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="usp_registrar_actividad" FunctionName="bdcongresoModel.Store.usp_registrar_actividad" />
           <FunctionImportMapping FunctionImportName="usp_registrar_Equipo" FunctionName="bdcongresoModel.Store.usp_registrar_Equipo" />
           <FunctionImportMapping FunctionImportName="usp_registrar_participante" FunctionName="bdcongresoModel.Store.usp_registrar_participante" />
           <FunctionImportMapping FunctionImportName="usp_registrar_usuario" FunctionName="bdcongresoModel.Store.usp_registrar_usuario" />
@@ -1439,6 +1554,74 @@ warning 6035: The relationship 'FK_dni' has columns that are not part of the key
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_asistencias_datos_codigo" FunctionName="bdcongresoModel.Store.usp_asistencias_datos_codigo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_datos_codigo_Result">
+                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_listaequipo_datos_codigo" FunctionName="bdcongresoModel.Store.usp_listaequipo_datos_codigo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_listaequipo_datos_codigo_Result">
+                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_asistencias_oficial" FunctionName="bdcongresoModel.Store.usp_asistencias_oficial">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_oficial_Result">
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+                <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_asistencias_listar_all" FunctionName="bdcongresoModel.Store.usp_asistencias_listar_all">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_listar_all_Result">
+                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_listaequipos_listar_all" FunctionName="bdcongresoModel.Store.usp_listaequipos_listar_all">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_listaequipos_listar_all_Result">
+                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_registrar_actividad_oficial" FunctionName="bdcongresoModel.Store.usp_registrar_actividad_oficial" />
+          <FunctionImportMapping FunctionImportName="usp_actividades_listar_all2" FunctionName="bdcongresoModel.Store.usp_actividades_listar_all">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bdcongresoModel.usp_actividades_listar_all2_Result">
+                <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+                <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+                <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+                <ScalarProperty Name="idsala" ColumnName="idsala" />
+                <ScalarProperty Name="fec_inicio" ColumnName="fec_inicio" />
+                <ScalarProperty Name="fec_Fin" ColumnName="fec_Fin" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="rol_responsable" ColumnName="rol_responsable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_actualizar_actividad_oficial" FunctionName="bdcongresoModel.Store.usp_actualizar_actividad_oficial" />
+          <FunctionImportMapping FunctionImportName="usp_actualiza_participante_oficial" FunctionName="bdcongresoModel.Store.usp_actualiza_participante_oficial" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

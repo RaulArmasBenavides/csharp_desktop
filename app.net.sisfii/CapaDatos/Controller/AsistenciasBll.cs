@@ -32,6 +32,46 @@ namespace appcongreso.Controller
             }
         }
 
+        public List<usp_asistencias_oficial_Result> ListaAsistenciaOficial(usp_asistencias_oficial_Result pro)
+        {
+            try
+            {
+                return dao.find2(pro);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public usp_asistencias_datos_codigo_Result Leer_asistencia_cabecera(usp_asistencias_Result pro)
+        {
+            try
+            {
+                return dao.Leer_asistencia_cabecera(pro);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+        
+        public List<usp_asistencias_listar_all_Result> ListarAll2()
+        {
+            try
+            {
+                return dao.readAll2();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public void RegistrarListaAsistentes(string codigo , List<usp_asistencias_Result> pro, bool Esnuevo)
         {
             try
@@ -44,16 +84,6 @@ namespace appcongreso.Controller
             }
         }
 
-        //public List<usp_sala_listar_all_Result> SalaListar()
-        //{
-        //    try
-        //    {
-        //        return dao.readAll();
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
+
     }
 }

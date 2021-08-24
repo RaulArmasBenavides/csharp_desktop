@@ -22,6 +22,10 @@ namespace appcongreso.EF
         public Nullable<int> idlistaeq { get; set; }
         public Nullable<int> idasistencias { get; set; }
         public Nullable<int> idsala { get; set; }
+        public Nullable<System.DateTime> fec_inicio { get; set; }
+        public Nullable<System.DateTime> fec_Fin { get; set; }
+        public string Nombre { get; set; }
+        public string rol_responsable { get; set; }
     
         public virtual listaequipos listaequipos { get; set; }
         public virtual sala sala { get; set; }

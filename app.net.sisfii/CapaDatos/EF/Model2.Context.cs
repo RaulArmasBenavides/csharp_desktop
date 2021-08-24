@@ -140,9 +140,9 @@ namespace appcongreso.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
-        public virtual ObjectResult<usp_actividades_listar_all_Result> usp_actividades_listar_all()
+        public virtual int usp_actividades_listar_all()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_actividades_listar_all_Result>("usp_actividades_listar_all");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actividades_listar_all");
         }
     
         public virtual int usp_actualiza_participante(string ap_paterno, string ap_materno, string nombre, string telefono, string sexo, string correo, string dNI, string dirrecion, string tipo)
@@ -281,7 +281,7 @@ namespace appcongreso.EF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_participantes_listar_profesionales_Result>("usp_participantes_listar_profesionales");
         }
     
-        public virtual int usp_registrar_actividad(string descripcion, string rol_creacion, Nullable<int> idasistencias, Nullable<int> idlistaeq, Nullable<int> idsala)
+        public virtual int usp_registrar_actividad(string descripcion, string rol_creacion, Nullable<System.DateTime> fec_inicio, Nullable<System.DateTime> fec_fin, Nullable<int> idasistencias, Nullable<int> idlistaeq, Nullable<int> idsala)
         {
             var descripcionParameter = descripcion != null ?
                 new ObjectParameter("descripcion", descripcion) :
@@ -290,6 +290,14 @@ namespace appcongreso.EF
             var rol_creacionParameter = rol_creacion != null ?
                 new ObjectParameter("rol_creacion", rol_creacion) :
                 new ObjectParameter("rol_creacion", typeof(string));
+    
+            var fec_inicioParameter = fec_inicio.HasValue ?
+                new ObjectParameter("fec_inicio", fec_inicio) :
+                new ObjectParameter("fec_inicio", typeof(System.DateTime));
+    
+            var fec_finParameter = fec_fin.HasValue ?
+                new ObjectParameter("fec_fin", fec_fin) :
+                new ObjectParameter("fec_fin", typeof(System.DateTime));
     
             var idasistenciasParameter = idasistencias.HasValue ?
                 new ObjectParameter("idasistencias", idasistencias) :
@@ -303,7 +311,7 @@ namespace appcongreso.EF
                 new ObjectParameter("idsala", idsala) :
                 new ObjectParameter("idsala", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_actividad", descripcionParameter, rol_creacionParameter, idasistenciasParameter, idlistaeqParameter, idsalaParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_actividad", descripcionParameter, rol_creacionParameter, fec_inicioParameter, fec_finParameter, idasistenciasParameter, idlistaeqParameter, idsalaParameter);
         }
     
         public virtual int usp_registrar_Equipo(string nombre, string sO, string procesador, string rAM, string tMADRE)
@@ -660,6 +668,184 @@ namespace appcongreso.EF
                 new ObjectParameter("Nombre", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_equipo_datos_codigo_Result>("usp_equipo_datos_codigo", nombreParameter);
+        }
+    
+        public virtual ObjectResult<usp_asistencias_datos_codigo_Result> usp_asistencias_datos_codigo(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_asistencias_datos_codigo_Result>("usp_asistencias_datos_codigo", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_listaequipo_datos_codigo_Result> usp_listaequipo_datos_codigo(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_listaequipo_datos_codigo_Result>("usp_listaequipo_datos_codigo", codigoParameter);
+        }
+    
+        public virtual int usp_actividades_listar_all1()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actividades_listar_all1");
+        }
+    
+        public virtual ObjectResult<usp_asistencias_oficial_Result> usp_asistencias_oficial(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_asistencias_oficial_Result>("usp_asistencias_oficial", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_asistencias_listar_all_Result> usp_asistencias_listar_all(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_asistencias_listar_all_Result>("usp_asistencias_listar_all", codigoParameter);
+        }
+    
+        public virtual ObjectResult<usp_listaequipos_listar_all_Result> usp_listaequipos_listar_all(string codigo)
+        {
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("codigo", codigo) :
+                new ObjectParameter("codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_listaequipos_listar_all_Result>("usp_listaequipos_listar_all", codigoParameter);
+        }
+    
+        public virtual int usp_registrar_actividad_oficial(string nombre, string descripcion, string rol_responsable, string rol_creacion, Nullable<System.DateTime> fec_inicio, Nullable<System.DateTime> fec_fin, Nullable<int> idasistencias, Nullable<int> idlistaeq, Nullable<int> idsala)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            var rol_responsableParameter = rol_responsable != null ?
+                new ObjectParameter("rol_responsable", rol_responsable) :
+                new ObjectParameter("rol_responsable", typeof(string));
+    
+            var rol_creacionParameter = rol_creacion != null ?
+                new ObjectParameter("rol_creacion", rol_creacion) :
+                new ObjectParameter("rol_creacion", typeof(string));
+    
+            var fec_inicioParameter = fec_inicio.HasValue ?
+                new ObjectParameter("fec_inicio", fec_inicio) :
+                new ObjectParameter("fec_inicio", typeof(System.DateTime));
+    
+            var fec_finParameter = fec_fin.HasValue ?
+                new ObjectParameter("fec_fin", fec_fin) :
+                new ObjectParameter("fec_fin", typeof(System.DateTime));
+    
+            var idasistenciasParameter = idasistencias.HasValue ?
+                new ObjectParameter("idasistencias", idasistencias) :
+                new ObjectParameter("idasistencias", typeof(int));
+    
+            var idlistaeqParameter = idlistaeq.HasValue ?
+                new ObjectParameter("idlistaeq", idlistaeq) :
+                new ObjectParameter("idlistaeq", typeof(int));
+    
+            var idsalaParameter = idsala.HasValue ?
+                new ObjectParameter("idsala", idsala) :
+                new ObjectParameter("idsala", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_registrar_actividad_oficial", nombreParameter, descripcionParameter, rol_responsableParameter, rol_creacionParameter, fec_inicioParameter, fec_finParameter, idasistenciasParameter, idlistaeqParameter, idsalaParameter);
+        }
+    
+        public virtual ObjectResult<usp_actividades_listar_all2_Result> usp_actividades_listar_all2()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_actividades_listar_all2_Result>("usp_actividades_listar_all2");
+        }
+    
+        public virtual int usp_actualizar_actividad_oficial(Nullable<int> id, string descripcion, Nullable<int> idlistaeq, Nullable<int> idsala, Nullable<int> idasistencias, string nombre, Nullable<System.DateTime> fec_inicio, Nullable<System.DateTime> fec_fin, string rol_responsable)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            var idlistaeqParameter = idlistaeq.HasValue ?
+                new ObjectParameter("idlistaeq", idlistaeq) :
+                new ObjectParameter("idlistaeq", typeof(int));
+    
+            var idsalaParameter = idsala.HasValue ?
+                new ObjectParameter("idsala", idsala) :
+                new ObjectParameter("idsala", typeof(int));
+    
+            var idasistenciasParameter = idasistencias.HasValue ?
+                new ObjectParameter("idasistencias", idasistencias) :
+                new ObjectParameter("idasistencias", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var fec_inicioParameter = fec_inicio.HasValue ?
+                new ObjectParameter("fec_inicio", fec_inicio) :
+                new ObjectParameter("fec_inicio", typeof(System.DateTime));
+    
+            var fec_finParameter = fec_fin.HasValue ?
+                new ObjectParameter("fec_fin", fec_fin) :
+                new ObjectParameter("fec_fin", typeof(System.DateTime));
+    
+            var rol_responsableParameter = rol_responsable != null ?
+                new ObjectParameter("rol_responsable", rol_responsable) :
+                new ObjectParameter("rol_responsable", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actualizar_actividad_oficial", idParameter, descripcionParameter, idlistaeqParameter, idsalaParameter, idasistenciasParameter, nombreParameter, fec_inicioParameter, fec_finParameter, rol_responsableParameter);
+        }
+    
+        public virtual int usp_actualiza_participante_oficial(string ap_paterno, string ap_materno, string nombre, string telefono, string sexo, string correo, string dNI, string dirrecion, string tipo)
+        {
+            var ap_paternoParameter = ap_paterno != null ?
+                new ObjectParameter("ap_paterno", ap_paterno) :
+                new ObjectParameter("ap_paterno", typeof(string));
+    
+            var ap_maternoParameter = ap_materno != null ?
+                new ObjectParameter("ap_materno", ap_materno) :
+                new ObjectParameter("ap_materno", typeof(string));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("telefono", telefono) :
+                new ObjectParameter("telefono", typeof(string));
+    
+            var sexoParameter = sexo != null ?
+                new ObjectParameter("sexo", sexo) :
+                new ObjectParameter("sexo", typeof(string));
+    
+            var correoParameter = correo != null ?
+                new ObjectParameter("correo", correo) :
+                new ObjectParameter("correo", typeof(string));
+    
+            var dNIParameter = dNI != null ?
+                new ObjectParameter("DNI", dNI) :
+                new ObjectParameter("DNI", typeof(string));
+    
+            var dirrecionParameter = dirrecion != null ?
+                new ObjectParameter("dirrecion", dirrecion) :
+                new ObjectParameter("dirrecion", typeof(string));
+    
+            var tipoParameter = tipo != null ?
+                new ObjectParameter("tipo", tipo) :
+                new ObjectParameter("tipo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usp_actualiza_participante_oficial", ap_paternoParameter, ap_maternoParameter, nombreParameter, telefonoParameter, sexoParameter, correoParameter, dNIParameter, dirrecionParameter, tipoParameter);
         }
     }
 }

@@ -47,12 +47,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dgvSalas = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtidsala = new System.Windows.Forms.TextBox();
-            this.btnExcel = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -64,11 +65,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.LblLimpiar);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.LblBuscar);
             this.groupBox1.Controls.Add(this.txtfiltro);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Location = new System.Drawing.Point(45, 26);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -209,9 +210,9 @@
             this.label2.Location = new System.Drawing.Point(32, 38);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción";
+            this.label2.Text = "Nombre";
             // 
             // LblBuscar
             // 
@@ -239,11 +240,12 @@
             this.comboBox1.Items.AddRange(new object[] {
             "idSala",
             "Nombre"});
-            this.comboBox1.Location = new System.Drawing.Point(29, 43);
+            this.comboBox1.Location = new System.Drawing.Point(164, 420);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(95, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Visible = false;
             // 
             // dgvSalas
             // 
@@ -275,10 +277,25 @@
             this.groupBox2.Text = "Opciones";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcel.Location = new System.Drawing.Point(455, 23);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(90, 78);
+            this.btnExcel.TabIndex = 54;
+            this.btnExcel.Text = "A Excel";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.Location = new System.Drawing.Point(553, 23);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
@@ -294,7 +311,6 @@
             // btnEliminar
             // 
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(365, 25);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
@@ -310,7 +326,6 @@
             // btnActualizar
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.Location = new System.Drawing.Point(265, 25);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
@@ -326,7 +341,6 @@
             // btnAgregar
             // 
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(165, 26);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
@@ -341,28 +355,21 @@
             // 
             // txtidsala
             // 
-            this.txtidsala.Location = new System.Drawing.Point(88, 409);
+            this.txtidsala.Location = new System.Drawing.Point(45, 420);
             this.txtidsala.Name = "txtidsala";
             this.txtidsala.Size = new System.Drawing.Size(100, 22);
             this.txtidsala.TabIndex = 5;
             this.txtidsala.Visible = false;
             // 
-            // btnExcel
+            // label6
             // 
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
-            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcel.Location = new System.Drawing.Point(455, 23);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(90, 78);
-            this.btnExcel.TabIndex = 54;
-            this.btnExcel.Text = "A Excel";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(26, 43);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 17);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Nombre";
             // 
             // FrmSala
             // 
@@ -374,6 +381,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvSalas);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.comboBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSala";
             this.Text = "::MANTENEDOR DE SALAS Y LABORATORIOS::";
@@ -418,5 +426,6 @@
         private System.Windows.Forms.TextBox txtidsala;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Label label6;
     }
 }

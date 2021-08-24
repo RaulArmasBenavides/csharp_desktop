@@ -50,7 +50,17 @@ namespace CapaDatos.Model
 
         public void update(usp_participantes_listar_all_Result t)
         {
-            e.usp_actualiza_participante(t.ap_paterno, t.ap_materno, t.nombre, t.telefono, t.sexo, t.correo, t.DNI, t.direccion, t.tipo_participante);
+            try
+            {
+                e.usp_actualiza_participante_oficial(t.ap_paterno, t.ap_materno, t.nombre, t.telefono, t.sexo, t.correo, t.DNI, t.direccion, t.tipo_participante);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+          //  e.SaveChanges();
         }
 
         //lista solo los estudiantes

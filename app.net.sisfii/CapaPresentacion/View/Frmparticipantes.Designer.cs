@@ -35,11 +35,11 @@
             // dgvParticipantes
             // 
             this.dgvParticipantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParticipantes.Location = new System.Drawing.Point(79, 105);
+            this.dgvParticipantes.Location = new System.Drawing.Point(45, 40);
             this.dgvParticipantes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvParticipantes.Name = "dgvParticipantes";
             this.dgvParticipantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParticipantes.Size = new System.Drawing.Size(922, 391);
+            this.dgvParticipantes.Size = new System.Drawing.Size(1010, 412);
             this.dgvParticipantes.TabIndex = 4;
             this.dgvParticipantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipantes_CellContentClick);
             // 
@@ -47,6 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1109, 540);
             this.Controls.Add(this.dgvParticipantes);
             this.Margin = new System.Windows.Forms.Padding(4);

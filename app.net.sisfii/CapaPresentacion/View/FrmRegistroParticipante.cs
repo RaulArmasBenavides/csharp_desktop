@@ -108,6 +108,7 @@ namespace CapaPresentacion
 
         private void FrmRegistroParticipante_Load(object sender, EventArgs e)
         {
+            LimpiaControles();
             listaParticipantes();
         }
 
@@ -235,17 +236,21 @@ namespace CapaPresentacion
                 txtDNI.Text = pro.DNI;
                 txtNombre.Text = pro.nombre;
                 txtapmat.Text = pro.ap_materno;
-                txtapmat.Text = pro.ap_paterno;
+                txtappat.Text = pro.ap_paterno;
                 txtCarrera.Text = pro.carrera;
                 txtCorreo.Text = pro.correo;
                 txtTelefono.Text = pro.telefono;
                 txtDireccion.Text = pro.direccion;
+                cmbSexo.Text = pro.sexo;
+                cmbTipo.Text = pro.tipo_participante;
 
                 //txtPrecio.Text = pro.PrecioUnidad.ToString();
                 //cboProveedor.SelectedValue = pro.IdProveedor;
                 //cboCategoria.SelectedValue = pro.IdCategoría;
                 //numCantidad.Value = (int)pro.UnidadesEnExistencia;
                 btnAgregar.Enabled = false;
+                btnActualizar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
             else
             {
@@ -282,10 +287,13 @@ namespace CapaPresentacion
             txtCarrera.Clear();
             txtCorreo.Clear();
             txtDireccion.Clear();
+            cmbTipo.Text = "";
+            cmbSexo.Text = "";
 
             listaParticipantes();
             btnAgregar.Enabled = true;
-
+            btnActualizar.Enabled = false;
+            btnEliminar.Enabled = false;
 
         }
 

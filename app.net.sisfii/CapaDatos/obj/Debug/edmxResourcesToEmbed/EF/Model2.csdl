@@ -15,6 +15,10 @@
     <NavigationProperty Name="listaequipos" Relationship="Self.FK__actividad__idlis__53D770D6" FromRole="actividades" ToRole="listaequipos" />
     <NavigationProperty Name="sala" Relationship="Self.FK__actividad__idsal__55BFB948" FromRole="actividades" ToRole="sala" />
     <NavigationProperty Name="asistencias" Relationship="bdcongresoModel.FK__actividad__idasi__54CB950F" FromRole="actividades" ToRole="asistencias" />
+    <Property Name="fec_inicio" Type="DateTime" Precision="3" />
+    <Property Name="fec_Fin" Type="DateTime" Precision="3" />
+    <Property Name="Nombre" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="rol_responsable" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="Equipo">
     <Key>
@@ -158,7 +162,7 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
-    <FunctionImport Name="usp_actividades_listar_all" ReturnType="Collection(bdcongresoModel.usp_actividades_listar_all_Result)" />
+    <FunctionImport Name="usp_actividades_listar_all" />
     <FunctionImport Name="usp_actualiza_participante">
       <Parameter Name="ap_paterno" Mode="In" Type="String" />
       <Parameter Name="ap_materno" Mode="In" Type="String" />
@@ -201,6 +205,8 @@
     <FunctionImport Name="usp_registrar_actividad">
       <Parameter Name="descripcion" Mode="In" Type="String" />
       <Parameter Name="rol_creacion" Mode="In" Type="String" />
+      <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
       <Parameter Name="idasistencias" Mode="In" Type="Int32" />
       <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
       <Parameter Name="idsala" Mode="In" Type="Int32" />
@@ -334,6 +340,56 @@
     <FunctionImport Name="usp_equipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_equipo_datos_codigo_Result)">
       <Parameter Name="Nombre" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="usp_asistencias_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_asistencias_datos_codigo_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_listaequipo_datos_codigo" ReturnType="Collection(bdcongresoModel.usp_listaequipo_datos_codigo_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actividades_listar_all1" />
+    <FunctionImport Name="usp_asistencias_oficial" ReturnType="Collection(bdcongresoModel.usp_asistencias_oficial_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_asistencias_listar_all" ReturnType="Collection(bdcongresoModel.usp_asistencias_listar_all_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_listaequipos_listar_all" ReturnType="Collection(bdcongresoModel.usp_listaequipos_listar_all_Result)">
+      <Parameter Name="codigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_registrar_actividad_oficial">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="rol_responsable" Mode="In" Type="String" />
+      <Parameter Name="rol_creacion" Mode="In" Type="String" />
+      <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
+      <Parameter Name="idasistencias" Mode="In" Type="Int32" />
+      <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
+      <Parameter Name="idsala" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actividades_listar_all2" ReturnType="Collection(bdcongresoModel.usp_actividades_listar_all2_Result)" />
+    <FunctionImport Name="usp_actualizar_actividad_oficial">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="idlistaeq" Mode="In" Type="Int32" />
+      <Parameter Name="idsala" Mode="In" Type="Int32" />
+      <Parameter Name="idasistencias" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="fec_inicio" Mode="In" Type="DateTime" />
+      <Parameter Name="fec_fin" Mode="In" Type="DateTime" />
+      <Parameter Name="rol_responsable" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_actualiza_participante_oficial">
+      <Parameter Name="ap_paterno" Mode="In" Type="String" />
+      <Parameter Name="ap_materno" Mode="In" Type="String" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="telefono" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="dirrecion" Mode="In" Type="String" />
+      <Parameter Name="tipo" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -345,16 +401,6 @@
     <Property Type="Int32" Name="ID" Nullable="false" />
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="usp_actividades_listar_all_Result">
-    <Property Type="Int32" Name="idactividad" Nullable="false" />
-    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
-    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
-    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
-    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
-    <Property Type="Int32" Name="idlistaeq" Nullable="true" />
-    <Property Type="Int32" Name="idasistencias" Nullable="true" />
-    <Property Type="Int32" Name="idsala" Nullable="true" />
   </ComplexType>
   <ComplexType Name="usp_BusquedaActividadforDescripcion_Result">
     <Property Type="Int32" Name="idactividad" Nullable="false" />
@@ -631,5 +677,46 @@
     <Property Type="String" Name="RAM" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="TarjetaMadre" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="usp_asistencias_datos_codigo_Result">
+    <Property Type="Int32" Name="idasistencias" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="usp_listaequipo_datos_codigo_Result">
+    <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_asistencias_oficial_Result">
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ap_paterno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="ap_materno" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="idasistencias" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="usp_asistencias_listar_all_Result">
+    <Property Type="Int32" Name="idasistencias" Nullable="false" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+  </ComplexType>
+  <ComplexType Name="usp_listaequipos_listar_all_Result">
+    <Property Type="Int32" Name="idlistaeq" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="codigo" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_actividades_listar_all2_Result">
+    <Property Type="Int32" Name="idactividad" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" />
+    <Property Type="DateTime" Name="fecha_creacion" Nullable="true" />
+    <Property Type="String" Name="rol_creacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="estado" Nullable="true" MaxLength="2" />
+    <Property Type="Int32" Name="idlistaeq" Nullable="true" />
+    <Property Type="Int32" Name="idasistencias" Nullable="true" />
+    <Property Type="Int32" Name="idsala" Nullable="true" />
+    <Property Type="DateTime" Name="fec_inicio" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fec_Fin" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Nombre" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="rol_responsable" Nullable="true" MaxLength="10" />
   </ComplexType>
 </Schema>

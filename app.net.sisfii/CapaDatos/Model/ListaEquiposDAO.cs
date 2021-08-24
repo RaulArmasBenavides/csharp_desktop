@@ -38,6 +38,14 @@ namespace appcongreso.Model
             //hrow new NotImplementedException();
         }
 
+
+        public List<usp_listaequipos_listar_all_Result> readAll2()
+        {
+            return entidades.usp_listaequipos_listar_all("").ToList();
+        }
+
+
+
         public void RegistrarListaEquipos(string codigo, List<usp_lista_equipos_oficial_Result> lista, bool Esnuevo)
         {
 

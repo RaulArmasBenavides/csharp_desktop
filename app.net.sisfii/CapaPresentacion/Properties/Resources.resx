@@ -139,4 +139,13 @@
   <data name="Save_as" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save as.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fii.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icacit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icacit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UNMSM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UNMSM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

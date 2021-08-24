@@ -33,6 +33,8 @@
             this.LblLimpiar = new System.Windows.Forms.PictureBox();
             this.LblBuscar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cboListaEquipos = new System.Windows.Forms.ComboBox();
+            this.cboAsistencias = new System.Windows.Forms.ComboBox();
             this.btnListaAsistenci = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,21 +45,22 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtidListaEquipos = new System.Windows.Forms.TextBox();
-            this.txtIdListaAsistencias = new System.Windows.Forms.TextBox();
             this.btnListaEquipos = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtrolresponsable = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtdescrip = new System.Windows.Forms.TextBox();
+            this.txtnombreactividad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtidentificador = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnAnular = new System.Windows.Forms.Button();
+            this.txtidActividades = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LblBuscar)).BeginInit();
@@ -66,15 +69,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txtidActividades);
             this.groupBox1.Controls.Add(this.LblLimpiar);
             this.groupBox1.Controls.Add(this.LblBuscar);
             this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.txtidentificador);
+            this.groupBox1.Controls.Add(this.txtcodigo);
             this.groupBox1.Location = new System.Drawing.Point(35, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1049, 493);
+            this.groupBox1.Size = new System.Drawing.Size(1058, 527);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la actividad";
@@ -83,18 +88,19 @@
             // LblLimpiar
             // 
             this.LblLimpiar.Image = global::CapaPresentacion.Properties.Resources.Clean_2;
-            this.LblLimpiar.Location = new System.Drawing.Point(259, 23);
+            this.LblLimpiar.Location = new System.Drawing.Point(344, 23);
             this.LblLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.LblLimpiar.Name = "LblLimpiar";
             this.LblLimpiar.Size = new System.Drawing.Size(24, 24);
             this.LblLimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.LblLimpiar.TabIndex = 36;
             this.LblLimpiar.TabStop = false;
+            this.LblLimpiar.Click += new System.EventHandler(this.LblLimpiar_Click);
             // 
             // LblBuscar
             // 
             this.LblBuscar.Image = ((System.Drawing.Image)(resources.GetObject("LblBuscar.Image")));
-            this.LblBuscar.Location = new System.Drawing.Point(227, 23);
+            this.LblBuscar.Location = new System.Drawing.Point(312, 23);
             this.LblBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.LblBuscar.Name = "LblBuscar";
             this.LblBuscar.Size = new System.Drawing.Size(24, 24);
@@ -105,6 +111,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cboListaEquipos);
+            this.groupBox3.Controls.Add(this.cboAsistencias);
             this.groupBox3.Controls.Add(this.btnListaAsistenci);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
@@ -115,32 +123,49 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.dtpicker1);
-            this.groupBox3.Controls.Add(this.txtidListaEquipos);
-            this.groupBox3.Controls.Add(this.txtIdListaAsistencias);
             this.groupBox3.Controls.Add(this.btnListaEquipos);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtrolresponsable);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtDescripcion);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.txtdescrip);
+            this.groupBox3.Controls.Add(this.txtnombreactividad);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(30, 55);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(972, 399);
+            this.groupBox3.Size = new System.Drawing.Size(991, 446);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
             // 
+            // cboListaEquipos
+            // 
+            this.cboListaEquipos.FormattingEnabled = true;
+            this.cboListaEquipos.Location = new System.Drawing.Point(166, 198);
+            this.cboListaEquipos.Margin = new System.Windows.Forms.Padding(4);
+            this.cboListaEquipos.Name = "cboListaEquipos";
+            this.cboListaEquipos.Size = new System.Drawing.Size(729, 24);
+            this.cboListaEquipos.TabIndex = 10022;
+            // 
+            // cboAsistencias
+            // 
+            this.cboAsistencias.FormattingEnabled = true;
+            this.cboAsistencias.Location = new System.Drawing.Point(166, 162);
+            this.cboAsistencias.Margin = new System.Windows.Forms.Padding(4);
+            this.cboAsistencias.Name = "cboAsistencias";
+            this.cboAsistencias.Size = new System.Drawing.Size(729, 24);
+            this.cboAsistencias.TabIndex = 10021;
+            this.cboAsistencias.SelectedIndexChanged += new System.EventHandler(this.cboAsistencias_SelectedIndexChanged);
+            // 
             // btnListaAsistenci
             // 
             this.btnListaAsistenci.Image = ((System.Drawing.Image)(resources.GetObject("btnListaAsistenci.Image")));
-            this.btnListaAsistenci.Location = new System.Drawing.Point(388, 162);
+            this.btnListaAsistenci.Location = new System.Drawing.Point(902, 162);
             this.btnListaAsistenci.Name = "btnListaAsistenci";
-            this.btnListaAsistenci.Size = new System.Drawing.Size(87, 28);
+            this.btnListaAsistenci.Size = new System.Drawing.Size(39, 28);
             this.btnListaAsistenci.TabIndex = 10020;
             this.btnListaAsistenci.UseVisualStyleBackColor = true;
             this.btnListaAsistenci.Click += new System.EventHandler(this.btnListaAsistenci_Click);
@@ -173,6 +198,7 @@
             this.cboSala.Name = "cboSala";
             this.cboSala.Size = new System.Drawing.Size(775, 24);
             this.cboSala.TabIndex = 10017;
+            this.cboSala.SelectedIndexChanged += new System.EventHandler(this.cboSala_SelectedIndexChanged);
             // 
             // dtpicker2
             // 
@@ -230,41 +256,23 @@
             this.dtpicker1.TabIndex = 10011;
             this.dtpicker1.Value = new System.DateTime(2021, 8, 22, 2, 40, 36, 0);
             // 
-            // txtidListaEquipos
-            // 
-            this.txtidListaEquipos.Location = new System.Drawing.Point(166, 195);
-            this.txtidListaEquipos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtidListaEquipos.Multiline = true;
-            this.txtidListaEquipos.Name = "txtidListaEquipos";
-            this.txtidListaEquipos.Size = new System.Drawing.Size(215, 28);
-            this.txtidListaEquipos.TabIndex = 10010;
-            // 
-            // txtIdListaAsistencias
-            // 
-            this.txtIdListaAsistencias.Location = new System.Drawing.Point(166, 162);
-            this.txtIdListaAsistencias.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdListaAsistencias.Multiline = true;
-            this.txtIdListaAsistencias.Name = "txtIdListaAsistencias";
-            this.txtIdListaAsistencias.Size = new System.Drawing.Size(215, 28);
-            this.txtIdListaAsistencias.TabIndex = 10009;
-            // 
             // btnListaEquipos
             // 
             this.btnListaEquipos.Image = ((System.Drawing.Image)(resources.GetObject("btnListaEquipos.Image")));
-            this.btnListaEquipos.Location = new System.Drawing.Point(388, 196);
+            this.btnListaEquipos.Location = new System.Drawing.Point(902, 197);
             this.btnListaEquipos.Name = "btnListaEquipos";
-            this.btnListaEquipos.Size = new System.Drawing.Size(87, 27);
+            this.btnListaEquipos.Size = new System.Drawing.Size(39, 27);
             this.btnListaEquipos.TabIndex = 10008;
             this.btnListaEquipos.UseVisualStyleBackColor = true;
             this.btnListaEquipos.Click += new System.EventHandler(this.btnListaEquipos_Click);
             // 
-            // textBox1
+            // txtrolresponsable
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 65);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(775, 22);
-            this.textBox1.TabIndex = 10007;
+            this.txtrolresponsable.Location = new System.Drawing.Point(166, 65);
+            this.txtrolresponsable.Margin = new System.Windows.Forms.Padding(4);
+            this.txtrolresponsable.Name = "txtrolresponsable";
+            this.txtrolresponsable.Size = new System.Drawing.Size(775, 22);
+            this.txtrolresponsable.TabIndex = 10007;
             // 
             // label1
             // 
@@ -316,13 +324,13 @@
             this.label6.TabIndex = 10005;
             this.label6.Text = "Description";
             // 
-            // txtdescrip
+            // txtnombreactividad
             // 
-            this.txtdescrip.Location = new System.Drawing.Point(166, 35);
-            this.txtdescrip.Margin = new System.Windows.Forms.Padding(4);
-            this.txtdescrip.Name = "txtdescrip";
-            this.txtdescrip.Size = new System.Drawing.Size(775, 22);
-            this.txtdescrip.TabIndex = 4;
+            this.txtnombreactividad.Location = new System.Drawing.Point(166, 35);
+            this.txtnombreactividad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnombreactividad.Name = "txtnombreactividad";
+            this.txtnombreactividad.Size = new System.Drawing.Size(775, 22);
+            this.txtnombreactividad.TabIndex = 4;
             // 
             // label2
             // 
@@ -334,31 +342,29 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // txtidentificador
+            // txtcodigo
             // 
-            this.txtidentificador.Location = new System.Drawing.Point(30, 23);
-            this.txtidentificador.Margin = new System.Windows.Forms.Padding(4);
-            this.txtidentificador.Name = "txtidentificador";
-            this.txtidentificador.Size = new System.Drawing.Size(189, 22);
-            this.txtidentificador.TabIndex = 1;
+            this.txtcodigo.Location = new System.Drawing.Point(115, 23);
+            this.txtcodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(189, 22);
+            this.txtcodigo.TabIndex = 1;
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(1101, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 47);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Actualizar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(1101, 69);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(104, 47);
+            this.btnActualizar.TabIndex = 57;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // btnGrabar
             // 
-            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGrabar.Image = global::CapaPresentacion.Properties.Resources.Save_as;
             this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnGrabar.Location = new System.Drawing.Point(1101, 21);
@@ -368,29 +374,63 @@
             this.btnGrabar.Text = "Grabar ";
             this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(1101, 124);
+            this.btnImprimir.Location = new System.Drawing.Point(1101, 169);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(104, 49);
+            this.btnImprimir.Size = new System.Drawing.Size(104, 82);
             this.btnImprimir.TabIndex = 54;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
+            // 
+            // btnAnular
+            // 
+            this.btnAnular.Image = ((System.Drawing.Image)(resources.GetObject("btnAnular.Image")));
+            this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnular.Location = new System.Drawing.Point(1101, 123);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(104, 39);
+            this.btnAnular.TabIndex = 58;
+            this.btnAnular.Text = "Anular";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
+            // 
+            // txtidActividades
+            // 
+            this.txtidActividades.Location = new System.Drawing.Point(832, 23);
+            this.txtidActividades.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidActividades.Name = "txtidActividades";
+            this.txtidActividades.Size = new System.Drawing.Size(189, 22);
+            this.txtidActividades.TabIndex = 37;
+            this.txtidActividades.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(27, 26);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 17);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Código";
             // 
             // FrmActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1264, 532);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1257, 555);
+            this.Controls.Add(this.btnAnular);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.groupBox1);
@@ -411,19 +451,17 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtidentificador;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtdescrip;
+        private System.Windows.Forms.TextBox txtnombreactividad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtrolresponsable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpicker1;
-        private System.Windows.Forms.TextBox txtidListaEquipos;
-        private System.Windows.Forms.TextBox txtIdListaAsistencias;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -436,8 +474,13 @@
         private System.Windows.Forms.PictureBox LblBuscar;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.Button btnListaAsistenci;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.ComboBox cboListaEquipos;
+        private System.Windows.Forms.ComboBox cboAsistencias;
+        private System.Windows.Forms.Button btnAnular;
+        private System.Windows.Forms.TextBox txtidActividades;
+        private System.Windows.Forms.Label label12;
     }
 }

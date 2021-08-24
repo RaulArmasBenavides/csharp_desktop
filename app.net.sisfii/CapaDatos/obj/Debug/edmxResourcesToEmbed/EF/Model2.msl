@@ -4,6 +4,10 @@
     <EntitySetMapping Name="actividades">
       <EntityTypeMapping TypeName="bdcongresoModel.actividades">
         <MappingFragment StoreEntitySet="actividades">
+          <ScalarProperty Name="rol_responsable" ColumnName="rol_responsable" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="fec_Fin" ColumnName="fec_Fin" />
+          <ScalarProperty Name="fec_inicio" ColumnName="fec_inicio" />
           <ScalarProperty Name="idactividad" ColumnName="idactividad" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
@@ -104,22 +108,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="bdcongresoModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="bdcongresoModel.Store.sp_upgraddiagrams" />
-    <FunctionImportMapping FunctionImportName="usp_actividades_listar_all" FunctionName="bdcongresoModel.Store.usp_actividades_listar_all">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="bdcongresoModel.usp_actividades_listar_all_Result">
-          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
-          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
-          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
-          <ScalarProperty Name="idsala" ColumnName="idsala" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="usp_actualiza_participante" FunctionName="bdcongresoModel.Store.usp_actualiza_participante" />
-    <FunctionImportMapping FunctionImportName="usp_actualizar_actividad" FunctionName="bdcongresoModel.Store.usp_actualizar_actividad" />
     <FunctionImportMapping FunctionImportName="usp_actualizar_usuario" FunctionName="bdcongresoModel.Store.usp_actualizar_usuario" />
     <FunctionImportMapping FunctionImportName="usp_BusquedaActividadforDescripcion" FunctionName="bdcongresoModel.Store.usp_BusquedaActividadforDescripcion">
       <ResultMapping>
@@ -224,7 +213,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="usp_registrar_actividad" FunctionName="bdcongresoModel.Store.usp_registrar_actividad" />
     <FunctionImportMapping FunctionImportName="usp_registrar_Equipo" FunctionName="bdcongresoModel.Store.usp_registrar_Equipo" />
     <FunctionImportMapping FunctionImportName="usp_registrar_participante" FunctionName="bdcongresoModel.Store.usp_registrar_participante" />
     <FunctionImportMapping FunctionImportName="usp_registrar_usuario" FunctionName="bdcongresoModel.Store.usp_registrar_usuario" />
@@ -411,5 +399,73 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_asistencias_datos_codigo" FunctionName="bdcongresoModel.Store.usp_asistencias_datos_codigo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_datos_codigo_Result">
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_listaequipo_datos_codigo" FunctionName="bdcongresoModel.Store.usp_listaequipo_datos_codigo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_listaequipo_datos_codigo_Result">
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_asistencias_oficial" FunctionName="bdcongresoModel.Store.usp_asistencias_oficial">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_oficial_Result">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="ap_paterno" ColumnName="ap_paterno" />
+          <ScalarProperty Name="ap_materno" ColumnName="ap_materno" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_asistencias_listar_all" FunctionName="bdcongresoModel.Store.usp_asistencias_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_asistencias_listar_all_Result">
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_listaequipos_listar_all" FunctionName="bdcongresoModel.Store.usp_listaequipos_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_listaequipos_listar_all_Result">
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_registrar_actividad_oficial" FunctionName="bdcongresoModel.Store.usp_registrar_actividad_oficial" />
+    <FunctionImportMapping FunctionImportName="usp_actividades_listar_all2" FunctionName="bdcongresoModel.Store.usp_actividades_listar_all">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="bdcongresoModel.usp_actividades_listar_all2_Result">
+          <ScalarProperty Name="idactividad" ColumnName="idactividad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+          <ScalarProperty Name="rol_creacion" ColumnName="rol_creacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idlistaeq" ColumnName="idlistaeq" />
+          <ScalarProperty Name="idasistencias" ColumnName="idasistencias" />
+          <ScalarProperty Name="idsala" ColumnName="idsala" />
+          <ScalarProperty Name="fec_inicio" ColumnName="fec_inicio" />
+          <ScalarProperty Name="fec_Fin" ColumnName="fec_Fin" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="rol_responsable" ColumnName="rol_responsable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_actualizar_actividad_oficial" FunctionName="bdcongresoModel.Store.usp_actualizar_actividad_oficial" />
+    <FunctionImportMapping FunctionImportName="usp_actualiza_participante_oficial" FunctionName="bdcongresoModel.Store.usp_actualiza_participante_oficial" />
   </EntityContainerMapping>
 </Mapping>

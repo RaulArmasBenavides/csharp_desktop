@@ -34,10 +34,9 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgvAsistencias = new System.Windows.Forms.DataGridView();
             this.Estado = new System.Windows.Forms.Label();
-            this.btnGrabar = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtnombres = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.cboDNI = new System.Windows.Forms.ComboBox();
             this.LblDNI = new System.Windows.Forms.Label();
             this.txtappaterno = new System.Windows.Forms.TextBox();
@@ -46,12 +45,16 @@
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
             this.txtidListaAsistencias = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.LblLimpiar = new System.Windows.Forms.PictureBox();
             this.LblBuscar = new System.Windows.Forms.PictureBox();
+            this.btnGrabar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnAnular = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencias)).BeginInit();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
@@ -91,7 +94,7 @@
             this.dgvAsistencias.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAsistencias.Name = "dgvAsistencias";
             this.dgvAsistencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsistencias.Size = new System.Drawing.Size(599, 246);
+            this.dgvAsistencias.Size = new System.Drawing.Size(656, 262);
             this.dgvAsistencias.TabIndex = 5;
             // 
             // Estado
@@ -102,19 +105,7 @@
             this.Estado.Size = new System.Drawing.Size(52, 17);
             this.Estado.TabIndex = 9;
             this.Estado.Text = "Estado";
-            // 
-            // btnGrabar
-            // 
-            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGrabar.Image = global::CapaPresentacion.Properties.Resources.Save_as;
-            this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGrabar.Location = new System.Drawing.Point(780, 299);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(90, 68);
-            this.btnGrabar.TabIndex = 10;
-            this.btnGrabar.Text = "Grabar ";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            this.Estado.Visible = false;
             // 
             // txtEstado
             // 
@@ -123,10 +114,11 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 22);
             this.txtEstado.TabIndex = 12;
+            this.txtEstado.Visible = false;
             // 
             // GroupBox2
             // 
-            this.GroupBox2.Controls.Add(this.txtnombres);
+            this.GroupBox2.Controls.Add(this.txtnombre);
             this.GroupBox2.Controls.Add(this.cboDNI);
             this.GroupBox2.Controls.Add(this.LblDNI);
             this.GroupBox2.Controls.Add(this.txtappaterno);
@@ -134,26 +126,26 @@
             this.GroupBox2.Controls.Add(this.LblApellido);
             this.GroupBox2.Controls.Add(this.Label6);
             this.GroupBox2.Controls.Add(this.Label8);
-            this.GroupBox2.Location = new System.Drawing.Point(45, 74);
+            this.GroupBox2.Location = new System.Drawing.Point(45, 65);
             this.GroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox2.Size = new System.Drawing.Size(699, 98);
+            this.GroupBox2.Size = new System.Drawing.Size(699, 107);
             this.GroupBox2.TabIndex = 33;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Datos Asistente";
             // 
-            // txtnombres
+            // txtnombre
             // 
-            this.txtnombres.BackColor = System.Drawing.SystemColors.Info;
-            this.txtnombres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtnombres.Enabled = false;
-            this.txtnombres.Location = new System.Drawing.Point(474, 51);
-            this.txtnombres.Margin = new System.Windows.Forms.Padding(4);
-            this.txtnombres.Name = "txtnombres";
-            this.txtnombres.Size = new System.Drawing.Size(203, 22);
-            this.txtnombres.TabIndex = 3;
-            this.txtnombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtnombre.BackColor = System.Drawing.SystemColors.Info;
+            this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtnombre.Enabled = false;
+            this.txtnombre.Location = new System.Drawing.Point(474, 51);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(203, 22);
+            this.txtnombre.TabIndex = 3;
+            this.txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cboDNI
             // 
@@ -163,6 +155,7 @@
             this.cboDNI.Name = "cboDNI";
             this.cboDNI.Size = new System.Drawing.Size(113, 24);
             this.cboDNI.TabIndex = 2;
+            this.cboDNI.SelectedIndexChanged += new System.EventHandler(this.cboDNI_SelectedIndexChanged);
             // 
             // LblDNI
             // 
@@ -239,22 +232,35 @@
             this.txtidListaAsistencias.TabIndex = 36;
             this.txtidListaAsistencias.Visible = false;
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnActualizar.Location = new System.Drawing.Point(780, 124);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(104, 46);
+            this.btnActualizar.TabIndex = 54;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // btnExcel
             // 
             this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
             this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnExcel.Location = new System.Drawing.Point(780, 223);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(90, 69);
+            this.btnExcel.Size = new System.Drawing.Size(100, 63);
             this.btnExcel.TabIndex = 37;
             this.btnExcel.Text = "A Excel";
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcel.UseVisualStyleBackColor = true;
-
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // LblLimpiar
             // 
@@ -281,15 +287,27 @@
             this.LblBuscar.TabStop = false;
             this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click);
             // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Image = global::CapaPresentacion.Properties.Resources.Save_as;
+            this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnGrabar.Location = new System.Drawing.Point(780, 74);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(104, 39);
+            this.btnGrabar.TabIndex = 10;
+            this.btnGrabar.Text = "Grabar ";
+            this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            // 
             // btnImprimir
             // 
             this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(780, 374);
+            this.btnImprimir.Location = new System.Drawing.Point(780, 294);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(90, 52);
+            this.btnImprimir.Size = new System.Drawing.Size(100, 70);
             this.btnImprimir.TabIndex = 8;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -302,7 +320,7 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(658, 223);
+            this.btnEliminar.Location = new System.Drawing.Point(709, 223);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(35, 35);
@@ -317,7 +335,7 @@
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(658, 180);
+            this.btnAgregar.Location = new System.Drawing.Point(709, 180);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(35, 35);
@@ -327,13 +345,42 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnAnular
+            // 
+            this.btnAnular.Image = ((System.Drawing.Image)(resources.GetObject("btnAnular.Image")));
+            this.btnAnular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnular.Location = new System.Drawing.Point(780, 176);
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(104, 39);
+            this.btnAnular.TabIndex = 55;
+            this.btnAnular.Text = "Anular";
+            this.btnAnular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAnular.UseVisualStyleBackColor = true;
+            this.btnAnular.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
+            this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnVolver.Location = new System.Drawing.Point(780, 371);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(100, 47);
+            this.btnVolver.TabIndex = 58;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FrmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(908, 444);
+            this.ClientSize = new System.Drawing.Size(909, 455);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnAnular);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.txtidListaAsistencias);
             this.Controls.Add(this.LblLimpiar);
@@ -375,7 +422,7 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtEstado;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.TextBox txtnombres;
+        internal System.Windows.Forms.TextBox txtnombre;
         internal System.Windows.Forms.ComboBox cboDNI;
         internal System.Windows.Forms.Label LblDNI;
         internal System.Windows.Forms.TextBox txtappaterno;
@@ -387,5 +434,8 @@
         private System.Windows.Forms.PictureBox LblBuscar;
         internal System.Windows.Forms.TextBox txtidListaAsistencias;
         private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnAnular;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

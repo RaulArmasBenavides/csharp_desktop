@@ -135,6 +135,8 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\CrystalDecisions
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\EntityFramework.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\FlashControlV71.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.Charting.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -152,7 +154,12 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\stdole.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\appcongreso.pdb
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\EntityFramework.xml
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.Charting.xml
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.ResolveComReference.cache
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.EditarUsuario.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaDatos.View.EditUsuarioView.resources
@@ -161,8 +168,6 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmEquipo.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmListaEquipos.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaDatos.View.FrmParticipantes.resources
-C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\Neptuno.Venta.AppWind.Formularios.frmProductoMant.resources
-C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\Neptuno.Venta.AppWind.Formularios.frmRegistraVentas.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaDatos.View.FrmSala.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.FrmRegistroParticipante.resources
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
@@ -170,4 +175,3 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.ResolveComReference.cache

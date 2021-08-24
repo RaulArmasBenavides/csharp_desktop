@@ -38,17 +38,17 @@
             this.txtProcesador = new System.Windows.Forms.TextBox();
             this.txtTM = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.txtidequipo = new System.Windows.Forms.TextBox();
             this.dgvEquipos = new System.Windows.Forms.DataGridView();
             this.txtRAM = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.LblLimpiar = new System.Windows.Forms.PictureBox();
             this.LblBuscar = new System.Windows.Forms.PictureBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LblLimpiar)).BeginInit();
@@ -128,7 +128,7 @@
             this.groupBox2.Controls.Add(this.btnActualizar);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.groupBox2.Location = new System.Drawing.Point(473, 355);
+            this.groupBox2.Location = new System.Drawing.Point(420, 355);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -136,6 +136,82 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
+            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExcel.Location = new System.Drawing.Point(511, 23);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(97, 74);
+            this.btnExcel.TabIndex = 53;
+            this.btnExcel.Text = "A Excel";
+            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
+            this.btnImprimir.Location = new System.Drawing.Point(616, 23);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(92, 74);
+            this.btnImprimir.TabIndex = 5;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(411, 23);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(92, 74);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.Location = new System.Drawing.Point(311, 23);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(92, 74);
+            this.btnActualizar.TabIndex = 3;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.Location = new System.Drawing.Point(211, 23);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(92, 74);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtidequipo
             // 
@@ -148,7 +224,7 @@
             // dgvEquipos
             // 
             this.dgvEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEquipos.Location = new System.Drawing.Point(473, 13);
+            this.dgvEquipos.Location = new System.Drawing.Point(420, 13);
             this.dgvEquipos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvEquipos.Name = "dgvEquipos";
             this.dgvEquipos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -173,114 +249,35 @@
             // 
             // LblLimpiar
             // 
+            this.LblLimpiar.ErrorImage = null;
             this.LblLimpiar.Image = global::CapaPresentacion.Properties.Resources.Clean_2;
-            this.LblLimpiar.Location = new System.Drawing.Point(373, 51);
+            this.LblLimpiar.Location = new System.Drawing.Point(363, 53);
             this.LblLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.LblLimpiar.Name = "LblLimpiar";
             this.LblLimpiar.Size = new System.Drawing.Size(24, 24);
             this.LblLimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LblLimpiar.TabIndex = 14;
+            this.LblLimpiar.TabIndex = 50;
             this.LblLimpiar.TabStop = false;
-            this.LblLimpiar.Click += new System.EventHandler(this.LblLimpiar_Click);
+            this.LblLimpiar.Click += new System.EventHandler(this.LblLimpiar_Click_1);
             // 
             // LblBuscar
             // 
             this.LblBuscar.Image = ((System.Drawing.Image)(resources.GetObject("LblBuscar.Image")));
-            this.LblBuscar.Location = new System.Drawing.Point(341, 51);
+            this.LblBuscar.Location = new System.Drawing.Point(331, 53);
             this.LblBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.LblBuscar.Name = "LblBuscar";
             this.LblBuscar.Size = new System.Drawing.Size(24, 24);
             this.LblBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LblBuscar.TabIndex = 13;
+            this.LblBuscar.TabIndex = 49;
             this.LblBuscar.TabStop = false;
-            this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
-            this.btnImprimir.Location = new System.Drawing.Point(616, 23);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(92, 74);
-            this.btnImprimir.TabIndex = 5;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(411, 23);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(92, 74);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
-            this.btnActualizar.Location = new System.Drawing.Point(311, 23);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(92, 74);
-            this.btnActualizar.TabIndex = 3;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(211, 23);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 74);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExcel.Image = global::CapaPresentacion.Properties.Resources.excel_pequeno;
-            this.btnExcel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcel.Location = new System.Drawing.Point(511, 23);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(97, 74);
-            this.btnExcel.TabIndex = 53;
-            this.btnExcel.Text = "A Excel";
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            this.LblBuscar.Click += new System.EventHandler(this.LblBuscar_Click_1);
             // 
             // FrmEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1257, 508);
+            this.ClientSize = new System.Drawing.Size(1148, 480);
             this.Controls.Add(this.LblLimpiar);
             this.Controls.Add(this.LblBuscar);
             this.Controls.Add(this.label5);
@@ -327,8 +324,8 @@
         private System.Windows.Forms.DataGridView dgvEquipos;
         private System.Windows.Forms.TextBox txtRAM;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.PictureBox LblLimpiar;
         private System.Windows.Forms.PictureBox LblBuscar;
-        private System.Windows.Forms.Button btnExcel;
     }
 }
