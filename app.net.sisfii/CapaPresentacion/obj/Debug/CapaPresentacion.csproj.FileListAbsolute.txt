@@ -175,3 +175,16 @@ C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\RAUL\Desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\FlashControlV71.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.Charting.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.xml
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\PdfSharp.Charting.xml
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.ResolveComReference.cache
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmAsistencias.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmEquipo.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmListaEquipos.resources
