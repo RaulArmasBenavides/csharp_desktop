@@ -1,0 +1,17 @@
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\bin\Debug\AppDemoWPF02.exe.config
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\bin\Debug\AppDemoWPF02.exe
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\bin\Debug\AppDemoWPF02.pdb
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.csprojResolveAssemblyReference.cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\View\ProductoView.g.cs
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\App.g.cs
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02_MarkupCompile.cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02_MarkupCompile.lref
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\View\ProductoView.baml
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.g.resources
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.Properties.Resources.resources
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.csproj.GenerateResource.Cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.exe
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.pdb
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF02\AppDemoWPF02\bin\Debug\AppDemoWPF02.exe.config
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.exe
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF02\AppDemoWPF02\obj\Debug\AppDemoWPF02.pdb

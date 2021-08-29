@@ -1,0 +1,23 @@
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.exe.config
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.exe
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.pdb
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.csprojResolveAssemblyReference.cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\App.g.cs
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01_MarkupCompile.cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01_MarkupCompile.lref
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.g.resources
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.Properties.Resources.resources
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.csproj.GenerateResource.Cache
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.exe
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.pdb
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\View\MainWindow.g.cs
+E:\Program Files\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\View\MainWindow.baml
+C:\Users\RAUL\Documents\SistemasUNIProgramación\Desarrollador de soluciones C#\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.exe.config
+C:\Users\RAUL\Documents\SistemasUNIProgramación\Desarrollador de soluciones C#\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.exe
+C:\Users\RAUL\Documents\SistemasUNIProgramación\Desarrollador de soluciones C#\CursoC#_2017\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.pdb
+C:\Users\Raúl\Desktop\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.exe.config
+C:\Users\Raúl\Desktop\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.exe
+C:\Users\Raúl\Desktop\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.pdb
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\bin\Debug\AppDemoWPF01.exe.config
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.exe
+C:\Users\RAUL\Documents\rmab\ADO.NET\Desarrollador de soluciones C#\Demos\AppDemoWPF01\AppDemoWPF01\obj\Debug\AppDemoWPF01.pdb

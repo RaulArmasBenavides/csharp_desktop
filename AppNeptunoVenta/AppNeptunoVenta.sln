@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaDatos", "CapaDatos", "{FF03D611-54A8-47D5-B660-C7345329F918}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaNegocio", "CapaNegocio", "{17EBB76C-1FAB-4C8E-8A64-17C4294AD1F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaEntidad", "CapaEntidad", "{1307DD24-C382-4C9D-8D35-F57F8CB1C432}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaServicio", "CapaServicio", "{84A68A3C-B1C7-41BA-901B-DC85381AB2D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaPresentacion", "CapaPresentacion", "{13DD369D-CC22-4E97-9BF2-E380E84DDAB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CapaUtil", "CapaUtil", "{3D609BEA-1973-4BF9-8C91-7F25D2275BB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.Entity", "Neptuno.Libreria.Entity\Neptuno.Libreria.Entity.csproj", "{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.Service", "Neptuno.Libreria.Service\Neptuno.Libreria.Service.csproj", "{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.SqlServer", "Neptuno.Libreria.SqlServer\Neptuno.Libreria.SqlServer.csproj", "{BFE64DDF-4B46-401E-8D30-78F246A3204C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.DataAccess", "Neptuno.Libreria.DataAccess\Neptuno.Libreria.DataAccess.csproj", "{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.Bussines", "Neptuno.Libreria.Bussines\Neptuno.Libreria.Bussines.csproj", "{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neptuno.Libreria.AppWind", "Neptuno.Libreria.AppWind\Neptuno.Libreria.AppWind.csproj", "{B86BA264-E070-4AE7-840D-C4FDCED1DEFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE64DDF-4B46-401E-8D30-78F246A3204C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE64DDF-4B46-401E-8D30-78F246A3204C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE64DDF-4B46-401E-8D30-78F246A3204C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE64DDF-4B46-401E-8D30-78F246A3204C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86BA264-E070-4AE7-840D-C4FDCED1DEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86BA264-E070-4AE7-840D-C4FDCED1DEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86BA264-E070-4AE7-840D-C4FDCED1DEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86BA264-E070-4AE7-840D-C4FDCED1DEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{557FCF4A-E9E3-4FA2-9A71-72A0A0E93409} = {1307DD24-C382-4C9D-8D35-F57F8CB1C432}
+		{3B5C8559-EFD7-4F88-946E-93A6DCC5F1F7} = {84A68A3C-B1C7-41BA-901B-DC85381AB2D3}
+		{BFE64DDF-4B46-401E-8D30-78F246A3204C} = {3D609BEA-1973-4BF9-8C91-7F25D2275BB1}
+		{2C5ADD8A-5B30-4552-A560-AA5854B3C4A8} = {FF03D611-54A8-47D5-B660-C7345329F918}
+		{BE1A45B6-EDA2-4B6D-8D91-6E6BDECDD9D7} = {17EBB76C-1FAB-4C8E-8A64-17C4294AD1F5}
+		{B86BA264-E070-4AE7-840D-C4FDCED1DEFA} = {13DD369D-CC22-4E97-9BF2-E380E84DDAB2}
+	EndGlobalSection
+EndGlobal

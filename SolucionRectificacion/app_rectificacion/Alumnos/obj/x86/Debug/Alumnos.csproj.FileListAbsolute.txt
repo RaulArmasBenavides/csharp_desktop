@@ -12,3 +12,5 @@ C:\Users\Raúl\Desktop\SCRIPTS\ADO.NET\Base de datos y Programación Visual\Base
 C:\Users\Raúl\Desktop\SCRIPTS\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb
 C:\Users\Raúl\Desktop\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.exe
 C:\Users\Raúl\Desktop\ADO.NET\Base de datos y Programación Visual\Base de Datos ( FII)\Trabajo2\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\SolucionRectificacion\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\SolucionRectificacion\app_rectificacion\Alumnos\obj\x86\Debug\Alumnos.pdb

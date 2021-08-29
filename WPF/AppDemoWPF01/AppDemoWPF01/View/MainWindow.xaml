@@ -1,0 +1,26 @@
+﻿<Window x:Class="AppDemoWPF01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDemoWPF01"
+        mc:Ignorable="d"
+        Title=":: MINI CALCULADORA ::" Height="221.053" Width="522.368" Background="#FF09FDFD">
+    <Grid Margin="0,0,0,5">     
+
+        <Label x:Name="label" Content="Numero 1" HorizontalAlignment="Left" Margin="26,31,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Numero 2" HorizontalAlignment="Left" Margin="26,75,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Resultado" HorizontalAlignment="Left" Margin="26,117,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNum1" HorizontalAlignment="Left" Height="23" Margin="120,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="txtNum2" HorizontalAlignment="Left" Height="23" Margin="120,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="txtResultado" HorizontalAlignment="Left" Height="23" Margin="120,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
+        <Button x:Name="btnSuma" Content="+" HorizontalAlignment="Left" Margin="284,35,0,0" VerticalAlignment="Top" Width="75" Click="btnSuma_Click"/>
+
+        <Button x:Name="btnResta" Content="-" HorizontalAlignment="Left" Margin="383,35,0,0" VerticalAlignment="Top" Width="75" Click="btnResta_Click"/>
+        <Button x:Name="btnMultiplica" Content="x" HorizontalAlignment="Left" Margin="284,76,0,0" VerticalAlignment="Top" Width="75" Click="btnMultiplica_Click"/>
+        <Button x:Name="btnDivide" Content="/" HorizontalAlignment="Left" Margin="383,75,0,0" VerticalAlignment="Top" Width="75" Click="btnDivide_Click"/>
+        <Button x:Name="btnMR" Content="MR" HorizontalAlignment="Left" Margin="284,117,0,0" VerticalAlignment="Top" Width="75" Click="btnMR_Click"/>
+        <Button x:Name="btnEX" Content="EX" HorizontalAlignment="Left" Margin="383,117,0,0" VerticalAlignment="Top" Width="75" Click="btnEX_Click"/>
+
+    </Grid>
+</Window>

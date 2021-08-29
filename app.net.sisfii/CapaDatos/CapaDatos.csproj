@@ -79,7 +79,9 @@
     <Compile Include="Clases\ImpresionSala.cs" />
     <Compile Include="Clases\ImpresiónEquipo.cs" />
     <Compile Include="Controller\ActividadBll.cs" />
+    <Compile Include="Controller\AlumnoController.cs" />
     <Compile Include="Controller\AsistenciasBll.cs" />
+    <Compile Include="Controller\CursoBll.cs" />
     <Compile Include="Controller\EquipoBll.cs" />
     <Compile Include="Controller\ListaEquiposBll.cs" />
     <Compile Include="Controller\ParticipanteBll.cs" />
