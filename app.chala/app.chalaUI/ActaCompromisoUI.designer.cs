@@ -65,52 +65,58 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 32);
+            this.label2.Location = new System.Drawing.Point(108, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "NumAC";
             // 
             // txtAC
             // 
-            this.txtAC.Location = new System.Drawing.Point(136, 29);
+            this.txtAC.Location = new System.Drawing.Point(181, 36);
+            this.txtAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAC.Name = "txtAC";
-            this.txtAC.Size = new System.Drawing.Size(100, 20);
+            this.txtAC.Size = new System.Drawing.Size(132, 22);
             this.txtAC.TabIndex = 2;
             this.txtAC.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 58);
+            this.label3.Location = new System.Drawing.Point(37, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(134, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Resolución Decanal";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtRD
             // 
-            this.txtRD.Location = new System.Drawing.Point(136, 55);
+            this.txtRD.Location = new System.Drawing.Point(181, 68);
+            this.txtRD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRD.MaxLength = 10;
             this.txtRD.Name = "txtRD";
-            this.txtRD.Size = new System.Drawing.Size(100, 20);
+            this.txtRD.Size = new System.Drawing.Size(132, 22);
             this.txtRD.TabIndex = 4;
             this.txtRD.TextChanged += new System.EventHandler(this.txtCI_TextChanged);
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(136, 81);
+            this.txtMonto.Location = new System.Drawing.Point(181, 100);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(100, 20);
+            this.txtMonto.Size = new System.Drawing.Size(132, 22);
             this.txtMonto.TabIndex = 6;
             // 
             // lblMonto
             // 
             this.lblMonto.AutoSize = true;
-            this.lblMonto.Location = new System.Drawing.Point(81, 88);
+            this.lblMonto.Location = new System.Drawing.Point(108, 108);
+            this.lblMonto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonto.Name = "lblMonto";
-            this.lblMonto.Size = new System.Drawing.Size(37, 13);
+            this.lblMonto.Size = new System.Drawing.Size(47, 17);
             this.lblMonto.TabIndex = 8;
             this.lblMonto.Text = "Monto";
             this.lblMonto.Click += new System.EventHandler(this.lblMonto_Click);
@@ -118,25 +124,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 142);
+            this.label6.Location = new System.Drawing.Point(80, 175);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
+            this.label6.Size = new System.Drawing.Size(90, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Número Días";
             // 
             // npdNumDias
             // 
-            this.npdNumDias.Location = new System.Drawing.Point(136, 140);
+            this.npdNumDias.Location = new System.Drawing.Point(181, 172);
+            this.npdNumDias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.npdNumDias.Name = "npdNumDias";
-            this.npdNumDias.Size = new System.Drawing.Size(40, 20);
+            this.npdNumDias.Size = new System.Drawing.Size(53, 22);
             this.npdNumDias.TabIndex = 11;
             // 
             // lblTipoGasto
             // 
             this.lblTipoGasto.AutoSize = true;
-            this.lblTipoGasto.Location = new System.Drawing.Point(242, 88);
+            this.lblTipoGasto.Location = new System.Drawing.Point(323, 108);
+            this.lblTipoGasto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTipoGasto.Name = "lblTipoGasto";
-            this.lblTipoGasto.Size = new System.Drawing.Size(62, 13);
+            this.lblTipoGasto.Size = new System.Drawing.Size(82, 17);
             this.lblTipoGasto.TabIndex = 12;
             this.lblTipoGasto.Text = "Tipo. Gasto";
             // 
@@ -147,18 +156,20 @@
             this.cmbTipoGasto.Items.AddRange(new object[] {
             "Viáticos",
             "Encargos"});
-            this.cmbTipoGasto.Location = new System.Drawing.Point(307, 84);
+            this.cmbTipoGasto.Location = new System.Drawing.Point(409, 103);
+            this.cmbTipoGasto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTipoGasto.Name = "cmbTipoGasto";
-            this.cmbTipoGasto.Size = new System.Drawing.Size(100, 21);
+            this.cmbTipoGasto.Size = new System.Drawing.Size(132, 24);
             this.cmbTipoGasto.TabIndex = 13;
             // 
             // dtgacta
             // 
             this.dtgacta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgacta.Location = new System.Drawing.Point(31, 219);
+            this.dtgacta.Location = new System.Drawing.Point(41, 270);
+            this.dtgacta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgacta.Name = "dtgacta";
             this.dtgacta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgacta.Size = new System.Drawing.Size(437, 136);
+            this.dtgacta.Size = new System.Drawing.Size(583, 167);
             this.dtgacta.TabIndex = 14;
             // 
             // groupBox1
@@ -167,9 +178,11 @@
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.btnGurdar);
-            this.groupBox1.Location = new System.Drawing.Point(117, 361);
+            this.groupBox1.Location = new System.Drawing.Point(41, 444);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(351, 48);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(583, 59);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
@@ -177,9 +190,10 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(262, 16);
+            this.btnSalir.Location = new System.Drawing.Point(349, 20);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(100, 28);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -187,9 +201,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(181, 16);
+            this.btnEliminar.Location = new System.Drawing.Point(241, 20);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "&Borrar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -197,9 +212,10 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(100, 16);
+            this.btnActualizar.Location = new System.Drawing.Point(133, 20);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(100, 28);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "&Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -207,9 +223,10 @@
             // 
             // btnGurdar
             // 
-            this.btnGurdar.Location = new System.Drawing.Point(19, 16);
+            this.btnGurdar.Location = new System.Drawing.Point(25, 20);
+            this.btnGurdar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGurdar.Name = "btnGurdar";
-            this.btnGurdar.Size = new System.Drawing.Size(75, 23);
+            this.btnGurdar.Size = new System.Drawing.Size(100, 28);
             this.btnGurdar.TabIndex = 0;
             this.btnGurdar.Text = "&Guardar";
             this.btnGurdar.UseVisualStyleBackColor = true;
@@ -223,34 +240,38 @@
             this.dtpFechaRD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaRD.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpFechaRD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaRD.Location = new System.Drawing.Point(307, 55);
+            this.dtpFechaRD.Location = new System.Drawing.Point(409, 68);
+            this.dtpFechaRD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaRD.Name = "dtpFechaRD";
-            this.dtpFechaRD.Size = new System.Drawing.Size(130, 20);
+            this.dtpFechaRD.Size = new System.Drawing.Size(172, 22);
             this.dtpFechaRD.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 58);
+            this.label1.Location = new System.Drawing.Point(323, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 24;
             this.label1.Text = "Fecha R.D";
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(136, 114);
+            this.txtMotivo.Location = new System.Drawing.Point(181, 140);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMotivo.MaxLength = 10;
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(332, 20);
+            this.txtMotivo.Size = new System.Drawing.Size(441, 22);
             this.txtMotivo.TabIndex = 25;
             // 
             // lblMotivo
             // 
             this.lblMotivo.AutoSize = true;
-            this.lblMotivo.Location = new System.Drawing.Point(79, 117);
+            this.lblMotivo.Location = new System.Drawing.Point(105, 144);
+            this.lblMotivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Size = new System.Drawing.Size(39, 13);
+            this.lblMotivo.Size = new System.Drawing.Size(49, 17);
             this.lblMotivo.TabIndex = 26;
             this.lblMotivo.Text = "Motivo";
             // 
@@ -262,9 +283,10 @@
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(136, 166);
+            this.dateTimePicker1.Location = new System.Drawing.Point(181, 204);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(172, 22);
             this.dateTimePicker1.TabIndex = 27;
             // 
             // dateTimePicker2
@@ -275,26 +297,29 @@
             this.dateTimePicker2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(338, 166);
+            this.dateTimePicker2.Location = new System.Drawing.Point(451, 204);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(130, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(172, 22);
             this.dateTimePicker2.TabIndex = 28;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 172);
+            this.label4.Location = new System.Drawing.Point(105, 212);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 29;
             this.label4.Text = "Fec.Inicial";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(285, 173);
+            this.label5.Location = new System.Drawing.Point(380, 213);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(65, 17);
             this.label5.TabIndex = 30;
             this.label5.Text = "Fec.Final";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -302,9 +327,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(245, 32);
+            this.label7.Location = new System.Drawing.Point(327, 39);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 31;
             this.label7.Text = "Fecha A.C";
             // 
@@ -316,9 +342,10 @@
             this.dtpFechaAC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpFechaAC.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpFechaAC.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaAC.Location = new System.Drawing.Point(307, 29);
+            this.dtpFechaAC.Location = new System.Drawing.Point(409, 36);
+            this.dtpFechaAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaAC.Name = "dtpFechaAC";
-            this.dtpFechaAC.Size = new System.Drawing.Size(130, 20);
+            this.dtpFechaAC.Size = new System.Drawing.Size(172, 22);
             this.dtpFechaAC.TabIndex = 32;
             this.dtpFechaAC.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
@@ -329,32 +356,35 @@
             this.cmbPersonal.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.cmbPersonal.Location = new System.Drawing.Point(136, 192);
+            this.cmbPersonal.Location = new System.Drawing.Point(181, 236);
+            this.cmbPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPersonal.Name = "cmbPersonal";
-            this.cmbPersonal.Size = new System.Drawing.Size(100, 21);
+            this.cmbPersonal.Size = new System.Drawing.Size(132, 24);
             this.cmbPersonal.TabIndex = 33;
             // 
             // txtIdPersonal
             // 
-            this.txtIdPersonal.Location = new System.Drawing.Point(248, 193);
+            this.txtIdPersonal.Location = new System.Drawing.Point(331, 238);
+            this.txtIdPersonal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdPersonal.Name = "txtIdPersonal";
-            this.txtIdPersonal.Size = new System.Drawing.Size(44, 20);
+            this.txtIdPersonal.Size = new System.Drawing.Size(57, 22);
             this.txtIdPersonal.TabIndex = 34;
             // 
             // Personal
             // 
             this.Personal.AutoSize = true;
-            this.Personal.Location = new System.Drawing.Point(76, 196);
+            this.Personal.Location = new System.Drawing.Point(101, 241);
+            this.Personal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Personal.Name = "Personal";
-            this.Personal.Size = new System.Drawing.Size(48, 13);
+            this.Personal.Size = new System.Drawing.Size(64, 17);
             this.Personal.TabIndex = 35;
             this.Personal.Text = "Personal";
             // 
             // ActaCompromisoUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 415);
+            this.ClientSize = new System.Drawing.Size(741, 511);
             this.Controls.Add(this.Personal);
             this.Controls.Add(this.txtIdPersonal);
             this.Controls.Add(this.cmbPersonal);
@@ -380,6 +410,7 @@
             this.Controls.Add(this.txtRD);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAC);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ActaCompromisoUI";
             this.Text = "Acta de Compromiso";
             this.Load += new System.EventHandler(this.actaUI_Load);

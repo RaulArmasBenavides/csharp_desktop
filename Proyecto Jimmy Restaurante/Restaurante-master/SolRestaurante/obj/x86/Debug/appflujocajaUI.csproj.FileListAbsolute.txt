@@ -15,3 +15,5 @@ C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurant
 C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\appflujocajaUI.csproj.GenerateResource.Cache
 C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
 C:\Users\MARCELO\Documents\Visual Studio 2015\Projects\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\Proyecto Jimmy Restaurante\Restaurante-master\SolRestaurante\obj\x86\Debug\SolRestaurante.pdb

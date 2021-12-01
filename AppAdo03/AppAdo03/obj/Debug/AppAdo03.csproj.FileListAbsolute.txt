@@ -38,3 +38,11 @@ C:\Users\MARCELO\Documents\rmab\C#\DESA\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe.config
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.exe
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\bin\Debug\AppAdo03.exe
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\bin\Debug\AppAdo03.pdb
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csprojResolveAssemblyReference.cache
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.Properties.Resources.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.LoginView.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.MDImenu.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.View.ProductoView.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\AppAdo03\AppAdo03\obj\Debug\AppAdo03.csproj.GenerateResource.Cache
