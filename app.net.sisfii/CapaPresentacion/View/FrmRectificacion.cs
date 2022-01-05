@@ -1,7 +1,4 @@
-﻿
-using Alumnos.Controller;
-using Alumnos.Entity;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace AppDemo11.View
@@ -22,7 +19,7 @@ namespace AppDemo11.View
         //Cursobll objcur2 = new Cursobll();
 
         //variables de la clases Alumno y Curso 
-        Alumno a;
+        //Alumno a;
         //Curso ci,ce;
 
         private void verAlumnos()
@@ -101,8 +98,8 @@ namespace AppDemo11.View
                     break;
                 case 3:
                     obj.AlumnoEliminar(leerDatos());
-                    objcur1.CursoEliminar(leerDatosCursosaIncluir());
-                    objcur2.CursoEliminar(leerDatosCursosaExcluir());
+                    //objcur1.CursoEliminar(leerDatosCursosaIncluir());
+                    //objcur2.CursoEliminar(leerDatosCursosaExcluir());
                     msg = "Alumno eliminado con exito";
                     break;
                 case 4:

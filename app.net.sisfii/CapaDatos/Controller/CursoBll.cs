@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace appcongreso.Controller
 {
-    publc class CursoBll
+    public class CursoBll
     {
     }
 }

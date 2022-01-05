@@ -188,3 +188,4 @@ C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentaci
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmAsistencias.resources
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmEquipo.resources
 C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\CapaPresentacion.View.FrmListaEquipos.resources
+C:\Users\RAUL\Documents\rmab\csharp\csharp_desktop\app.net.sisfii\CapaPresentacion\obj\Debug\AppDemo11.View.FrmRectificacion.resources
